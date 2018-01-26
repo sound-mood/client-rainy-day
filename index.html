@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Sound Mood</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/layout.css">
+        <link rel="stylesheet" href="styles/modules/modules.css">
+        <link rel="stylesheet" href="styles/modules/accordion.css">
+        
+    
+    </head>
+    <body>
+        <header>
+            <h1>Rainy Day</h1>
+        </header>
+        <main>
+            <!-- this is where the user selects their  -->
+            <div class="grid-container">
+                <div class="col-1of5">
+                    <div id="preset-playlists">
+                        <a class="section-title" href="/playlist">Preset Playlists</a>
+                        <div class="" id="playlist-selections">
+                            <a href="">This is an example tag for a playlist</a>
+                            <a href="">This is an example tag for a playlist</a>
+                            <a href="">This is an example tag for a playlist</a>
+                            <a href="">This is an example tag for a playlist</a>
+                        </div>
+                    </div>                        
+                    <div id="custom-playlists">
+                        <a class="section-title" href="/custom">Custom playlists</a>
+                        <div class="" id="custom-options">
+                            <a href="/custom/music">Music selection</a>
+                            <div class="" id="music-selection">
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                            </div>
+                            <a href="/custom/sound">Sound selection</a>
+                            <div class="" id="sound-selection">
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                            </div>
+                            <a href="/custom/video">Video selection</a>
+                            <div class="" id="video-selection">
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                                <a href="">Example song choices</a>
+                                <a href="/play-music">Click here to begin playing music</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-4of5">
+                    <div class="" id="audio-visual">
+                        <a href="/play-music">Start playing...</a>
+                        <p>This is where the music player will go</p>
+                    </div>
+                </div>  
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+        <!-- not sure if we need handlebars yet -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+        <script src="/scripts/models/soundmood.js"></script>
+        <script src="/scripts/views/music-view.js"></script>
+        <script src="/scripts/views/video-view.js"></script>
+        <script src="/scripts/views/sound-view.js"></script>
+        <script src="/scripts/views/routes.js"></script>
+    </body>
+</html>
