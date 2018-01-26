@@ -1,0 +1,27 @@
+* {
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+html, body {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 8vw;
+    font-family: verdana;
+}
+
+a {
+    text-decoration: none;
+    font-size: 5vw;
+    font-family: verdana;
+    color: rgb(255, 255, 255);
+}
+
+div {
+    background-color: rgba(135, 47, 194, 0.171);
+    outline: .25px solid rgb(255, 255, 255);
+}
+
