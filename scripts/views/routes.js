@@ -5,21 +5,21 @@ function showPresetPlaylists (ctx, next) {
   $('preset-playlists').toggleClass('hide');
 }
 
-function showCustomOpts (ctx, next) {
+// function showCustomOpts (ctx, next) {
 
-}
+// }
 
-function showSongOpts (ctx, next) {
+// function showSongOpts (ctx, next) {
 
-}
+// }
 
-function showSoundOpts (ctx, next) {
+// function showSoundOpts (ctx, next) {
 
-}
+// }
 
-function showVideoOpts (ctx, next) {
+// function showVideoOpts (ctx, next) {
 
-}
+// }
 
 
 
@@ -36,6 +36,4 @@ page('/custom/video', showVideoOpts)
 
 
 
-$(function() {
-  page();
-})
+page();
