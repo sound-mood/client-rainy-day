@@ -22,13 +22,15 @@
                 <div class="col-1of5">
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
+                        
                         <div class="" id="playlist-selections">
                             <a href="">This is an example tag for a playlist</a>
                             <a href="">This is an example tag for a playlist</a>
                             <a href="">This is an example tag for a playlist</a>
                             <a href="">This is an example tag for a playlist</a>
                         </div>
-                    </div>                        
+                    </div> 
+                
                     <div id="custom-playlists">
                         <a class="section-title" href="/custom">Custom playlists</a>
                         <div class="" id="custom-options">
@@ -39,6 +41,17 @@
                                 <a href="">Example song choices</a>
                                 <a href="">Example song choices</a>
                             </div>
+
+                        <!-- user will add fiv. songs via this form -->
+                            <form id="favSongform">
+                                <input type="text" id="moodcat" placeholder="moodcat" required>
+                                <input type="text" id="genre" placeholder="genre" required>
+                                <input type="text" id="artist" placeholder="artist" required>
+                                <input type="text" id="songtitle" placeholder="songtitle" required>
+                                <input type="text" id="moodcat" placeholder="moodcat" required>
+                                <button type="submit">Add song</button>
+                            </form>
+
                             <a href="/custom/sound">Sound selection</a>
                             <div class="" id="sound-selection">
                                 <a href="">Example song choices</a>
@@ -82,5 +95,6 @@
         <script src="/scripts/views/video-view.js"></script>
         <script src="/scripts/views/sound-view.js"></script>
         <script src="/scripts/views/routes.js"></script>
+    
     </body>
 </html>
