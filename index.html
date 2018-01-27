@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/modules/modules.css">
-        <link rel="stylesheet" href="styles/modules/accordion.css">
+        <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
         
     
     </head>
@@ -30,10 +30,10 @@
                         </div>
                     </div>                        
                     <div id="custom-playlists">
-                        <a class="section-title" href="/custom">Custom playlists</a>
+                        <a class="section-title" href="/custom">Pick your own from our library</a>
                         <div class="hide" id="custom-options">
                             <div>
-                                <a href="/custom/music">Music selection</a>
+                                <a href="/custom/music">Music selection (click song to add to playlist)</a>
                                 <div class="hide" id="music-selection">
                                     <a href="">Example song choices</a>
                                     <a href="">Example song choices</a>
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a href="/custom/sound">Sound selection</a>
+                                <a href="/custom/sound">Sound selection (click to swap out ambient noise)</a>
                                 <div class="hide" id="sound-selection">
                                     <a href="">Example song choices</a>
                                     <a href="">Example song choices</a>
@@ -51,30 +51,70 @@
                                 </div>
                             </div>
                             <div>
-                                <a href="/custom/video">Video selection</a>
+                                <a href="/custom/video">Video selection (click to swap out video)</a>
                                 <div class="hide" id="video-selection">
                                     <a href="">Example song choices</a>
                                     <a href="">Example song choices</a>
                                     <a href="">Example song choices</a>
                                     <a href="">Example song choices</a>
-                                    <a href="/play-music">Click here to begin playing music</a>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <div id="create-your-own">
-                        <a class="section-title" href="/create">Create your own playlist</a>
+                        <a class="section-title" href="/create">Add your own to our library</a>
                         <div class="hide" id="create-playlist">
-                            <form>
-                                <input type="text" placeholder="SONG TITLE">
-                                <input type="text" placeholder="SONG ARTIST">
-                                <input type="text" placeholder="SONG URL">
-                                <input type="text" placeholder="AMBIENT TRACK TITLE">
-                                <input type="text" placeholder="AMBIENT TRACK URL">
-                                <input type="text" placeholder="VIDEO TITLE">
-                                <input type="text" placeholder="VIDEO URL">
-                            </form>
+                            <div>
+                                <form>
+                                    <p>Title your playlist:</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <input type="text" placeholder="PLAYLIST TITLE">
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                        </div>
+                                    </div>
+                                    <p>Background Sounds (one per playlist)</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <input type="text" placeholder="AMBIENT TRACK TITLE">
+                                            <input type="text" placeholder="AMBIENT TRACK URL">
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                            <button>+</button>
+                                        </div>
+                                    </div>
+                                    <p>Background Video (one per playlist)</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <input type="text" placeholder="VIDEO TITLE">
+                                            <input type="text" placeholder="VIDEO URL">
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                            <button>+</button>                                    
+                                        </div>
+                                    </div>
+                                    <p>Track Title</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <div class="grid-container">
+                                                <div class="col-2of5">
+                                                    <input type="text" class="half-size-input" placeholder="SONG TITLE">
+                                                </div>
+                                                <div class="col-2of5">
+                                                    <input type="text" class="half-size-input" placeholder="SONG ARTIST">
+                                                </div>
+                                            </div>
+                                            <input type="text" placeholder="SONG URL">
+
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                            <button>+</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
     
