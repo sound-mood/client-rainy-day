@@ -8,7 +8,7 @@ activeArray = [];
 {
     _id: ObjectId(will.be.auto.generated )
     title: 'Nightmood_category',
-    sound: 'Ocean1',
+    sound: 'nightsound1',
     by: 'Artist1',
     url: 'http://www.soundlocationOnYouTube.com',
     // tags: ['ocean1', 'ocean2', 'ocean3'],
@@ -31,17 +31,17 @@ activeArray = [];
 
  {
     _id: ObjectId(will.be.auto.generated )
-    title: 'AcitvemoodCategory', 
-    sound: 'ocean2',
+    title: 'NightmoodCategory', 
+    sound: 'nightsound2',
     by: 'mixArtist',
     url: 'http://www.soundlocationOnYouTube.com',
-    mylist: 'myActiveList',
+    mylist: 'myNightList',
  }
 
  {
     _id: ObjectId(will.be.auto.generated )
-    title: 'AcitvemoodCategory', 
-    sound: 'song2',
+    title: 'NightmoodCategory', 
+    sound: '',
     by: 'mixArtist',
     url: 'http://www.soundlocationOnYouTube.com',
     mylist: 'myActiveList',
