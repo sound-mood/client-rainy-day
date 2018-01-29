@@ -5,7 +5,7 @@
     const createView = {};
 
     createView.init = function (ctx, next) {
-        console.log('route hit');
+        console.log('createView.init route hit');
 
         if (!$('#custom-options').hasClass('hide')) {
             $('#custom-options').addClass('hide');
