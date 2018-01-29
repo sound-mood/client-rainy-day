@@ -9,8 +9,12 @@
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/modules/modules.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
-        
-    
+
+        <!-- this generates the list of preset playlists and tells routeJS where to point to -->
+        <script id="preset-playlist-template" type="text/x-handlebars-template">
+            <a href="/playlist/{{preset-id}}">{{playlist-title}}</a>
+        </script>
+            
     </head>
     <body>
         <header>
@@ -23,10 +27,12 @@
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
                         <div class="hide" id="playlist-selections">
-                            <a href="">This is an example tag for a playlist</a>
-                            <a href="">This is an example tag for a playlist</a>
-                            <a href="">This is an example tag for a playlist</a>
-                            <a href="">This is an example tag for a playlist</a>
+                            <!-- this section will be where playlists are rendered by handlebars -->
+                            <!-- each href will point to a playlist ID in routes JS which will tell the detail view which playlist to display -->
+                            <a href="">Playlist1</a>
+                            <a href="">Playlist2</a>
+                            <a href="">Playlist3</a>
+                            <a href="">Playlist4</a>
                         </div>
                     </div>                        
                     <div id="custom-playlists">
@@ -117,7 +123,11 @@
                             </div>
                         </div>
                     </div>
+                    <div id="your-current-playlist">
+                        <a class="section-title" href="/preview">Playlist Preview</a>
+                        <div class="hide" id="create-playlist">
     
+                    </div>
 
                 </div>
                 <div class="col-4of5">
@@ -136,7 +146,6 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-        <!-- not sure if we need handlebars yet -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
         <script src="/scripts/models/soundmood.js"></script>
         <script src="/scripts/views/music-view.js"></script>
@@ -144,6 +153,11 @@
         <script src="/scripts/views/sound-view.js"></script>
         <script src="/scripts/views/create-view.js"></script>
         <script src="/scripts/views/playlist-view.js"></script>
+        <script src="/scripts/views/preview-view.js"></script>
         <script src="/scripts/controllers/routes.js"></script>
+        <script>
+            // TODO: not sure if i need a callback here or not yet
+            soundmood.fetchAll();
+        </script>
     </body>
 </html>
