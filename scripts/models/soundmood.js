@@ -1,10 +1,9 @@
 'use strict';
 
 // var __API_URL__ = 'https://rainy-day-v2.herokuapp.com'
-// var __API_URL__ = 'https://localhost:3000'
+var __API_URL__ = 'https://localhost:3000'
 
 
-(function(module) {
     let soundmood = {};
     
     function Song(rawDataObj) {
@@ -74,13 +73,21 @@
         Video.all = rawData.rows.map((videoObj) => new Video(videoObj));
     }
 
-
-
     soundmood.fetchAll = function () {
         Song.fetchAll();
         Ambiance.fetchAll();
         Video.fetchAll();
     }
 
-    module.soundmood = soundmood;
-})(window)
+    Song.fetchAll = () => {
+        $.get(`${__API_URL__}/api/v1/songs`)
+            .then(results => {
+                Song.loadAll(results);
+            }
+        )
+    }
+
+    // module.Song = Song;
+    // module.Video = Video;
+    // module.Ambiance = Ambiance;
+    // module.soundmood = soundmood;
