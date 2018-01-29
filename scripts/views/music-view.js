@@ -4,6 +4,100 @@ nightArray = [];
 activeArray = [];
 
 
+
+//Example syntax
+//data set format
+//Sounds
+{
+    id: (auto_generated)
+    locatoin: "https://www.youtube.com/watch?v=Sv0LwXYAVVg ",
+    name: "Cricket chirping https",
+    artist: "youtube",
+    category: "sleep",
+}
+
+
+{
+    id: (auto_generated)
+    locatoin: "https://www.youtube.com/watch?v=dTBqPeASNW8",
+    name: "high_waySounds",
+    artist: "highway",
+    category: "sleep",
+}
+
+{
+    id: (auto_generated)
+    locatoin: "https://www.youtube.com/watch?v=cB5e0zHRzHc",
+    name: "In the club",
+    artist: "Usher",
+    category: "active"
+}
+
+//songs: 
+{
+    id: (auto_generated)
+    name: "https://www.youtube.com/watch?v=CTFtOOh47oo ",
+    locatoin: "",
+    name: "Unforgetable",
+    artist: "French Montana",
+    category: "active"
+}
+
+{
+    id: (auto_generated)
+    locatoin: "https://www.youtube.com/watch?v=gkeCNeHcmXY",
+    name: "Woman'sWork",
+    artist: "Maxwell",
+    category: "sleep",
+}
+
+//videos:
+{
+    id: (auto_generated)
+    locatoin: " https://www.youtube.com/watch?v=IZGRe_s_AEo",
+    name: "underwater",
+    artist: "youtube"
+    category: "sleep",
+}
+
+{
+    id: (auto_generated)
+    locatoin: "https://www.youtube.com/watch?v=mEqcala-NiE",
+    name: "white_lines",
+    artist: "youtube",
+    category: "sleep",
+}
+
+{
+    id: (auto_generated)
+    locatoin: "https://www.youtube.com/watch?v=sXJXLq1lN7U",
+    name: "Swest Girl",
+    artist: "Wyclef_Jean",
+    category: "active",
+}
+
+{
+    id: (auto_generated)
+    locatoin: "url",
+    name: "",
+    category: ""
+}
+
+
+
+
+{
+    playlist: "run",
+    category: "Sleep",
+    //dataset as object, i.e sound-object
+    sound: {
+        id: auto_gene
+        location: "url"
+
+    }
+}
+
+
 //All Night sounds
 {
     _id: ObjectId(will.be.auto.generated )
