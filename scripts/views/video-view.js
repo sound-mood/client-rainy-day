@@ -4,7 +4,7 @@
     const videoView = {};
     
     videoView.init = function (ctx, next) {
-        console.log('route hit');
+        console.log('videoView.init route hit');
 
         // shows video selection area
         $('#video-selection').toggleClass('hide');

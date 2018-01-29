@@ -1,6 +1,8 @@
 'use strict';
 
 function showCustomOpts(ctx) {
+    console.log('custom options route hit')
+
     if(!$('#playlist-selections').hasClass('hide')) {
         $('#playlist-selections').addClass('hide');
     }
@@ -24,7 +26,7 @@ page('/custom/music', musicView.init)
 page('/custom/sound', soundView.init)
 page('/custom/video', videoView.init)
 page('/create', createView.init)
-
+page('/preview', previewView.init)
 
 
 

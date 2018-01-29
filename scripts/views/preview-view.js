@@ -1,10 +1,11 @@
 'use strict';
 
-(function (module) {
-    const playlistView = {};
 
-    playlistView.init = function (ctx, next, e) {
-        console.log('playlistView.init route hit');
+(function (module) {
+    const previewView = {};
+
+    previewView.init = function (ctx, next) {
+        console.log('previewView.init route hit');
 
         // this sends each item in the presetPlaylists array to the toHtml method which appends the playlist preview to the website
         // app.soundmood.presetPlaylists.forEach(a => $('playlist-selections').append(a.playlistPreviewToHtml()));
@@ -27,8 +28,12 @@
             $('#video-selection').addClass('hide');
         }
         
-        $('#playlist-selections').toggleClass('hide');
+        if (!$('#playlist-selections').hasClass('hide')) {
+            $('#playlist-selections').addClass('hide');
+        }
+        
+        $('#preview-view').removeClass('hide');
     }
 
-    module.playlistView = playlistView;
+    module.previewView = previewView;
 })(window);

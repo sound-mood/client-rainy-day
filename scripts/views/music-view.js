@@ -4,7 +4,7 @@
     const musicView = {};
     
     musicView.init = function (ctx, next) {
-        console.log('route hit');
+        console.log('musicView.init route hit');
 
         $('#music-selection').toggleClass('hide');
             
