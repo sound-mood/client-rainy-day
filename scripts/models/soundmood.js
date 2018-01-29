@@ -79,12 +79,12 @@ var __API_URL__ = 'https://localhost:3000'
         Video.fetchAll();
     }
 
-    Song.fetchAll = () => {
+    Song.fetchAll = (callback) => {
         $.get(`${__API_URL__}/api/v1/songs`)
             .then(results => {
                 Song.loadAll(results);
-            }
-        )
+            })
+            .then(callback)
     }
 
     // module.Song = Song;
