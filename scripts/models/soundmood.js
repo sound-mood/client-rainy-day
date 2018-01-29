@@ -82,5 +82,78 @@
         Video.fetchAll();
     }
 
+    //###################################################################################
+
+    var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player1;
+        var player2;
+        var player3;
+        function onYouTubeIframeAPIReady() {
+            player1 = new YT.Player('player1', {
+                                  
+                                  videoId: 'VhQWF-H6eNU',
+                                  playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                                  events: {
+                                        'onReady': onPlayer1Ready,
+                                        'onStateChange': onPlayer1StateChange
+                                  }
+                             });
+            player2 = new YT.Player('player2', {
+                                  
+                                  videoId: 'q76bMs-NwRk',
+                                  playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                                  events: {
+                                       'onReady': onPlayer2Ready,
+                                       //'onStateChange': onPlayer2StateChange
+                                  }
+                              });
+            player3 = new YT.Player('player3', {
+                                  videoId: 'n0svuurLibQ',
+                                  playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                                  events: {
+                                    'onReady': onPlayer3Ready,
+                                  }
+                                  
+                                  
+
+
+
+            })
+        }
+
+        function onPlayer1Ready() {
+          player1.setVolume(0);
+
+        }
+
+        function onPlayer2Ready() {
+          player2.setVolume(100);
+        }
+
+        function onPlayer3Ready() {
+          player3.setVolume(90);
+        }
+
+        function onPlayer1StateChange() {
+          if(player2.getPlayerState() == '1') {
+            player2.pauseVideo();
+          } else if(player2.getPlayerState() == '2') {
+            player2.playVideo();
+          }
+
+          if(player3.getPlayerState() == '1') {
+            player3.pauseVideo();
+          } else if(player3.getPlayerState() == '2') {
+            player3.playVideo();
+          }
+        }
+
+
+
     module.soundmood = soundmood;
 })(window)

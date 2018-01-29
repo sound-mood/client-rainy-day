@@ -131,9 +131,14 @@
 
                 </div>
                 <div class="col-4of5">
-                    <div class="hide" id="audio-visual">
-                        <a href="/play-music">Start playing...</a>
-                        <p>This is where the music player will go</p>
+                    <div id="audio-visual">
+                        <a href="/player">Start playing...</a>
+                        <section id="player">
+                            <div id="player1" style="position: fixed; z-index: -99; width: 100%; height: 100%"></div>    
+                            <div id="player2" style="display: none"></div> 
+                            <div id="player3" style="display: none"></div>
+                        </section>
+                          
                     </div>
                 </div>  
             </div>
@@ -154,6 +159,7 @@
         <script src="/scripts/views/create-view.js"></script>
         <script src="/scripts/views/playlist-view.js"></script>
         <script src="/scripts/views/preview-view.js"></script>
+        <script src="/scripts/views/player-view.js"></script>
         <script src="/scripts/controllers/routes.js"></script>
         <script>
             // TODO: not sure if i need a callback here or not yet
