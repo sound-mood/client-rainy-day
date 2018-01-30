@@ -8,19 +8,20 @@
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/modules/modules.css">
+        <link rel="stylesheet" href="styles/login.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
 
         <script id="song-choices-template" type="text/x-handlebars-template">
-            <a href="/custom/music/">+ {{name}} - {{artist}}</a>
+            <a href="/custom/music/{{song_id}}">+ {{name}} - {{artist}}</a>
         </script>
         <script id="preset-playlist-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{preset-id}}">{{playlist-title}}</a>
+            <a href="/playlist/{{playlist_id}}">{{playlist-title}}</a>
         </script>
         <script id="ambiance-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{ambiance_id}}">+ {{name}}</a>
         </script>
         <script id="video-choices-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{video}}">+ {{name}}</a>
+            <a href="/playlist/{{video_id}}">+ {{name}}</a>
         </script>
             
     </head>
@@ -32,9 +33,22 @@
         <main id="menu">
             <!-- this is where the user selects their  -->
             <div class="grid-container">
-                <div class="col-1of5">
+                <div class="col-1of5 hide">
                     <div id="log-in">
                         <!-- LOG IN GOES HERE -->
+                        <form>
+                            <div class="loginContainer">
+                                <label><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="userName" required>
+                                <label><b>Password</b></label>
+                                <input type="text" placeholder="Enter Password" name="password" required>
+                                <button type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked"> Remember me
+                                </label>
+                            </div>
+                            <span class="password"><a href="#">Forgot password?</a></span>
+                        </form>
                     </div>
                 </div>
                 <div class="col-1of5">
@@ -48,7 +62,8 @@
                             <a href="">Playlist3</a>
                             <a href="">Playlist4</a>
                         </div>
-                    </div>                        
+                    </div> 
+                
                     <div id="custom-playlists">
                         <a class="section-title" href="/custom">Pick your own from our library</a>
                         <div class="hide" id="custom-options">
@@ -164,9 +179,5 @@
         <script src="/scripts/views/preview-view.js"></script>
         <script src="/scripts/views/player-view.js"></script>
         <script src="/scripts/controllers/routes.js"></script>
-        <script>
-            // TODO: not sure if i need a callback here or not yet
-            // soundmood.fetchAll();
-        </script>
     </body>
 </html>
