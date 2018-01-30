@@ -1,23 +1,28 @@
 # client-rainy-day
 
-## Songs list: 
 
-Category: 
-Active:
-https://www.youtube.com/watch?v=jYdaQJzcAcw (J. Cole She knows)
-https://www.youtube.com/watch?v=GF8aaTu2kg0 (Kendrick Lamar – Don’t kill my vibe) 
-https://www.youtube.com/watch?v=a2Gh3VdnXQs (IT. K. Dot,  BoB)
-https://www.youtube.com/watch?v=sXJXLq1lN7U (Wyclef Jean ft. Sweetest Girls) 
-https://www.youtube.com/watch?v=CTFtOOh47oo ( French Montana – Unforgettable ) 
-https://www.youtube.com/watch?v=FJt7gNi3Nr4 (Jay and Kanye West – Church in the wild) 
+Background Videos
+Trippy fractal https://www.youtube.com/watch?v=t6jlhqNxRYk
+Underwater https://www.youtube.com/watch?v=zJ7hUvU-d2Q
+Snow Fall https://www.youtube.com/watch?v=r6VkCdQQdG0
+Aurora Borealis https://www.youtube.com/watch?v=NZlfxWMr7nc
+Thunderstorm https://www.youtube.com/watch?v=DJE2OQsqhmo
+Jungle https://www.youtube.com/watch?v=8myYyMg1fFE
+Beach https://www.youtube.com/watch?v=QX4j_zHAlw8
+Seattle Urban https://www.youtube.com/watch?v=fz5H7ObqXj4
+Ocean Thunderstorm https://www.youtube.com/watch?v=AsD5u6k6dKI
+Space https://www.youtube.com/watch?v=nY4uOZrzv0s
+White Lines https://www.youtube.com/watch?v=mEqcala-NiE
+JellyFish https://www.youtube.com/watch?v=uNsrXzY3Mgc
+Drone https://www.youtube.com/watch?v=0YjLf8T0lUs
 
-Chill: 
-https://www.youtube.com/watch?v=gkeCNeHcmXY  (Maxwell Woman’s work)
-https://www.youtube.com/watch?v=RkPy4yq7EJo&list=RDEM_tbXWmz2bMi_I8VlVYFNmw (Maxwell Pretty wings) 
-https://www.youtube.com/watch?v=eRaFMlZ1YHA (j. Cole Apparently)
-https://www.youtube.com/watch?v=p_RqWocthcc  (Keri Hilson – Knock you down ) 
-https://www.youtube.com/watch?v=iF_JBlSh_G8  (Trey Songz – Can’t help but wait) 
-https://www.youtube.com/watch?v=fzzMOMkjm8A (J. Cole Crooked Smile) 
-https://www.youtube.com/watch?v=jYdaQJzcAcw (J. Cole She knows)
-https://www.youtube.com/watch?v=k6M5C-oKw9k&list=RDEM0tf6YKVhAn0A5a_IK8F2rg (Neyo - )
-https://www.youtube.com/watch?v=udsmegqZMzg (Lloyd – You) 
+Ambient sounds
+Gentle rain https://www.youtube.com/watch?v=Sv0LwXYAVVg
+Cricket chirping https://www.youtube.com/watch?v=eKmRkS1os7k
+Fireplace https://www.youtube.com/watch?v=atELVQ9aVGw
+Thunderstorm https://www.youtube.com/watch?v=kygoJiJAWG4
+Highway sounds https://www.youtube.com/watch?v=dTBqPeASNW8
+Beach noises https://www.youtube.com/watch?v=f77SKdyn-1Y
+Babbling brook https://www.youtube.com/watch?v=xKjOZUVeWKM
+Bird Singing https://www.youtube.com/watch?v=PwSHOI7DwWM
+

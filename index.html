@@ -8,9 +8,13 @@
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/modules/modules.css">
-        <link rel="stylesheet" href="styles/modules/accordion.css">
-        
-    
+        <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
+
+        <!-- this generates the list of preset playlists and tells routeJS where to point to -->
+        <script id="preset-playlist-template" type="text/x-handlebars-template">
+            <a href="/playlist/{{preset-id}}">{{playlist-title}}</a>
+        </script>
+            
     </head>
     <body>
         <header>
@@ -22,25 +26,38 @@
                 <div class="col-1of5">
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
+<<<<<<< HEAD
                         
                         <div class="" id="playlist-selections">
                             <a href="">This is an example tag for a playlist</a>
                             <a href="">This is an example tag for a playlist</a>
                             <a href="">This is an example tag for a playlist</a>
                             <a href="">This is an example tag for a playlist</a>
+=======
+                        <div class="hide" id="playlist-selections">
+                            <!-- this section will be where playlists are rendered by handlebars -->
+                            <!-- each href will point to a playlist ID in routes JS which will tell the detail view which playlist to display -->
+                            <a href="">Playlist1</a>
+                            <a href="">Playlist2</a>
+                            <a href="">Playlist3</a>
+                            <a href="">Playlist4</a>
+>>>>>>> 42c822a1c41992e53a25f5100450017da482fd6b
                         </div>
                     </div> 
                 
                     <div id="custom-playlists">
-                        <a class="section-title" href="/custom">Custom playlists</a>
-                        <div class="" id="custom-options">
-                            <a href="/custom/music">Music selection</a>
-                            <div class="" id="music-selection">
-                                <a href="">Example song choices</a>
-                                <a href="">Example song choices</a>
-                                <a href="">Example song choices</a>
-                                <a href="">Example song choices</a>
+                        <a class="section-title" href="/custom">Pick your own from our library</a>
+                        <div class="hide" id="custom-options">
+                            <div>
+                                <a href="/custom/music">Music selection (click song to add to playlist)</a>
+                                <div class="hide" id="music-selection">
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                </div>
                             </div>
+<<<<<<< HEAD
 
                         <!-- user will add fiv. songs via this form -->
                             <form id="favSongform">
@@ -58,24 +75,100 @@
                                 <a href="">Example song choices</a>
                                 <a href="">Example song choices</a>
                                 <a href="">Example song choices</a>
+=======
+                            <div>
+                                <a href="/custom/sound">Sound selection (click to swap out ambient noise)</a>
+                                <div class="hide" id="sound-selection">
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                </div>
+>>>>>>> 42c822a1c41992e53a25f5100450017da482fd6b
                             </div>
-                            <a href="/custom/video">Video selection</a>
-                            <div class="" id="video-selection">
-                                <a href="">Example song choices</a>
-                                <a href="">Example song choices</a>
-                                <a href="">Example song choices</a>
-                                <a href="">Example song choices</a>
-                                <a href="/play-music">Click here to begin playing music</a>
+                            <div>
+                                <a href="/custom/video">Video selection (click to swap out video)</a>
+                                <div class="hide" id="video-selection">
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                    <a href="">Example song choices</a>
+                                </div>
                             </div>
                         </div>
 
                     </div>
+                    <div id="create-your-own">
+                        <a class="section-title" href="/create">Add your own to our library</a>
+                        <div class="hide" id="create-playlist">
+                            <div>
+                                <form>
+                                    <p>Title your playlist:</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <input type="text" placeholder="PLAYLIST TITLE">
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                        </div>
+                                    </div>
+                                    <p>Background Sounds (one per playlist)</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <input type="text" placeholder="AMBIENT TRACK TITLE">
+                                            <input type="text" placeholder="AMBIENT TRACK URL">
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                            <button>+</button>
+                                        </div>
+                                    </div>
+                                    <p>Background Video (one per playlist)</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <input type="text" placeholder="VIDEO TITLE">
+                                            <input type="text" placeholder="VIDEO URL">
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                            <button>+</button>                                    
+                                        </div>
+                                    </div>
+                                    <p>Track Title</p>
+                                    <div class="grid-container clearfix">
+                                        <div class="col-9of10 float-left">
+                                            <div class="grid-container">
+                                                <div class="col-2of5">
+                                                    <input type="text" class="half-size-input" placeholder="SONG TITLE">
+                                                </div>
+                                                <div class="col-2of5">
+                                                    <input type="text" class="half-size-input" placeholder="SONG ARTIST">
+                                                </div>
+                                            </div>
+                                            <input type="text" placeholder="SONG URL">
+
+                                        </div>
+                                        <div class="col-1of10 float-right">
+                                            <button>+</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="your-current-playlist">
+                        <a class="section-title" href="/preview">Playlist Preview</a>
+                        <div class="hide" id="create-playlist">
+    
+                    </div>
 
                 </div>
                 <div class="col-4of5">
-                    <div class="" id="audio-visual">
-                        <a href="/play-music">Start playing...</a>
-                        <p>This is where the music player will go</p>
+                    <div id="audio-visual">
+                        <a href="/player">Start playing...</a>
+                        <section id="player">
+                            <div id="player1" style="position: fixed; z-index: -99; width: 100%; height: 100%"></div>    
+                            <div id="player2" style="display: none"></div> 
+                            <div id="player3" style="display: none"></div>
+                        </section>
+                          
                     </div>
                 </div>  
             </div>
@@ -88,13 +181,24 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-        <!-- not sure if we need handlebars yet -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
         <script src="/scripts/models/soundmood.js"></script>
         <script src="/scripts/views/music-view.js"></script>
         <script src="/scripts/views/video-view.js"></script>
         <script src="/scripts/views/sound-view.js"></script>
+<<<<<<< HEAD
         <script src="/scripts/views/routes.js"></script>
     
+=======
+        <script src="/scripts/views/create-view.js"></script>
+        <script src="/scripts/views/playlist-view.js"></script>
+        <script src="/scripts/views/preview-view.js"></script>
+        <script src="/scripts/views/player-view.js"></script>
+        <script src="/scripts/controllers/routes.js"></script>
+        <script>
+            // TODO: not sure if i need a callback here or not yet
+            // soundmood.fetchAll();
+        </script>
+>>>>>>> 42c822a1c41992e53a25f5100450017da482fd6b
     </body>
 </html>

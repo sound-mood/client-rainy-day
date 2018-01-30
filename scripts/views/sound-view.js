@@ -1,13 +1,21 @@
 'use strict';
 
-var __API_URL_ = 'https://....';
+(function (module) {
+    const soundView = {};
+    
+    soundView.init = function (ctx, next) {
+        console.log('soundView.init route hit');
 
-pageLoad();
-
-$('#favSongform').on('submit', funtion(addsong) {
-    addsong.prevenDefault(); //this keeps a onePage app from refreshing
-
-    var data = {.
-        moodcat: 
+        $('#sound-selection').toggleClass('hide');
+        
+        // hides music and sound selection area
+        if (!$('#music-selection').hasClass('hide')) {
+            $('#music-selection').addClass('hide');
+        }
+        if (!$('#video-selection').hasClass('hide')) {
+            $('#video-selection').addClass('hide');
+        }
     }
-}
+    
+    module.soundView = soundView;
+})(window);
