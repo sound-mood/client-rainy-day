@@ -10,20 +10,32 @@
         <link rel="stylesheet" href="styles/modules/modules.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
 
-        <!-- this generates the list of preset playlists and tells routeJS where to point to -->
+        <script id="song-choices-template" type="text/x-handlebars-template">
+            <a href="/custom/music/">+ {{name}} - {{artist}}</a>
+        </script>
         <script id="preset-playlist-template" type="text/x-handlebars-template">
             <a href="/playlist/{{preset-id}}">{{playlist-title}}</a>
+        </script>
+        <script id="ambiance-choices-template" type="text/x-handlebars-template">
+            <a href="/playlist/{{ambiance_id}}">+ {{name}}</a>
+        </script>
+        <script id="video-choices-template" type="text/x-handlebars-template">
+            <a href="/playlist/{{video}}">+ {{name}}</a>
         </script>
             
     </head>
     <body>
         <header>
             <h1>Rainy Day</h1>
-            <a href="/getSongs">get songs</a>
         </header>
         <main>
             <!-- this is where the user selects their  -->
             <div class="grid-container">
+                <div class="col-1of5">
+                    <div id="log-in">
+                        <!-- LOG IN GOES HERE -->
+                    </div>
+                </div>
                 <div class="col-1of5">
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
@@ -42,28 +54,16 @@
                             <div>
                                 <a href="/custom/music">Music selection (click song to add to playlist)</a>
                                 <div class="hide" id="music-selection">
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
                                 </div>
                             </div>
                             <div>
                                 <a href="/custom/sound">Sound selection (click to swap out ambient noise)</a>
                                 <div class="hide" id="sound-selection">
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
                                 </div>
                             </div>
                             <div>
                                 <a href="/custom/video">Video selection (click to swap out video)</a>
                                 <div class="hide" id="video-selection">
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
-                                    <a href="">Example song choices</a>
                                 </div>
                             </div>
                         </div>
