@@ -12,59 +12,59 @@
         "video_id" : " "
     },
     {
-        "name": "Embiance Chill",
+        "name": "Beach Chill",
         "user_id": 0,
         "ambiance_id": "1",
         "video_id" : "7"
     },
     {
-        "name": "Embiance Chill",
+        "name": "Jungle Cricket",
         "user_id": 0,
         "ambiance_id": "2",
         "video_id" : "6"
     },
     {
-        "name": "Embiance Chill",
+        "name": "It's cold Outside",
         "user_id": 0,
         "ambiance_id": "3",
         "video_id" : "3"
     },
     {
-        "name": "Embiance Chill",
+        "name": "Water Water",
         "user_id": 0,
         "ambiance_id": "4",
         "video_id" : "9"
     },
     {
-        "name": "Embiance Chill",
+        "name": "Dream Travel",
         "user_id": 0,
         "ambiance_id": "5",
         "video_id" : "10"
     },
     {
-        "name": "Embiance Chill",
+        "name": "Staycation",
         "user_id": 0,
         "ambiance_id": "6",
         "video_id" : "7"
     },
     {
-        "name": "Embiance Chill",
+        "name": "Gravity",
         "user_id": 0,
         "ambiance_id": "7",
         "video_id" : "11"
     },
     {
-        "name": "Embiance Chill",
+        "name": "Sweet Wings",
         "user_id": 0,
         "ambiance_id": "8",
         "video_id" : "8"
     },
     {
-        "name": "Embiance Chill",
+        "name": "Join In",
         "user_id": 0,
         "ambiance_id": "5",
         "video_id" : "1"
-    },
+    }
 
 
 ]
