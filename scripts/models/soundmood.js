@@ -19,6 +19,9 @@ var __API_URL__ = 'http://localhost:3000';
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
     }
 
+    //  THIS IS A TEST
+
+    
     // gonna need to create an object constructor which will put playlist objects in this array so that they can be called by the playlistView.init function
     // TODO: should probably only be triggered when the /playlist route is hit??? don't need it every time
     let presetPlaylists = [];
@@ -36,8 +39,12 @@ var __API_URL__ = 'http://localhost:3000';
 
     Song.loadAll = rawData => {
         console.log(rawData);
+
         
+
         Song.all = rawData.map((songObj) => new Song(songObj));
+
+        // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
         Song.all.forEach(a => {
             console.log(a);
             $('#music-selection').append(a.songToHtml())
@@ -46,6 +53,8 @@ var __API_URL__ = 'http://localhost:3000';
 
     Ambiance.loadAll = rawData => {
         Ambiance.all = rawData.map((ambianceObj) => new Ambiance(ambianceObj));
+
+        // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain ambiances
         Ambiance.all.forEach(a => {
             // console.log(a);
             $('#sound-selection').append(a.ambianceToHtml())
@@ -54,13 +63,13 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     Video.loadAll = rawData => {
-        console.log('video raw data', rawData);
         Video.all = rawData.map((videoObj) => new Video(videoObj));
-        console.log(Video.all);
+        // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain videos
         Video.all.forEach(a => {
             console.log(a);
             $('#video-selection').append(a.videoToHtml())
         });
+
     }
        
     // TODO: ask why didn't this work as a lexical arrow function
@@ -100,21 +109,97 @@ var __API_URL__ = 'http://localhost:3000';
             .then(callback)
     }
 
+
     Ambiance.fetchAll = (callback) => {
         $.get(`${__API_URL__}/api/v1/ambiance`)
             .then(results => {
                 Ambiance.loadAll(results);
+
             })
             .then(callback)
     }
+
 
     Video.fetchAll = (callback) => {
         $.get(`${__API_URL__}/api/v1/videos`)
             .then(results => {
                 Video.loadAll(results);
+
             })
             .then(callback)
     }
+
+
+    // module.Song = Song;
+    // module.Video = Video;
+    // module.Ambiance = Ambiance;
+    // module.soundmood = soundmood;
+
+    //#####################PLAYER#######################################
+
+    var player1;
+    var player2;
+    var player3;
+    soundmood.createPlayer = function(ctx,next) {
+        player1 = new YT.Player('player1', {
+                              
+            videoId: '668nUCeBHyY',
+            playerVars: { 'playlist': '668nUCeBHyY', 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+            events: {
+            'onReady': onPlayer1Ready,
+            'onStateChange': onPlayer1StateChange
+                }
+          });
+        player2 = new YT.Player('player2', {
+                              
+                              videoId: 'q76bMs-NwRk',
+                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                              events: {
+                                   'onReady': onPlayer2Ready,
+                                   //'onStateChange': onPlayer2StateChange
+                              }
+                          });
+        player3 = new YT.Player('player3', {
+                              videoId: 'n0svuurLibQ',
+                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                              events: {
+                                'onReady': onPlayer3Ready,
+                              }
+                              
+                              
+
+
+
+        })
+    }
+
+    function onPlayer1Ready() {
+      player1.setVolume(0);
+
+    }
+
+    function onPlayer2Ready() {
+      player2.setVolume(100);
+    }
+
+    function onPlayer3Ready() {
+      player3.setVolume(90);
+    }
+
+    function onPlayer1StateChange() {
+      if(player2.getPlayerState() == '1') {
+        player2.pauseVideo();
+      } else if(player2.getPlayerState() == '2') {
+        player2.playVideo();
+      }
+
+      if(player3.getPlayerState() == '1') {
+        player3.pauseVideo();
+      } else if(player3.getPlayerState() == '2') {
+        player3.playVideo();
+      }
+    }
+
 
     module.Song = Song;
     module.Video = Video;
@@ -122,3 +207,4 @@ var __API_URL__ = 'http://localhost:3000';
     module.soundmood = soundmood;
 
 })(window)
+

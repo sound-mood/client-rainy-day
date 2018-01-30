@@ -1,0 +1,54 @@
+.loginContainer {
+    border: 3px solid black;
+    font-family: 'Yantramanav', sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.loginContainer input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.loginContainer button {
+    background-color: gray;
+    color: whitesmoke;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%
+}
+
+button: hover {
+    opacity: 0.7;
+}
+
+.cancelButton {
+    width: auto;
+    padding: 10px 18px;
+    background-color: rgb(170, 170, 170);
+}
+
+.container {
+    padding: 16px;
+}
+
+span.password {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.password {
+        display: block;
+        float: none;
+    }
+    .cancelButton {
+        width: 100%;
+    }
+}

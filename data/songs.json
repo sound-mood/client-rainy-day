@@ -152,9 +152,63 @@
         "user_id": 0
     },
     {
-        "name": "Someone Like You!",
-        "artist": "Adele",
-        "URI": "jD9dr2ZRm9A",
+        "name": "My Immortal",
+        "artist": "Evanescence",
+        "URI": "5anLPw0Efmo",
+        "user_id": 0
+    },
+    {
+        "name": "Sound of Silence",
+        "artist": "Simon and Garfunkel",
+        "URI": "4fWyzwo1xg0",
+        "user_id": 0
+    },
+    {
+        "name": "Dust In the Wind",
+        "artist": "Kansas",
+        "URI": "tH2w6Oxx0kQ",
+        "user_id": 0
+    },
+    {
+        "name": "Time After Time",
+        "artist": "Cyndi Lauper",
+        "URI": "VdQY7BusJNU",
+        "user_id": 0
+    },
+    {
+        "name": "Take My Breath Away",
+        "artist": "Berlin",
+        "URI": "Bx51eegLTY8",
+        "user_id": 0
+    },
+    {
+        "name": "G.O.M.D.",
+        "artist": "J. Cole",
+        "URI": "vHU6ZRQJ50Q",
+        "user_id": 0
+    },
+    {
+        "name": "Day n Nite",
+        "artist": "Kid Cudi",
+        "URI": "VrDfSZ_6f4U",
+        "user_id": 0
+    },
+    {
+        "name": "POWER",
+        "artist": "Kayne West",
+        "URI": "L53gjP-TtGE",
+        "user_id": 0
+    },
+    {
+        "name": "Lose Yourself",
+        "artist": "Eminem",
+        "URI": "_Yhyp-_hX2s",
+        "user_id": 0
+    },
+    {
+        "name": "Clint Eastwood",
+        "artist": "Gorillaz",
+        "URI": "1V_xRb0x9aw",
         "user_id": 0
     },
     {
@@ -198,59 +252,30 @@
         "artist": "Jason Mraz",
         "URI": "RILP53OR63k",
         "user_id": 0
+    },
+    {
+        "name": "Lay Me Down",
+        "artist": "Sam Smith",
+        "URI": "tZFScuPR0v0",
+        "user_id": 0
+    },
+    {
+        "name": "Crystalised",
+        "artist": "The XX",
+        "URI": "Pib8eYDSFEI",
+        "user_id": 0
+    },
+    {
+        "name": "Blue Jeans",
+        "artist": "Lana Del Rey",
+        "URI": "PpF0vlAtjBM",
+        "user_id": 0
+    },
+    {
+        "name": "Stay",
+        "artist": "Rihanna",
+        "URI": "wS4InT7Ycdk",
+        "user_id": 0
     }
 
 ]
-
-//chill
-//https://www.youtube.com/watch?v=RILP53OR63k (I'm Yours - Jason Mraz (Lyrics included))
-//https://www.youtube.com/watch?v=oBIxScJ5rlY (John Mayer - Waiting On the World to Change)
-//https://www.youtube.com/watch?v=9R50OpRbVxI (John Mayer - Assassin Lyrics)
-//https://www.youtube.com/watch?v=N5EnGwXV_Pg (John Mayer - Your Body Is A Wonderland)
-//https://www.youtube.com/watch?v=IhP5wSDFxyg (Phil Collins - hits)
-//https://www.youtube.com/watch?v=QzRIPJMK6l8 (BB King - multiple songs)
-//https://www.youtube.com/watch?v=_WS9w10ygpU (Adele - Hello)
-//https://www.youtube.com/watch?v=jD9dr2ZRm9A (Adele - Someone Like You! )
-//https://www.youtube.com/watch?v=nCkpzqqog4k (Sam smith - I'm not the only one)
-//https://www.youtube.com/watch?v=IszJPYjNidg (Wale - The Matrimony)
-//https://www.youtube.com/watch?v=PIh07c_P4hc (John Legend - Ordinary People)
-//https://www.youtube.com/watch?v=RkPy4yq7EJo (maxwell - pretty wings)
-//https://www.youtube.com/watch?v=gkeCNeHcmXY (maxwell - this worman's wrok) 
-// https://www.youtube.com/watch?v=iF_JBlSh_G8  (Trey Songz – Can’t help but wait) 
-
-//Active 
-// https://www.youtube.com/watch?v=jYdaQJzcAcw (J. Cole She knows)
-// https://www.youtube.com/watch?v=GF8aaTu2kg0 (Kendrick Lamar – Don’t kill my vibe) 
-// https://www.youtube.com/watch?v=a2Gh3VdnXQs (IT. K. Dot,  BoB)
-// https://www.youtube.com/watch?v=sXJXLq1lN7U (Wyclef Jean ft. Sweetest Girls) 
-// https://www.youtube.com/watch?v=CTFtOOh47oo ( French Montana – Unforgettable ) 
-// https://www.youtube.com/watch?v=FJt7gNi3Nr4 (Jay and Kanye West – Church in the wild) 
-
-
-//https://www.youtube.com/watch?v=weeI1G46q0o (DJ Khalad, I'm the One)
-//https://www.youtube.com/watch?v=kAOmzXRpkVk (User/Chris Brown - New flame)
-//https://www.youtube.com/watch?v=p_RqWocthcc (Keri Hilson - Knock you down)
-//https://www.youtube.com/watch?v=rhBwt9mw7Sk (Chris Brwon )
-//https://www.youtube.com/watch?v=3w0yqAdJ1iY (Usher - No Limit)
-//https://www.youtube.com/watch?v=ZB7Xjd34pjo (Chris Brown/50cent - I'm the Man)
-//https://www.youtube.com/watch?v=3AszPTJXIgM (Usher - you don't have to call)
-//https://www.youtube.com/watch?v=1-7ABIM2qjU (Michael Jackson - You rock my world)
-//https://www.youtube.com/watch?v=ZbZSe6N_BXs (Pharrell Williams - Happy)
-//https://www.youtube.com/watch?v=a6T5azW4qEA (Jay Z - Holy Grail)
-
-//Reggae
-// https://www.youtube.com/watch?v=zaGUr6wzyT8 (Bob Marley - little bird sing)
-//https://www.youtube.com/watch?v=h4OiCUkxGto (Bob Marley - interview)
-//https://www.youtube.com/watch?v=pHlSE9j5FGY(Bob Marley - No woman no cray)
-//https://www.youtube.com/watch?v=c9VQye6P8k0 (Damian Marley - Patience)
-//https://www.youtube.com/watch?v=xlCmQcRPtRg (Damian Marley - Jamrock)
-//https://www.youtube.com/watch?v=ebfeumBDymc (Damian Marley - Speak life - *Chill)
-//https://www.youtube.com/watch?v=LfeIfiiBTfY (Chronixx - here come truble)
-//https://www.youtube.com/watch?v=OmnDEUD9NyI (Hello - Adele (Reggae Cover))
-//https://www.youtube.com/watch?v=xr6Kcgl0r5E (Chronixx /Jah9 - Hardcore)
-//world 
-//https://www.youtube.com/watch?v=CTFtOOh47oo (French Montana - Unforgetable)
-
-
-
-
