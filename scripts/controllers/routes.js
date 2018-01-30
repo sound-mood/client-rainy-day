@@ -27,7 +27,8 @@ page('/custom/sound', soundView.init)
 page('/custom/video', videoView.init)
 page('/create', createView.init)
 page('/preview', previewView.init)
-page('/player', playerView.init)
+page('/player', playerView.init, createPlayer)
+
 
 
 page();
