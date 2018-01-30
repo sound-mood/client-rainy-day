@@ -27,7 +27,8 @@
     {
         "name": "G.O.M.D.",
         "artist": "J. Cole",
-        "URI": "vHU6ZRQJ50Q"
+        "URI": "vHU6ZRQJ50Q",
+        "catagory": "Day_Active"
     },
     {
         "name": "Day n Nite",
@@ -37,7 +38,8 @@
     {
         "name": "POWER",
         "artist": "Kayne West",
-        "URI": "L53gjP-TtGE"
+        "URI": "L53gjP-TtGE",
+        "catagory":"Day_Active"
     },
     {
         "name": "Lose Yourself",
@@ -162,7 +164,146 @@
         "URI": "ZbZSe6N_BXs",
         "catagory": "Day_Active"
     },
+    {
+        "name": "a6T5azW4qEA",
+        "artist": "Pharrelle William",
+        "URI": "a6T5azW4qEA",
+        "catagory": "Day_Active"
+    },
+    {
+        "name": "jYdaQJzcAcw",
+        "artist": "J. cole - She knows",
+        "URI": "jYdaQJzcAcw",
+        "catagory": "Day_Active"
+    },
+    {
+        "name": "sXJXLq1lN7U",
+        "artist": "Wyclef Jean - Sweetest Girls",
+        "URI": "sXJXLq1lN7U",
+        "catagory": "Day_Active"
+    },
+    {
+        "name": "iF_JBlSh_G8",
+        "artist": "Trey songz - Can't help but wait",
+        "URI": "iF_JBlSh_G8",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "RkPy4yq7EJo",
+        "artist": "maxwell - pretty wings",
+        "URI": "RkPy4yq7EJo",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "gkeCNeHcmXY",
+        "artist": "maxwell - this worman's wrok",
+        "URI": "gkeCNeHcmXY",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "PIh07c_P4hc",
+        "artist": "John Legend - Ordinary People",
+        "URI": "PIh07c_P4hc",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "IszJPYjNidg",
+        "artist": "Wale - The Matrimony",
+        "URI": "IszJPYjNidg",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "nCkpzqqog4k",
+        "artist": "Sam smith - I'm not the only one",
+        "URI": "nCkpzqqog4k",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "jD9dr2ZRm9A",
+        "artist": "Adele - Someone Like You!",
+        "URI": "jD9dr2ZRm9A",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "_WS9w10ygpU",
+        "artist": "Adele - Hello",
+        "URI": "_WS9w10ygpU",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "QzRIPJMK6l8",
+        "artist": "BB King - multipleSongs",
+        "URI": "QzRIPJMK6l8",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "N5EnGwXV_Pg",
+        "artist": "John Mayer - Your Body Is A Wonderland",
+        "URI": "N5EnGwXV_Pg",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "IhP5wSDFxyg",
+        "artist": "Phil Collins - hits",
+        "URI": "IhP5wSDFxyg",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "9R50OpRbVxI",
+        "artist": "John Mayer - Assassin Lyrics",
+        "URI": "9R50OpRbVxI",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "oBIxScJ5rlY",
+        "artist": "John Mayer - Waiting On the World to Change",
+        "URI": "oBIxScJ5rlY",
+        "catagory": "Day_Chill"
+    },
+    {
+        "name": "RILP53OR63k",
+        "artist": "Jason Mraz -I'm Yours(Lyrics included",
+        "URI": "RILP53OR63k",
+        "catagory": "Day_Chill"
+    },
+
 ]
+
+//chill
+//https://www.youtube.com/watch?v=RILP53OR63k (I'm Yours - Jason Mraz (Lyrics included))
+//https://www.youtube.com/watch?v=oBIxScJ5rlY (John Mayer - Waiting On the World to Change)
+//https://www.youtube.com/watch?v=9R50OpRbVxI (John Mayer - Assassin Lyrics)
+//https://www.youtube.com/watch?v=N5EnGwXV_Pg (John Mayer - Your Body Is A Wonderland)
+//https://www.youtube.com/watch?v=IhP5wSDFxyg (Phil Collins - hits)
+//https://www.youtube.com/watch?v=QzRIPJMK6l8 (BB King - multiple songs)
+//https://www.youtube.com/watch?v=_WS9w10ygpU (Adele - Hello)
+//https://www.youtube.com/watch?v=jD9dr2ZRm9A (Adele - Someone Like You! )
+//https://www.youtube.com/watch?v=nCkpzqqog4k (Sam smith - I'm not the only one)
+//https://www.youtube.com/watch?v=IszJPYjNidg (Wale - The Matrimony)
+//https://www.youtube.com/watch?v=PIh07c_P4hc (John Legend - Ordinary People)
+//https://www.youtube.com/watch?v=RkPy4yq7EJo (maxwell - pretty wings)
+//https://www.youtube.com/watch?v=gkeCNeHcmXY (maxwell - this worman's wrok) 
+// https://www.youtube.com/watch?v=iF_JBlSh_G8  (Trey Songz – Can’t help but wait) 
+
+//Active 
+// https://www.youtube.com/watch?v=jYdaQJzcAcw (J. Cole She knows)
+// https://www.youtube.com/watch?v=GF8aaTu2kg0 (Kendrick Lamar – Don’t kill my vibe) 
+// https://www.youtube.com/watch?v=a2Gh3VdnXQs (IT. K. Dot,  BoB)
+// https://www.youtube.com/watch?v=sXJXLq1lN7U (Wyclef Jean ft. Sweetest Girls) 
+// https://www.youtube.com/watch?v=CTFtOOh47oo ( French Montana – Unforgettable ) 
+// https://www.youtube.com/watch?v=FJt7gNi3Nr4 (Jay and Kanye West – Church in the wild) 
+
+
+//https://www.youtube.com/watch?v=weeI1G46q0o (DJ Khalad, I'm the One)
+//https://www.youtube.com/watch?v=kAOmzXRpkVk (User/Chris Brown - New flame)
+//https://www.youtube.com/watch?v=p_RqWocthcc (Keri Hilson - Knock you down)
+//https://www.youtube.com/watch?v=rhBwt9mw7Sk (Chris Brwon )
+//https://www.youtube.com/watch?v=3w0yqAdJ1iY (Usher - No Limit)
+//https://www.youtube.com/watch?v=ZB7Xjd34pjo (Chris Brown/50cent - I'm the Man)
+//https://www.youtube.com/watch?v=3AszPTJXIgM (Usher - you don't have to call)
+//https://www.youtube.com/watch?v=1-7ABIM2qjU (Michael Jackson - You rock my world)
+//https://www.youtube.com/watch?v=ZbZSe6N_BXs (Pharrell Williams - Happy)
+//https://www.youtube.com/watch?v=a6T5azW4qEA (Jay Z - Holy Grail)
 
 //Reggae
 // https://www.youtube.com/watch?v=zaGUr6wzyT8 (Bob Marley - little bird sing)
@@ -176,16 +317,6 @@
 //world 
 //https://www.youtube.com/watch?v=CTFtOOh47oo (French Montana - Unforgetable)
 
-//Active
-//https://www.youtube.com/watch?v=weeI1G46q0o (DJ Khalad, I'm the One)
-//https://www.youtube.com/watch?v=kAOmzXRpkVk (User/Chris Brown - New flame)
-//https://www.youtube.com/watch?v=p_RqWocthcc (Keri Hilson - Knock you down)
-//https://www.youtube.com/watch?v=rhBwt9mw7Sk (Chris Brwon )
-//https://www.youtube.com/watch?v=3w0yqAdJ1iY (Usher - No Limit)
-//https://www.youtube.com/watch?v=ZB7Xjd34pjo (Chris Brown/50cent - I'm the Man)
-//https://www.youtube.com/watch?v=3AszPTJXIgM (Usher - you don't have to call)
-//https://www.youtube.com/watch?v=1-7ABIM2qjU (Michael Jackson - You rock my world)
-//https://www.youtube.com/watch?v=ZbZSe6N_BXs (Pharrell Williams - Happy)
 
 
 
