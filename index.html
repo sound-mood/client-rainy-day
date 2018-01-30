@@ -33,6 +33,30 @@
             <!-- this is where the user selects their  -->
             <div class="grid-container">
                 <div class="col-1of5">
+                    <div id="log-in">
+                        <!-- LOG IN GOES HERE -->
+                        <form>
+                            <div class="loginContainer">
+                                <label><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="userName" required>
+
+                                <label><b>Password</b></label>
+                                <input type="text" placeholder="Enter Password" name="password" required>
+
+                                <button type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked"> Remeber me
+                                </label>
+                            </div>
+
+                            <div class="container" style="background-color:chartreuse">
+                                <button type="button" class="cancelButton">Cancel</button>
+                                <span class="password">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-1of5">
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
                         <div class="hide" id="playlist-selections">
