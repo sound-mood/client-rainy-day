@@ -1,6 +1,6 @@
 [
     {
-        "name": "little bird sing",
+        "name": "Little Bird Sing",
         "artist": "Bob Marley",
         "URI": "zaGUr6wzyT8",
         "user_id": 0
@@ -12,7 +12,7 @@
         "user_id": 0
     },
     {
-        "name": "No woman no cray",
+        "name": "No Woman No Cry",
         "artist": "Bob Marley",
         "URI": "pHlSE9j5FGY",
         "user_id": 0
@@ -62,18 +62,18 @@
     },
     {
         "name": "New flame",
-        "artist": "Usher_Chris.B",
+        "artist": "Chris Brown",
         "URI": "kAOmzXRpkVk",
         "user_id": 0
     },
     {
-        "name": "Knock you down",
+        "name": "Knock You Down",
         "artist": "Keri Hilson",
         "URI": "p_RqWocthcc",
         "user_id": 0
     },
     {
-        "name": "rhBwt9mw7Sk",
+        "name": "Deuces",
         "artist": "Chris Brown",
         "URI": "rhBwt9mw7Sk",
         "user_id": 0
@@ -91,38 +91,32 @@
         "user_id": 0
     },
     {
-        "name": "ZbZSe6N_BXs",
-        "artist": "Pharrelle William",
+        "name": "Happy",
+        "artist": "Pharrell Williams",
         "URI": "ZbZSe6N_BXs",
         "user_id": 0
     },
     {
-        "name": "HAPPY",
-        "artist": "Pharrelle William",
-        "URI": "a6T5azW4qEA",
-        "user_id": 0
-    },
-    {
-        "name": "She knows",
-        "artist": "J. cole",
+        "name": "She Knows",
+        "artist": "J. Cole",
         "URI": "jYdaQJzcAcw",
         "user_id": 0
     },
     {
-        "name": "Sweetest Girls",
+        "name": "Sweetest Girl",
         "artist": "Wyclef Jean",
         "URI": "sXJXLq1lN7U",
         "user_id": 0
 
     },
     {
-        "name": "Can't help but wait",
+        "name": "Can't Help But Wait",
         "artist": "Trey songz",
         "URI": "iF_JBlSh_G8",
         "user_id": 0
     },
     {
-        "name": "pretty wings",
+        "name": "Pretty Wings",
         "artist": "Maxwell",
         "URI": "RkPy4yq7EJo",
         "user_id": 0
@@ -152,9 +146,63 @@
         "user_id": 0
     },
     {
-        "name": "Someone Like You!",
-        "artist": "Adele",
-        "URI": "jD9dr2ZRm9A",
+        "name": "My Immortal",
+        "artist": "Evanescence",
+        "URI": "5anLPw0Efmo",
+        "user_id": 0
+    },
+    {
+        "name": "Sound of Silence",
+        "artist": "Simon and Garfunkel",
+        "URI": "4fWyzwo1xg0",
+        "user_id": 0
+    },
+    {
+        "name": "Dust In the Wind",
+        "artist": "Kansas",
+        "URI": "tH2w6Oxx0kQ",
+        "user_id": 0
+    },
+    {
+        "name": "Time After Time",
+        "artist": "Cyndi Lauper",
+        "URI": "VdQY7BusJNU",
+        "user_id": 0
+    },
+    {
+        "name": "Take My Breath Away",
+        "artist": "Berlin",
+        "URI": "Bx51eegLTY8",
+        "user_id": 0
+    },
+    {
+        "name": "G.O.M.D.",
+        "artist": "J. Cole",
+        "URI": "vHU6ZRQJ50Q",
+        "user_id": 0
+    },
+    {
+        "name": "Day n Nite",
+        "artist": "Kid Cudi",
+        "URI": "VrDfSZ_6f4U",
+        "user_id": 0
+    },
+    {
+        "name": "POWER",
+        "artist": "Kayne West",
+        "URI": "L53gjP-TtGE",
+        "user_id": 0
+    },
+    {
+        "name": "Lose Yourself",
+        "artist": "Eminem",
+        "URI": "_Yhyp-_hX2s",
+        "user_id": 0
+    },
+    {
+        "name": "Clint Eastwood",
+        "artist": "Gorillaz",
+        "URI": "1V_xRb0x9aw",
         "user_id": 0
     },
     {
@@ -176,12 +224,6 @@
         "user_id": 0
     },
     {
-        "name": "Multiple Songs(hits)",
-        "artist": "Phil Collins",
-        "URI": "IhP5wSDFxyg",
-        "user_id": 0
-    },
-    {
         "name": "Assassin",
         "artist": "John Mayer",
         "URI": "9R50OpRbVxI",
@@ -194,9 +236,33 @@
         "user_id": 0
     },
     {
-        "name": "I'm Yours(with lyrics)",
+        "name": "I'm Yours",
         "artist": "Jason Mraz",
         "URI": "RILP53OR63k",
+        "user_id": 0
+    },
+    {
+        "name": "Lay Me Down",
+        "artist": "Sam Smith",
+        "URI": "tZFScuPR0v0",
+        "user_id": 0
+    },
+    {
+        "name": "Crystalised",
+        "artist": "The XX",
+        "URI": "Pib8eYDSFEI",
+        "user_id": 0
+    },
+    {
+        "name": "Blue Jeans",
+        "artist": "Lana Del Rey",
+        "URI": "PpF0vlAtjBM",
+        "user_id": 0
+    },
+    {
+        "name": "Stay",
+        "artist": "Rihanna",
+        "URI": "wS4InT7Ycdk",
         "user_id": 0
     }
 
