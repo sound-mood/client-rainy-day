@@ -2,76 +2,91 @@
     {
         "name": "My Immortal",
         "artist": "Evanescence",
-        "URI": "5anLPw0Efmo"
+        "URI": "5anLPw0Efmo",
+        "user_id": 0
     },
     {
         "name": "Sound of Silence",
         "artist": "Simon and Garfunkel",
-        "URI": "4fWyzwo1xg0"
+        "URI": "4fWyzwo1xg0",
+        "user_id": 0
     },
     {
         "name": "Dust In the Wind",
         "artist": "Kansas",
-        "URI": "tH2w6Oxx0kQ"
+        "URI": "tH2w6Oxx0kQ",
+        "user_id": 0
     },
     {
         "name": "Time After Time",
         "artist": "Cyndi Lauper",
-        "URI": "VdQY7BusJNU"
+        "URI": "VdQY7BusJNU",
+        "user_id": 0
     },
     {
         "name": "Take My Breath Away",
         "artist": "Berlin",
-        "URI": "Bx51eegLTY8"
+        "URI": "Bx51eegLTY8",
+        "user_id": 0
     },
     {
         "name": "G.O.M.D.",
         "artist": "J. Cole",
-        "URI": "vHU6ZRQJ50Q"
+        "URI": "vHU6ZRQJ50Q",
+        "user_id": 0
     },
     {
         "name": "Day n Nite",
         "artist": "Kid Cudi",
-        "URI": "VrDfSZ_6f4U"
+        "URI": "VrDfSZ_6f4U",
+        "user_id": 0
     },
     {
         "name": "POWER",
         "artist": "Kayne West",
-        "URI": "L53gjP-TtGE"
+        "URI": "L53gjP-TtGE",
+        "user_id": 0
     },
     {
         "name": "Lose Yourself",
         "artist": "Eminem",
-        "URI": "_Yhyp-_hX2s"
+        "URI": "_Yhyp-_hX2s",
+        "user_id": 0
     },
     {
         "name": "Clint Eastwood",
         "artist": "Gorillaz",
-        "URI": "1V_xRb0x9aw"
+        "URI": "1V_xRb0x9aw",
+        "user_id": 0
     },
     {
         "name": "Hello",
         "artist": "Adele",
-        "URI": "9h0Arg_-380"
+        "URI": "9h0Arg_-380",
+        "user_id": 0
     },
     {
         "name": "Lay Me Down",
         "artist": "Sam Smith",
-        "URI": "tZFScuPR0v0"
+        "URI": "tZFScuPR0v0",
+        "user_id": 0
     },
     {
         "name": "Crystalised",
         "artist": "The XX",
-        "URI": "Pib8eYDSFEI"
+        "URI": "Pib8eYDSFEI",
+        "user_id": 0
     },
     {
         "name": "Blue Jeans",
         "artist": "Lana Del Rey",
-        "URI": "PpF0vlAtjBM"
+        "URI": "PpF0vlAtjBM",
+        "user_id": 0
     },
     {
         "name": "Stay",
         "artist": "Rihanna",
-        "URI": "wS4InT7Ycdk"
+        "URI": "wS4InT7Ycdk",
+        "user_id": 0
     }
 ]

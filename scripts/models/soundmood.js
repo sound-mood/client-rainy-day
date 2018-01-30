@@ -43,6 +43,8 @@ var __API_URL__ = 'http://localhost:3000';
         
 
         Song.all = rawData.map((songObj) => new Song(songObj));
+
+        // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
         Song.all.forEach(a => {
             console.log(a);
             $('#music-selection').append(a.songToHtml())
@@ -51,6 +53,8 @@ var __API_URL__ = 'http://localhost:3000';
 
     Ambiance.loadAll = rawData => {
         Ambiance.all = rawData.map((ambianceObj) => new Ambiance(ambianceObj));
+
+        // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain ambiances
         Ambiance.all.forEach(a => {
             // console.log(a);
             $('#sound-selection').append(a.ambianceToHtml())
@@ -59,10 +63,8 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     Video.loadAll = rawData => {
-
-        console.log('video raw data', rawData);
         Video.all = rawData.map((videoObj) => new Video(videoObj));
-        console.log(Video.all);
+        // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain videos
         Video.all.forEach(a => {
             console.log(a);
             $('#video-selection').append(a.videoToHtml())
@@ -138,7 +140,7 @@ var __API_URL__ = 'http://localhost:3000';
     var player1;
     var player2;
     var player3;
-    function createPlayer(ctx,next) {
+    soundmood.createPlayer = function(ctx,next) {
         player1 = new YT.Player('player1', {
                               
             videoId: '668nUCeBHyY',
