@@ -135,10 +135,10 @@ var __API_URL__ = 'http://localhost:3000';
     var player1;
     var player2;
     var player3;
-    function createPlayer(ctx,next) {
+    soundmood.createPlayer = function(ctx,next) {
         player1 = new YT.Player('player1', {
                               
-            videoId: '668nUCeBHyY',
+            videoId: `${Video.all[2].uri}`,
             playerVars: { 'playlist': '668nUCeBHyY', 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
             events: {
             'onReady': onPlayer1Ready,
@@ -155,7 +155,7 @@ var __API_URL__ = 'http://localhost:3000';
                               }
                           });
         player3 = new YT.Player('player3', {
-                              videoId: 'n0svuurLibQ',
+                              videoId: `${Song.all[5].uri}`,
                               playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
                               events: {
                                 'onReady': onPlayer3Ready,
