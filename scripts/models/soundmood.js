@@ -15,7 +15,7 @@ var __API_URL__ = 'http://localhost:3000'
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
     }
 
-    function Video(rawDataObject) {
+    function Video(rawDataObj) {
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
     }
 
@@ -56,15 +56,15 @@ var __API_URL__ = 'http://localhost:3000'
     }
 
     Video.loadAll = rawData => {
-        Video.all = rawData.rows.map((videoObj) => new Video(videoObj));
+        Video.all = rawData.map((videoObj) => new Video(videoObj));
     }
        
 
 
     soundmood.fetchAll = function () {
         Song.fetchAll();
-        //Ambiance.fetchAll();
-        //Video.fetchAll();
+        Ambiance.fetchAll();
+        Video.fetchAll();
     }
 
     Song.fetchAll = (callback) => {
@@ -78,7 +78,7 @@ var __API_URL__ = 'http://localhost:3000'
     Video.fetchAll = (callback) => {
         $.get(`${__API_URL__}/api/v1/songs`)
             .then(results => {
-                Song.loadAll(results);
+                Video.loadAll(results);
             })
             .then(callback)
     }
@@ -86,7 +86,7 @@ var __API_URL__ = 'http://localhost:3000'
     Ambiance.fetchAll = (callback) => {
         $.get(`${__API_URL__}/api/v1/songs`)
             .then(results => {
-                Song.loadAll(results);
+                Ambiance.loadAll(results);
             })
             .then(callback)
     }
@@ -95,3 +95,69 @@ var __API_URL__ = 'http://localhost:3000'
     // module.Video = Video;
     // module.Ambiance = Ambiance;
     // module.soundmood = soundmood;
+
+    //#####################PLAYER#######################################
+
+    var player1;
+    var player2;
+    var player3;
+    function createPlayer(ctx,next) {
+        player1 = new YT.Player('player1', {
+                              
+            videoId: '668nUCeBHyY',
+            playerVars: { 'playlist': '668nUCeBHyY', 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+            events: {
+            'onReady': onPlayer1Ready,
+            'onStateChange': onPlayer1StateChange
+                }
+          });
+        player2 = new YT.Player('player2', {
+                              
+                              videoId: 'q76bMs-NwRk',
+                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                              events: {
+                                   'onReady': onPlayer2Ready,
+                                   //'onStateChange': onPlayer2StateChange
+                              }
+                          });
+        player3 = new YT.Player('player3', {
+                              videoId: 'n0svuurLibQ',
+                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                              events: {
+                                'onReady': onPlayer3Ready,
+                              }
+                              
+                              
+
+
+
+        })
+    }
+
+    function onPlayer1Ready() {
+      player1.setVolume(0);
+
+    }
+
+    function onPlayer2Ready() {
+      player2.setVolume(100);
+    }
+
+    function onPlayer3Ready() {
+      player3.setVolume(90);
+    }
+
+    function onPlayer1StateChange() {
+      if(player2.getPlayerState() == '1') {
+        player2.pauseVideo();
+      } else if(player2.getPlayerState() == '2') {
+        player2.playVideo();
+      }
+
+      if(player3.getPlayerState() == '1') {
+        player3.pauseVideo();
+      } else if(player3.getPlayerState() == '2') {
+        player3.playVideo();
+      }
+    }
+

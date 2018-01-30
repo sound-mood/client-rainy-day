@@ -19,9 +19,9 @@
     <body>
         <header>
             <h1>Rainy Day</h1>
-            <a href="/getSongs">get songs</a>
+            
         </header>
-        <main>
+        <main id="menu">
             <!-- this is where the user selects their  -->
             <div class="grid-container">
                 <div class="col-1of5">
@@ -134,22 +134,23 @@
                 <div class="col-4of5">
                     <div id="audio-visual">
                         <a href="/player">Start playing...</a>
-                        <section id="player">
-                            <div id="player1" style="position: fixed; z-index: -99; width: 100%; height: 100%"></div>    
-                            <div id="player2" style="display: none"></div> 
-                            <div id="player3" style="display: none"></div>
-                        </section>
+                        
                           
                     </div>
                 </div>  
             </div>
         </main>
+        <section id="player" class="hide">
+            <div id="player1" style="position: fixed; z-index: -99; width: 100%; height: 100%"></div>    
+            <div id="player2" style="display: none"></div> 
+            <div id="player3" style="display: none"></div>
+        </section>
         <footer>
 
         </footer>
 
 
-
+        <script src = "https://www.youtube.com/iframe_api"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
