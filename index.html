@@ -11,16 +11,16 @@
         <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
 
         <script id="song-choices-template" type="text/x-handlebars-template">
-            <a href="/custom/music/">+ {{name}} - {{artist}}</a>
+            <a href="/custom/music/{{song_id}}">+ {{name}} - {{artist}}</a>
         </script>
         <script id="preset-playlist-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{preset-id}}">{{playlist-title}}</a>
+            <a href="/playlist/{{playlist_id}}">{{playlist-title}}</a>
         </script>
         <script id="ambiance-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{ambiance_id}}">+ {{name}}</a>
         </script>
         <script id="video-choices-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{video}}">+ {{name}}</a>
+            <a href="/playlist/{{video_id}}">+ {{name}}</a>
         </script>
             
     </head>
