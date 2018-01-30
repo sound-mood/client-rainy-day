@@ -1,17 +1,5 @@
 [
     {
-        "name": "Day Chill",
-        "user_id": 0,
-        "ambiance_id": " ",
-        "video_id" : " "
-    },
-    {
-        "name": "Embiance Chill",
-        "user_id": 0,
-        "ambiance_id": " ",
-        "video_id" : " "
-    },
-    {
         "name": "Beach Chill",
         "user_id": 0,
         "ambiance_id": 1,
