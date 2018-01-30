@@ -45,6 +45,7 @@ var __API_URL__ = 'http://localhost:3000'
         // }); 
 
         // TODO: again, double check that data comes back as rows
+        Song.all = [];
         Song.all = rawData.map((songObj) => new Song(songObj));
     }
 
@@ -67,6 +68,22 @@ var __API_URL__ = 'http://localhost:3000'
     }
 
     Song.fetchAll = (callback) => {
+        $.get(`${__API_URL__}/api/v1/songs`)
+            .then(results => {
+                Song.loadAll(results);
+            })
+            .then(callback)
+    }
+
+    Video.fetchAll = (callback) => {
+        $.get(`${__API_URL__}/api/v1/songs`)
+            .then(results => {
+                Song.loadAll(results);
+            })
+            .then(callback)
+    }
+
+    Ambiance.fetchAll = (callback) => {
         $.get(`${__API_URL__}/api/v1/songs`)
             .then(results => {
                 Song.loadAll(results);
