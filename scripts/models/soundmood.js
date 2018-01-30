@@ -1,9 +1,9 @@
 'use strict';
 
 // var __API_URL__ = 'https://rainy-day-v2.herokuapp.com'
-var __API_URL__ = 'http://localhost:3000'
+var __API_URL__ = 'http://localhost:3000';
 
-
+(function(module) {
     let soundmood = {};
     
     function Song(rawDataObj) {
@@ -35,30 +35,59 @@ var __API_URL__ = 'http://localhost:3000'
     // };
 
     Song.loadAll = rawData => {
-        // TODO: double check how the data object comes back from mongo... rawData.rows may not work. might need to be just rawData
-        // this sorts the song objects by ID so that when we reference them in the array the index *SHOULD* only be one off from the ID
         console.log(rawData);
-        // rawData.sort((a, b) => {
-        //     if (a.id < b.id) return -1;
-        //     if (a.id > b.id) return 1;
-        //     return 0;
-        // }); 
 
-        // TODO: again, double check that data comes back as rows
-        Song.all = [];
+        
+
         Song.all = rawData.map((songObj) => new Song(songObj));
+        Song.all.forEach(a => {
+            console.log(a);
+            $('#music-selection').append(a.songToHtml())
+        });
     }
 
     Ambiance.loadAll = rawData => {
-        
-
         Ambiance.all = rawData.map((ambianceObj) => new Ambiance(ambianceObj));
+        Ambiance.all.forEach(a => {
+            // console.log(a);
+            $('#sound-selection').append(a.ambianceToHtml())
+        });
+
     }
 
     Video.loadAll = rawData => {
+
+        console.log('video raw data', rawData);
         Video.all = rawData.map((videoObj) => new Video(videoObj));
+        console.log(Video.all);
+        Video.all.forEach(a => {
+            console.log(a);
+            $('#video-selection').append(a.videoToHtml())
+        });
+
     }
        
+    // TODO: ask why didn't this work as a lexical arrow function
+    Song.prototype.songToHtml = function() {
+        console.log(this);
+        let template = Handlebars.compile($('#song-choices-template').text());
+        console.log(template(this));
+        return template(this);
+    }
+
+    Ambiance.prototype.ambianceToHtml = function() {
+        console.log(this);
+        let template = Handlebars.compile($('#ambiance-choices-template').text());
+        console.log(template(this));
+        return template(this);
+    }
+
+    Video.prototype.videoToHtml = function() {
+        console.log(this);
+        let template = Handlebars.compile($('#video-choices-template').text());
+        console.log(template(this));
+        return template(this);
+    }
 
 
     soundmood.fetchAll = function () {
@@ -75,21 +104,26 @@ var __API_URL__ = 'http://localhost:3000'
             .then(callback)
     }
 
-    Video.fetchAll = (callback) => {
-        $.get(`${__API_URL__}/api/v1/songs`)
+
+    Ambiance.fetchAll = (callback) => {
+        $.get(`${__API_URL__}/api/v1/ambiance`)
             .then(results => {
-                Video.loadAll(results);
+                Ambiance.loadAll(results);
+
             })
             .then(callback)
     }
 
-    Ambiance.fetchAll = (callback) => {
-        $.get(`${__API_URL__}/api/v1/songs`)
+
+    Video.fetchAll = (callback) => {
+        $.get(`${__API_URL__}/api/v1/videos`)
             .then(results => {
-                Ambiance.loadAll(results);
+                Video.loadAll(results);
+
             })
             .then(callback)
     }
+
 
     // module.Song = Song;
     // module.Video = Video;
@@ -160,4 +194,12 @@ var __API_URL__ = 'http://localhost:3000'
         player3.playVideo();
       }
     }
+
+
+    module.Song = Song;
+    module.Video = Video;
+    module.Ambiance = Ambiance;
+    module.soundmood = soundmood;
+
+})(window)
 

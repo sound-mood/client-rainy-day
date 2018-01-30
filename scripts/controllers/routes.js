@@ -31,5 +31,4 @@ page('/player', playerView.init, createPlayer)
 
 
 
-
 page();
