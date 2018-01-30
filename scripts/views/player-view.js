@@ -8,15 +8,15 @@
 
         $('#menu').hide();
         $('#player').toggleClass('hide');
-        next();
-
-        // var tag = document.createElement('script');
-
-        // tag.src = "https://www.youtube.com/iframe_api";
-        // var firstScriptTag = document.getElementsByTagName('script')[0];
-        // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        next()
 
        
+
+    }
+    
+        module.playerView = playerView;
+    })(window)
+    
 
 
 
@@ -27,8 +27,3 @@
        
 
 
-
-
-    }
-    module.playerView = playerView;
-})(window)

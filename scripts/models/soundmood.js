@@ -160,13 +160,13 @@ var __API_URL__ = 'http://localhost:3000';
                               events: {
                                 'onReady': onPlayer3Ready,
                               }
+                            })
                               
                               
 
 
 
-        })
-    }
+    };
 
     function onPlayer1Ready() {
       player1.setVolume(0);
