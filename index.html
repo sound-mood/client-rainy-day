@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Sound Mood</title>
+        <title>Soundmood</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/base.css">
@@ -36,13 +36,16 @@
     </head>
     <body>
         <header>
-            <h1>Rainy Day</h1>
+            <div class="grid-container">
+                <div class="col-2of5"><a href="/home"><h1>soundmood</h1></a></div>
+                <div class="col-2of5 float-right"><a href="/login">Log In</a></div>
+            </div>
 
         </header>
         <main id="menu">
-            <div class="grid-container">
-                <div class="col-1of5">
-                    <div id="log-in">
+                <div class="grid-container">
+                    <div class="col-1of5">
+                    <div id="log-in" class="hide">
                         <form>
                             <div class="loginContainer">
                                 <label><b>Username</b></label>
@@ -53,7 +56,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-1of5">
+                <div class="col-1of5" id="all-content">
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
                         <div class="hide" id="playlist-selections">
@@ -136,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="your-current-playlist">
+                    <div id="your-current-playlist" class="hide">
                         <a class="section-title" href="/preview">Playlist Preview</a>
                         <div class="hide" id="playlist-preview"></div>
                     </div>

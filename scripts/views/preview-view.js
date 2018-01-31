@@ -38,6 +38,7 @@
         }
         
         $('#playlist-preview').removeClass('hide');
+        $('#your-current-playlist').removeClass('hide');
     }
 
     module.previewView = previewView;
