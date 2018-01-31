@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Sound Mood</title>
+        <title>Soundmood</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/base.css">
@@ -15,8 +15,8 @@
         <script id="song-choices-template" type="text/x-handlebars-template">
             <a href="/custom/music/{{song_id}}">+ {{name}} - {{artist}}</a>
         </script>
-        <script id="preset-playlist-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{playlist_id}}">{{playlist-title}}</a>
+        <script id="playlist-template" type="text/x-handlebars-template">
+            <a href="/playlist/{{playlist_id}}">+ {{name}}</a>
         </script>
         <script id="ambiance-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{ambiance_id}}">+ {{name}}</a>
@@ -24,19 +24,29 @@
         <script id="video-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{video_id}}">+ {{name}}</a>
         </script>
+        <script id="preview-template" type="text/x-handlebars-template">
+            <h3>{{name}}</h3>
+            <h4>Background Video:</h4>
+            <p>- {{video}}</p>
+            <h4>Ambient Noises:</h4> 
+            <p>- {{ambiance}}</p>
+            <h4>Songs:</h4>
+        </script>
+
             
     </head>
     <body>
         <header>
-            <h1>Rainy Day</h1>
+            <div class="grid-container">
+                <div class="col-2of5"><a href="/home"><h1>soundmood</h1></a></div>
+                <div class="col-2of5 float-right"><a href="/login">Log In</a></div>
+            </div>
 
         </header>
         <main id="menu">
-            <!-- this is where the user selects their  -->
-            <div class="grid-container">
-                <div class="col-1of5 hide">
-                    <div id="log-in">
-                        <!-- LOG IN GOES HERE -->
+                <div class="grid-container">
+                    <div class="col-1of5">
+                    <div id="log-in" class="hide">
                         <form>
                             <div class="loginContainer">
                                 <label><b>Username</b></label>
@@ -44,12 +54,14 @@
                                 <label><b>Password</b></label>
                                 <input type="text" placeholder="Enter Password" name="password" required>
                                 <button type="submit">Login</button>
+
                                 <button type="singUp">Sign Up</button>
                                 <label>
                                     <input type="checkbox" checked="checked"> Remember me
                                 </label>
                             </div>
                             <span class="password"><a href="#">Forgot password?</a></span>
+
                         </form>
                         <!-- sign up goes here -->
                         <!-- <form>
@@ -78,16 +90,10 @@
                         </form> -->
                     </div>
                 </div>
-                <div class="col-1of5">
+                <div class="col-1of5" id="all-content">
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
                         <div class="hide" id="playlist-selections">
-                            <!-- this section will be where playlists are rendered by handlebars -->
-                            <!-- each href will point to a playlist ID in routes JS which will tell the detail view which playlist to display -->
-                            <a href="">Playlist1</a>
-                            <a href="">Playlist2</a>
-                            <a href="">Playlist3</a>
-                            <a href="">Playlist4</a>
                         </div>
                     </div> 
                 
@@ -167,17 +173,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id="your-current-playlist">
+                    <div id="your-current-playlist" class="hide">
                         <a class="section-title" href="/preview">Playlist Preview</a>
-                        <div class="hide" id="create-playlist">
-    
+                        <div class="hide" id="playlist-preview"></div>
                     </div>
-
-                </div>
-                <div class="col-4of5">
-                    <div id="audio-visual">
-                        <a href="/player">Start playing...</a>
-                        
+                    <div class="col-4of5">
+                        <div id="audio-visual">
+                            <a href="/player">Start playing...</a>
+                            
                           
                     </div>
                 </div>  
@@ -193,7 +196,7 @@
         </footer>
 
 
-        <script src = "https://www.youtube.com/iframe_api"></script>
+        <script src ="https://www.youtube.com/iframe_api"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
