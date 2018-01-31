@@ -14,8 +14,8 @@
         <script id="song-choices-template" type="text/x-handlebars-template">
             <a href="/custom/music/{{song_id}}">+ {{name}} - {{artist}}</a>
         </script>
-        <script id="preset-playlist-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{playlist_id}}">{{playlist-title}}</a>
+        <script id="playlist-template" type="text/x-handlebars-template">
+            <a href="/playlist/{{playlist_id}}">+ {{name}}</a>
         </script>
         <script id="ambiance-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{ambiance_id}}">+ {{name}}</a>
@@ -23,6 +23,15 @@
         <script id="video-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{video_id}}">+ {{name}}</a>
         </script>
+        <script id="preview-template" type="text/x-handlebars-template">
+            <h3>{{name}}</h3>
+            <h4>Background Video:</h4>
+            <p>- {{video}}</p>
+            <h4>Ambient Noises:</h4> 
+            <p>- {{ambiance}}</p>
+            <h4>Songs:</h4>
+        </script>
+
             
     </head>
     <body>
@@ -31,11 +40,9 @@
 
         </header>
         <main id="menu">
-            <!-- this is where the user selects their  -->
             <div class="grid-container">
-                <div class="col-1of5 hide">
+                <div class="col-1of5">
                     <div id="log-in">
-                        <!-- LOG IN GOES HERE -->
                         <form>
                             <div class="loginContainer">
                                 <label><b>Username</b></label>
@@ -43,11 +50,6 @@
                                 <label><b>Password</b></label>
                                 <input type="text" placeholder="Enter Password" name="password" required>
                                 <button type="submit">Login</button>
-                                <label>
-                                    <input type="checkbox" checked="checked"> Remember me
-                                </label>
-                            </div>
-                            <span class="password"><a href="#">Forgot password?</a></span>
                         </form>
                     </div>
                 </div>
@@ -55,12 +57,6 @@
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
                         <div class="hide" id="playlist-selections">
-                            <!-- this section will be where playlists are rendered by handlebars -->
-                            <!-- each href will point to a playlist ID in routes JS which will tell the detail view which playlist to display -->
-                            <a href="">Playlist1</a>
-                            <a href="">Playlist2</a>
-                            <a href="">Playlist3</a>
-                            <a href="">Playlist4</a>
                         </div>
                     </div> 
                 
@@ -142,15 +138,12 @@
                     </div>
                     <div id="your-current-playlist">
                         <a class="section-title" href="/preview">Playlist Preview</a>
-                        <div class="hide" id="create-playlist">
-    
+                        <div class="hide" id="playlist-preview"></div>
                     </div>
-
-                </div>
-                <div class="col-4of5">
-                    <div id="audio-visual">
-                        <a href="/player">Start playing...</a>
-                        
+                    <div class="col-4of5">
+                        <div id="audio-visual">
+                            <a href="/player">Start playing...</a>
+                            
                           
                     </div>
                 </div>  
@@ -166,7 +159,7 @@
         </footer>
 
 
-        <script src = "https://www.youtube.com/iframe_api"></script>
+        <script src ="https://www.youtube.com/iframe_api"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>

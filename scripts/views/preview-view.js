@@ -4,11 +4,16 @@
 (function (module) {
     const previewView = {};
 
+
     previewView.init = function (ctx, next) {
         console.log('previewView.init route hit');
-
-        // this sends each item in the presetPlaylists array to the toHtml method which appends the playlist preview to the website
-        // app.soundmood.presetPlaylists.forEach(a => $('playlist-selections').append(a.playlistPreviewToHtml()));
+        
+        // TODO double check this... this object should push the context object into the object constructor above
+        console.log('context object', ctx);
+        var preview = new Preview(ctx);
+        console.log('preview object', preview);
+        $('#playlist-preview').empty();
+        $('#playlist-preview').append(preview.previewToHtml());
 
         if (!$('#custom-options').hasClass('hide')) {
             $('#custom-options').addClass('hide');
@@ -32,8 +37,8 @@
             $('#playlist-selections').addClass('hide');
         }
         
-        $('#preview-view').removeClass('hide');
+        $('#playlist-preview').removeClass('hide');
     }
 
     module.previewView = previewView;
-})(window);
+})(window)

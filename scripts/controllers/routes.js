@@ -18,6 +18,7 @@ function showCustomOpts(ctx) {
 // this will need to grab the ID of the playlist and use it to display the predetermined music experience
 page('/', soundmood.fetchAll)
 page('/playlist', playlistView.init)
+page('/playlist/:playlist_id', previewView.init)
 //this will just render the custom options menu
 page('/custom', showCustomOpts)
 
@@ -26,7 +27,6 @@ page('/custom/music', musicView.init)
 page('/custom/sound', soundView.init)
 page('/custom/video', videoView.init)
 page('/create', createView.init)
-page('/preview', previewView.init)
 page('/player', playerView.init, soundmood.createPlayer)
 
 
