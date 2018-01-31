@@ -1,6 +1,6 @@
 [
     {
-        "name": "little bird sing",
+        "name": "Little Bird Sing",
         "artist": "Bob Marley",
         "URI": "zaGUr6wzyT8",
         "user_id": 0
@@ -12,7 +12,7 @@
         "user_id": 0
     },
     {
-        "name": "No woman no cray",
+        "name": "No Woman No Cry",
         "artist": "Bob Marley",
         "URI": "pHlSE9j5FGY",
         "user_id": 0
@@ -62,18 +62,18 @@
     },
     {
         "name": "New flame",
-        "artist": "Usher_Chris.B",
+        "artist": "Chris Brown",
         "URI": "kAOmzXRpkVk",
         "user_id": 0
     },
     {
-        "name": "Knock you down",
+        "name": "Knock You Down",
         "artist": "Keri Hilson",
         "URI": "p_RqWocthcc",
         "user_id": 0
     },
     {
-        "name": "rhBwt9mw7Sk",
+        "name": "Deuces",
         "artist": "Chris Brown",
         "URI": "rhBwt9mw7Sk",
         "user_id": 0
@@ -91,38 +91,32 @@
         "user_id": 0
     },
     {
-        "name": "ZbZSe6N_BXs",
-        "artist": "Pharrelle William",
+        "name": "Happy",
+        "artist": "Pharrell Williams",
         "URI": "ZbZSe6N_BXs",
         "user_id": 0
     },
     {
-        "name": "HAPPY",
-        "artist": "Pharrelle William",
-        "URI": "a6T5azW4qEA",
-        "user_id": 0
-    },
-    {
-        "name": "She knows",
-        "artist": "J. cole",
+        "name": "She Knows",
+        "artist": "J. Cole",
         "URI": "jYdaQJzcAcw",
         "user_id": 0
     },
     {
-        "name": "Sweetest Girls",
+        "name": "Sweetest Girl",
         "artist": "Wyclef Jean",
         "URI": "sXJXLq1lN7U",
         "user_id": 0
 
     },
     {
-        "name": "Can't help but wait",
+        "name": "Can't Help But Wait",
         "artist": "Trey songz",
         "URI": "iF_JBlSh_G8",
         "user_id": 0
     },
     {
-        "name": "pretty wings",
+        "name": "Pretty Wings",
         "artist": "Maxwell",
         "URI": "RkPy4yq7EJo",
         "user_id": 0
@@ -230,12 +224,6 @@
         "user_id": 0
     },
     {
-        "name": "Multiple Songs(hits)",
-        "artist": "Phil Collins",
-        "URI": "IhP5wSDFxyg",
-        "user_id": 0
-    },
-    {
         "name": "Assassin",
         "artist": "John Mayer",
         "URI": "9R50OpRbVxI",
@@ -248,7 +236,7 @@
         "user_id": 0
     },
     {
-        "name": "I'm Yours(with lyrics)",
+        "name": "I'm Yours",
         "artist": "Jason Mraz",
         "URI": "RILP53OR63k",
         "user_id": 0
