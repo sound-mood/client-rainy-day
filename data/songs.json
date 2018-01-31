@@ -7,13 +7,6 @@
         "playlist_id": 1
     },
     {
-        "name": "Little Bird Sing",
-        "artist": "Bob Marley",
-        "URI": "zaGUr6wzyT8",
-        "user_id": 1,
-        "playlist_id": 6
-    },
-    {
         "name": "Knowledge",
         "artist": "Bob Marley",
         "URI": "h4OiCUkxGto",
@@ -90,13 +83,6 @@
         "URI": "6OcOO1k-vGE",
         "user_id": 1,
         "playlist_id": 1
-    },
-    {
-        "name": "Knock You Down",
-        "artist": "Keri Hilson",
-        "URI": "p_RqWocthcc",
-        "user_id": 1,
-        "playlist_id": 6
     },
     {
         "name": "Knock You Down",
@@ -216,13 +202,6 @@
         "artist": "Cyndi Lauper",
         "URI": "VdQY7BusJNU",
         "user_id": 1,
-        "playlist_id": 1
-    },
-    {
-        "name": "Time After Time",
-        "artist": "Cyndi Lauper",
-        "URI": "VdQY7BusJNU",
-        "user_id": 1,
         "playlist_id": 3
     },
     {
@@ -265,13 +244,6 @@
         "artist": "Gorillaz",
         "URI": "1V_xRb0x9aw",
         "user_id": 1,
-        "playlist_id": 1 
-    },
-    {
-        "name": "Clint Eastwood",
-        "artist": "Gorillaz",
-        "URI": "1V_xRb0x9aw",
-        "user_id": 1,
         "playlist_id": 6 
     },
     {
@@ -286,13 +258,6 @@
         "artist": "BB King",
         "URI": "QzRIPJMK6l8",
         "user_id": 1,
-        "playlist_id": 6 
-    },
-    {
-        "name": "MultipleSongs",
-        "artist": "BB King",
-        "URI": "QzRIPJMK6l8",
-        "user_id": 1,
         "playlist_id": 5 
     },
     {
@@ -301,13 +266,6 @@
         "URI": "N5EnGwXV_Pg",
         "user_id": 1,
         "playlist_id": 7
-    },
-    {
-        "name": "Your Body Is A Wonderland",
-        "artist": "John Mayer",
-        "URI": "N5EnGwXV_Pg",
-        "user_id": 1,
-        "playlist_id": 3
     },
     {
         "name": "Assassin",
@@ -329,13 +287,6 @@
         "URI": "RILP53OR63k",
         "user_id": 1,
         "playlist_id": 1
-    },
-    {
-        "name": "I'm Yours",
-        "artist": "Jason Mraz",
-        "URI": "RILP53OR63k",
-        "user_id": 1,
-        "playlist_id": 7
     },
     {
         "name": "Lay Me Down",
