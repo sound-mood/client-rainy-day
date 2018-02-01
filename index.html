@@ -31,21 +31,25 @@
             <h4>Ambient Noises:</h4> 
             <p>- {{ambiance}}</p>
             <h4>Songs:</h4>
+            {{#each songs}}
+            <p>- {{this.name}}</p> 
+            {{/each}}
         </script>
+
 
             
     </head>
     <body>
         <header>
-            <div class="grid-container">
+            <div class="grid-container clearfix">
                 <div class="col-2of5"><a href="/home"><h1>soundmood</h1></a></div>
                 <div class="col-2of5 float-right"><a href="/login">Log In</a></div>
             </div>
 
         </header>
         <main id="menu">
-                <div class="grid-container">
-                    <div class="col-1of5">
+            <div class="grid-container">
+                <div class="col-1of5">
                     <div id="log-in" class="hide">
                         <form>
                             <div class="loginContainer">
@@ -54,15 +58,10 @@
                                 <label><b>Password</b></label>
                                 <input type="text" placeholder="Enter Password" name="password" required>
                                 <button type="submit">Login</button>
-
                                 <button type="singUp">Sign Up</button>
-                                <label>
-                                    <input type="checkbox" checked="checked"> Remember me
-                                </label>
                             </div>
-                            <span class="password"><a href="#">Forgot password?</a></span>
-
                         </form>
+                    </div>
                         <!-- sign up goes here -->
                         <!-- <form>
                             <div class="signUpContainer">
@@ -93,10 +92,8 @@
                 <div class="col-1of5" id="all-content">
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
-                        <div class="hide" id="playlist-selections">
-                        </div>
+                        <div class="hide" id="playlist-selections"></div>
                     </div> 
-                
                     <div id="custom-playlists">
                         <a class="section-title" href="/custom">Pick your own from our library</a>
                         <div class="hide" id="custom-options">
@@ -116,7 +113,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div id="create-your-own">
                         <a class="section-title" href="/create">Add your own to our library</a>
@@ -176,13 +172,12 @@
                     <div id="your-current-playlist" class="hide">
                         <a class="section-title" href="/preview">Playlist Preview</a>
                         <div class="hide" id="playlist-preview"></div>
+                        <div class="hide" id="song-preview"></div>
+                        <p id="play-button">Start playing...</p>            
                     </div>
-                    <div class="col-4of5">
-                        <div id="audio-visual">
-                            <a href="/player">Start playing...</a>
-                            
-                          
-                    </div>
+                </div>
+                <div class="col-4of5">
+                    <div id="audio-visual"></div>
                 </div>  
             </div>
         </main>
@@ -192,7 +187,6 @@
             <div id="player3" style="display: none"></div>
         </section>
         <footer>
-
         </footer>
 
 
