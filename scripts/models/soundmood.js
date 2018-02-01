@@ -52,12 +52,12 @@ var __API_URL__ = 'http://localhost:3000';
     Video.all = [];
     Playlist.all = [];
     soundmood.currentUser = 0;
-    
+    soundmood.playersCreated = false;    
     
 
     Song.loadAll = rawData => {
         console.log(rawData);
-        Song.all = rawData.map((songObj) => new Song(songObj));
+        Song.all = rawData.map((songObj) => new Song(songObj)).filter(a => (a.user_id === 1 || a.user_id === `${soundmood.currentUser}`));
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
         Song.all.forEach(a => {
@@ -89,6 +89,7 @@ var __API_URL__ = 'http://localhost:3000';
               name: this.name,
               artist: this.artist,
               URI: this.URI,
+              user_id: `${soundmood.currentUser}`
             },
             
         })
@@ -239,7 +240,6 @@ var __API_URL__ = 'http://localhost:3000';
 
 
     soundmood.fetchAll = function () {
-        $('#all-content').hide();
         Song.fetchAll();
         Ambiance.fetchAll();
         Video.fetchAll();
@@ -317,6 +317,9 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     soundmood.createPlayer = function (video, ambiance, songs, firstSong) {
+
+        soundmood.playersCreated = true;
+
         player1 = new YT.Player('player1', {
             // background video
             videoId: `${video}`,

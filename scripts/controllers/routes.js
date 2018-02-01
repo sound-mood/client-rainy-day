@@ -27,8 +27,10 @@ function showHomePage() {
     }
     $('#menu').show();
     $('#all-content').show();
-
-    soundmood.stopPlayer();
+    
+    if (soundmood.playersCreated === true) {
+        soundmood.stopPlayer();
+    }
 }
 
 function showHidePreview() {
