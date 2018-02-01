@@ -239,6 +239,7 @@ var __API_URL__ = 'http://localhost:3000';
 
 
     soundmood.fetchAll = function () {
+        $('#all-content').hide();
         Song.fetchAll();
         Ambiance.fetchAll();
         Video.fetchAll();
