@@ -8,7 +8,6 @@
         soundmood.createPlayer(videoURI, ambianceURI, songUriString, firstSong);
         $('#menu').hide();
         $('#player').toggleClass('hide');
-
         // var tag = document.createElement('script');
 
         // tag.src = "https://www.youtube.com/iframe_api";

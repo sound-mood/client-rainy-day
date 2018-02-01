@@ -4,6 +4,57 @@
 (function (module) {
     const createView = {};
 
+
+    function newPlaylist(e) {
+        e.preventDefault();
+        let playlist = new Playlist({
+            name: $('#new-playlist').val()
+        });
+    
+        playlist.insertRecord();
+    
+    }
+
+    function newSound(e) {
+        e.preventDefault();
+        let ambURI = $('#sound-url').val().split('=')[1];
+        console.log(ambURI);
+        let ambiance = new Ambiance({
+            name: $('#new-sound').val(),
+            URI:  `${ambURI}`,
+        });
+    
+        ambiance.insertRecord();
+    
+    }
+
+    function newVideo(e) {
+        e.preventDefault();
+        let vidURI = $('#video-url').val().split('=')[1];
+        console.log(vidURI);
+        let video = new Video({
+            name: $('#new-video').val(),
+            URI:  `${vidURI}`,
+        });
+    
+        video.insertRecord();
+    
+    }
+
+    function newSong(e) {
+        e.preventDefault();
+        let songURI = $('#song-url').val().split('=')[1];
+        console.log(songURI);
+        let song = new Song({
+            name: $('#new-song').val(),
+            artist: $('#song-artist').val(),
+            URI:  `${songURI}`,
+        });
+    
+        song.insertRecord();
+    
+    }
+
     createView.init = function (ctx, next) {
         console.log('createView.init route hit');
 
@@ -17,6 +68,11 @@
 
         
         $('#create-playlist').toggleClass('hide');
+
+        $('#playlist-insert').on('click', newPlaylist);
+        $('#sound-insert').on('click', newSound);
+        $('#video-insert').on('click', newVideo);
+        $('#song-insert').on('click', newSong);
     }
 
     module.createView = createView;
