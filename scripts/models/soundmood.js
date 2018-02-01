@@ -52,6 +52,8 @@ var __API_URL__ = 'http://localhost:3000';
     Ambiance.all = [];
     Video.all = [];
     Playlist.all = [];
+    soundmood.currentUser = 0;
+    
     
 
     Song.loadAll = rawData => {
@@ -74,6 +76,9 @@ var __API_URL__ = 'http://localhost:3000';
             data: {
               name: this.name,
               
+            },
+            error: function() {
+                alert('Username Taken');
             },
             
         })
@@ -104,6 +109,21 @@ var __API_URL__ = 'http://localhost:3000';
         })
     };
 
+    Playlist.prototype.updateRecord = function (callback) {
+       
+        $.ajax({
+          url: `${__API_URL__}/api/v1/playlists/${this.playlist_id}`,
+          method: 'PUT',
+          data: {
+            name: this.name,
+            
+          }
+        })
+        .then(callback);
+    };
+          
+
+
     Video.prototype.insertRecord = function(){
         $.ajax({
             url: `${__API_URL__ }/api/v1/videos`,
@@ -122,7 +142,8 @@ var __API_URL__ = 'http://localhost:3000';
             method: 'POST',
             data: {
               name: this.name,
-              URI: this.URI
+              URI: this.URI,
+              user_id: `${soundmood.currentUser}`
             },
             
         })
@@ -263,6 +284,28 @@ var __API_URL__ = 'http://localhost:3000';
             })
             .then(callback)
     }
+
+    User.prototype.setUser = (callback) => {
+        $.get(`${__API_URL__}/api/v1/users`)
+            .then(results => {
+                console.log(results);
+                console.log(results[results.length-1]);
+                soundmood.currentUser = results[results.length-1].user_id;
+            })
+            .then(callback)
+    }
+
+    User.prototype.setUserLogin = (callback) => {
+        $.get(`${__API_URL__}/api/v1/users/login`)
+            .then(results => {
+                console.log(results);
+                console.log(results[results.length-1]);
+                soundmood.currentUser = results[results.length-1].user_id;
+            })
+            .then(callback)
+    }
+
+
    
     //#####################PLAYER#######################################
 

@@ -15,28 +15,9 @@ function showCustomOpts(ctx) {
     $('#custom-options').toggleClass('hide');
 }
 
-function loginSubmit(e) {
-    e.preventDefault();
-    let username = $('#username').val();
-    let user = new User({
-        name: `${username}`
-    });
 
-    user.insertRecord();
 
-}
 
-function showLogIn(ctx, next) {
-    console.log('log in route hit');
-    
-    if(!$('#all-content').hasClass('hide')) {
-        $('#all-content').addClass('hide');
-    }
-
-    $('#log-in').toggleClass('hide');
-
-    $('#log-in-form').on('submit', loginSubmit);
-}
 
 function showHomePage() {
     if(!$('#log-in').hasClass('hide')) {
@@ -56,7 +37,7 @@ page('/playlist', playlistView.init)
 page('/playlist/:playlist_id', previewView.init)
 //this will just render the custom options menu
 page('/custom', showCustomOpts)
-page('/login', showLogIn)
+page('/login', loginView.init)
 page('/home', showHomePage)
 page('/preview', showHidePreview)
 
