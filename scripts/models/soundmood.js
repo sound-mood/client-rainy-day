@@ -23,6 +23,11 @@ var __API_URL__ = 'http://localhost:3000';
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
     }
 
+    function User(rawDataObj) {
+        Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
+    }
+
+
     function Preset(ctx) {
         let index = (parseInt(ctx.params.playlist_id) - 1);
         console.log('playlist index', index);
@@ -35,7 +40,6 @@ var __API_URL__ = 'http://localhost:3000';
         this.songs = Song.all.filter(a => a.playlist_id === parseInt(ctx.params.playlist_id));
     }
 
-    //  THIS IS A TEST
 
 
     // gonna need to create an object constructor which will put playlist objects in this array so that they can be called by the playlistView.init function
@@ -47,6 +51,9 @@ var __API_URL__ = 'http://localhost:3000';
     Ambiance.all = [];
     Video.all = [];
     Playlist.all = [];
+    soundmood.currentUser = 0;
+    
+    
 
     Song.loadAll = rawData => {
         console.log(rawData);
@@ -57,6 +64,123 @@ var __API_URL__ = 'http://localhost:3000';
             $('#music-selection').append(a.songToHtml())
         });
     }
+
+    User.prototype.insertRecord = function(){
+        $.ajax({
+            url: `${__API_URL__ }/api/v1/users`,
+            method: 'POST',
+            data: {
+              name: this.name,
+              
+            },
+            error: function() {
+                alert('Username Taken');
+            },
+            
+        })
+    };
+
+
+    Song.prototype.insertRecord = function(){
+        $.ajax({
+            url: `${__API_URL__ }/api/v1/songs`,
+            method: 'POST',
+            data: {
+              name: this.name,
+              artist: this.artist,
+              URI: this.URI,
+            },
+            
+        })
+    };
+
+    Playlist.prototype.insertRecord = function(){
+        $.ajax({
+            url: `${__API_URL__ }/api/v1/playlists`,
+            method: 'POST',
+            data: {
+              name: this.name
+            },
+            
+        })
+    };
+
+    Playlist.prototype.updateRecord = function (callback) {
+       
+        $.ajax({
+          url: `${__API_URL__}/api/v1/playlists/${this.playlist_id}`,
+          method: 'PUT',
+          data: {
+            name: this.name,
+            
+          }
+        })
+        .then(callback);
+    };
+          
+
+
+    Video.prototype.insertRecord = function(){
+        $.ajax({
+            url: `${__API_URL__ }/api/v1/videos`,
+            method: 'POST',
+            data: {
+              name: this.name,
+              URI: this.URI
+            },
+            
+        })
+    };
+
+    Ambiance.prototype.insertRecord = function(){
+        $.ajax({
+            url: `${__API_URL__ }/api/v1/ambiance`,
+            method: 'POST',
+            data: {
+              name: this.name,
+              URI: this.URI,
+              user_id: `${soundmood.currentUser}`
+            },
+            
+        })
+    };
+
+    Playlist.prototype.deleteRecord = (ctx, next) => {
+        let playlist_id = ctx.params.playlist_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/playlist/${playlist_id}`,
+            method: 'DELETE',
+        })
+    };
+           
+    Song.prototype.deleteRecord = (ctx, next) => {
+        let song_id = ctx.params.song_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/song/${song_id}`,
+            method: 'DELETE',
+        })
+    };        
+
+    Video.prototype.deleteRecord = (ctx, next) => {
+        let video_id = ctx.params.video_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/video/${video_id}`,
+            method: 'DELETE',
+        })
+    };   
+
+    Ambiance.prototype.deleteRecord = (ctx, next) => {
+        let ambiance_id = ctx.params.ambiance_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/ambiance/${ambiance_id}`,
+            method: 'DELETE',
+        })
+    };
+
+
+
+
+    
 
     Ambiance.loadAll = rawData => {
         Ambiance.all = rawData.map((ambianceObj) => new Ambiance(ambianceObj));
@@ -157,6 +281,28 @@ var __API_URL__ = 'http://localhost:3000';
             .then(callback)
     }
 
+    User.prototype.setUser = (callback) => {
+        $.get(`${__API_URL__}/api/v1/users`)
+            .then(results => {
+                console.log(results);
+                console.log(results[results.length-1]);
+                soundmood.currentUser = results[results.length-1].user_id;
+            })
+            .then(callback)
+    }
+
+    User.prototype.setUserLogin = (callback) => {
+        $.get(`${__API_URL__}/api/v1/users/login`)
+            .then(results => {
+                console.log(results);
+                console.log(results[results.length-1]);
+                soundmood.currentUser = results[results.length-1].user_id;
+            })
+            .then(callback)
+    }
+
+
+   
     //#####################PLAYER#######################################
 
     var player1;
@@ -175,6 +321,7 @@ var __API_URL__ = 'http://localhost:3000';
             }
         });
         player2 = new YT.Player('player2', {
+
             // sound
             videoId: `${ambiance}`,
             playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
@@ -192,10 +339,7 @@ var __API_URL__ = 'http://localhost:3000';
 
 
 
-
-
-        })
-    }
+    };
 
     function onPlayer1Ready() {
         player1.setVolume(0);
@@ -226,6 +370,7 @@ var __API_URL__ = 'http://localhost:3000';
         }
     }
 
+    module.User = User;
     module.Playlist = Playlist;
     module.Song = Song;
     module.Video = Video;

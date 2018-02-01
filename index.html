@@ -56,7 +56,7 @@
             <div class="grid-container">
                 <div class="col-1of5">
                     <div id="log-in" class="hide">
-                        <form>
+                        <form id="log-in-form">
                             <div class="loginContainer">
                                 <div class="login-title">Username</div>
                                 <input class="log-in-input" type="text" placeholder="Enter Username" name="userName" required>
@@ -65,8 +65,7 @@
                                 <button type="submit">Login</button>
                                 <button type="singUp">Sign Up</button>
                             </div>
-                        </form>
-                    </div>
+                      </form>
                     </div>
                 </div>
                 <div class="col-1of5" id="all-content">
@@ -104,7 +103,7 @@
                                         <div>
                                             <input type="text" placeholder="PLAYLIST TITLE">
                                         </div>
-                                        <button class="playlist-buttons">Save</button>
+                                        <button class="playlist-buttons" id="playlist-insert">Save</button>
                                     </div>
                                     <div class="hide">
                                         <p>Background Sounds (one per playlist)</p>
@@ -175,6 +174,7 @@
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
         <script src="/scripts/models/soundmood.js"></script>
+        <script src="/scripts/views/login-view.js"></script>
         <script src="/scripts/views/music-view.js"></script>
         <script src="/scripts/views/video-view.js"></script>
         <script src="/scripts/views/sound-view.js"></script>
