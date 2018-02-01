@@ -5,10 +5,9 @@
 
     playerView.init = function(ctx, next) {
         console.log('playerView route hit');
-
+        soundmood.createPlayer(videoURI, ambianceURI, songUriString, firstSong);
         $('#menu').hide();
         $('#player').toggleClass('hide');
-        next();
 
         // var tag = document.createElement('script');
 
@@ -16,17 +15,7 @@
         // var firstScriptTag = document.getElementsByTagName('script')[0];
         // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-       
-
-
-
-
-
         
-
-       
-
-
 
 
     }

@@ -3,12 +3,12 @@
 // var __API_URL__ = 'https://rainy-day-v2.herokuapp.com'
 var __API_URL__ = 'http://localhost:3000';
 
-(function(module) {
+(function (module) {
     let soundmood = {};
-    
+
     function Song(rawDataObj) {
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
-        
+
     }
 
     function Ambiance(rawDataObj) {
@@ -37,7 +37,7 @@ var __API_URL__ = 'http://localhost:3000';
 
     //  THIS IS A TEST
 
-    
+
     // gonna need to create an object constructor which will put playlist objects in this array so that they can be called by the playlistView.init function
     // TODO: should probably only be triggered when the /playlist route is hit??? don't need it every time
     let presetPlaylists = [];
@@ -88,27 +88,27 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     // TODO: ask why didn't this work as a lexical arrow function
-    Song.prototype.songToHtml = function() {
+    Song.prototype.songToHtml = function () {
         let template = Handlebars.compile($('#song-choices-template').text());
         return template(this);
     }
 
-    Ambiance.prototype.ambianceToHtml = function() {
+    Ambiance.prototype.ambianceToHtml = function () {
         let template = Handlebars.compile($('#ambiance-choices-template').text());
         return template(this);
     }
 
-    Video.prototype.videoToHtml = function() {
+    Video.prototype.videoToHtml = function () {
         let template = Handlebars.compile($('#video-choices-template').text());
         return template(this);
     }
 
-    Playlist.prototype.playlistToHtml = function() {
+    Playlist.prototype.playlistToHtml = function () {
         let template = Handlebars.compile($('#playlist-template').text());
         return template(this);
     }
 
-    Preset.prototype.presetToHtml = function(a) {
+    Preset.prototype.presetToHtml = function (a) {
         let template = Handlebars.compile(a);
         return template(this);
     }
@@ -156,48 +156,41 @@ var __API_URL__ = 'http://localhost:3000';
             })
             .then(callback)
     }
-   
+
     //#####################PLAYER#######################################
 
     var player1;
     var player2;
     var player3;
-    soundmood.play = function(ctx, next) {
-        $('#play-button').click(function(ctx, next, e) {
-            e.preventDefault();
-            console.log(ctx);
-        });
-    }
-
-    soundmood.createPlayer = function(ctx,next) {
 
 
+    soundmood.createPlayer = function (video, ambiance, songs, firstSong) {
         player1 = new YT.Player('player1', {
             // background video
-            videoId: '668nUCeBHyY',
-            playerVars: { 'playlist': '668nUCeBHyY', 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+            videoId: `${video}`,
+            playerVars: { 'playlist': `${video}`, 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
             events: {
-            'onReady': onPlayer1Ready,
-            'onStateChange': onPlayer1StateChange
-                }
-          });
+                'onReady': onPlayer1Ready,
+                'onStateChange': onPlayer1StateChange
+            }
+        });
         player2 = new YT.Player('player2', {
-                            // sound
-                              videoId: 'q76bMs-NwRk',
-                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
-                              events: {
-                                   'onReady': onPlayer2Ready,
-                              }
-                          });
+            // sound
+            videoId: `${ambiance}`,
+            playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+            events: {
+                'onReady': onPlayer2Ready,
+            }
+        });
         player3 = new YT.Player('player3', {
-                            // song
-                              videoId: 'n0svuurLibQ',
-                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
-                              events: {
-                                'onReady': onPlayer3Ready,
-                              }
-                              
-                              
+            // song
+            videoId: `${firstSong}`,
+            playerVars: { 'playlist': `${songs}`, 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+            events: {
+                'onReady': onPlayer3Ready,
+            }
+
+
 
 
 
@@ -205,30 +198,32 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     function onPlayer1Ready() {
-      player1.setVolume(0);
-
+        player1.setVolume(0);
+        player1.startVideo();
     }
 
     function onPlayer2Ready() {
-      player2.setVolume(100);
+        player2.setVolume(100);
+        player2.startVideo();
     }
 
     function onPlayer3Ready() {
-      player3.setVolume(90);
+        player3.setVolume(90);
+        player3.startVideo();
     }
 
     function onPlayer1StateChange() {
-      if(player2.getPlayerState() == '1') {
-        player2.pauseVideo();
-      } else if(player2.getPlayerState() == '2') {
-        player2.playVideo();
-      }
+        if (player1.getPlayerState() == '2') {
+            player2.pauseVideo();
+        } else if (player1.getPlayerState() == '1') {
+            player2.playVideo();
+        }
 
-      if(player3.getPlayerState() == '1') {
-        player3.pauseVideo();
-      } else if(player3.getPlayerState() == '2') {
-        player3.playVideo();
-      }
+        if (player1.getPlayerState() == '2') {
+            player3.pauseVideo();
+        } else if (player1.getPlayerState() == '1') {
+            player3.playVideo();
+        }
     }
 
     module.Playlist = Playlist;
