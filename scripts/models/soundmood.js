@@ -310,6 +310,11 @@ var __API_URL__ = 'http://localhost:3000';
     var player2;
     var player3;
 
+    soundmood.stopPlayer = () => {
+        player1.stopVideo();
+        player2.stopVideo();
+        player3.stopVideo();
+    }
 
     soundmood.createPlayer = function (video, ambiance, songs, firstSong) {
         player1 = new YT.Player('player1', {

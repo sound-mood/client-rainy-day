@@ -20,11 +20,15 @@ function showCustomOpts(ctx) {
 
 
 function showHomePage() {
-    if(!$('#log-in').hasClass('hide')) {
-        $('#log-in').addClass('hide');
+    $('#log-in').hide();
+    $('#audio-visual').hide();
+    if(!$('#player').hasClass('hide')) {
+        $('#player').addClass('hide');
     }
-
+    $('#menu').show();
     $('#all-content').show();
+
+    soundmood.stopPlayer();
 }
 
 function showHidePreview() {
@@ -61,6 +65,12 @@ function homePageInit (ctx, next) {
     next();
 }
 
+function addSVA() {
+    console.log('save button hit');
+    $('#playlist-add-opts').hide();
+    $('#SVA-opts').show();
+}
+
 // this will need to grab the ID of the playlist and use it to display the predetermined music experience
 page('/', homePageInit, soundmood.fetchAll)
 page('/playlist', playlistView.init)
@@ -76,7 +86,7 @@ page('/custom/sound', soundView.init)
 page('/custom/video', videoView.init)
 page('/create', createView.init)
 page('/player', playerView.init)
-
+page('/playlist-add', addSVA)
 
 
 
