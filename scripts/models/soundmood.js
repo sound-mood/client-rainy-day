@@ -90,6 +90,8 @@ var __API_URL__ = 'http://localhost:3000';
               name: this.name,
               artist: this.artist,
               URI: this.URI,
+              user_id: `${soundmood.currentUser}`,
+              playlist_id: `${soundmood.currentPlaylist}`
             },
             
         })
@@ -127,7 +129,8 @@ var __API_URL__ = 'http://localhost:3000';
             method: 'POST',
             data: {
               name: this.name,
-              URI: this.URI
+              URI: this.URI,
+              user_id: `${soundmood.currentUser}`
             },
             
         })
@@ -303,21 +306,17 @@ var __API_URL__ = 'http://localhost:3000';
             .then(callback)
     }
 
-    User.prototype.setUserLogin = function(){
-        $.ajax({
-            url: `${__API_URL__ }/api/v1/users/login`,
-            method: 'GET',
-            data: {
-              name: `${username}`
-              
-            },
-        })
+    User.prototype.setUserLogin = function(callback){
+        $.get(`${__API_URL__}/api/v1/users`)
         .then(results => {
             console.log(results);
-        })
-
-    };
+            console.log(`${username}`);
+            soundmood.currentUser = results.filter(item => item.name === `${username}`).name;
+            console.log(soundmood.currentUser);
             
+        })
+        .then(callback)
+}
             
             
 

@@ -51,6 +51,10 @@ function homePageInit (ctx, next) {
     function loginSubmit(e) {
         e.preventDefault();
         let username = $('#username').val();
+        let user = new User({
+            name: `${username}`
+        });
+        user.setUserLogin();
         $('#log-in').hide();
         $('#all-content').show();
     }
