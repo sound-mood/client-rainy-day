@@ -33,7 +33,6 @@
         "URI": "c9VQye6P8k0",
         "user_id": 1,
         "playlist_id": 1
-
     },
     {
         "name": "Jamrock",
@@ -146,7 +145,6 @@
         "URI": "sXJXLq1lN7U",
         "user_id": 1,
         "playlist_id": 5
-
     },
     {
         "name": "Can't Help But Wait",
@@ -265,13 +263,6 @@
         "artist": "Gorillaz",
         "URI": "1V_xRb0x9aw",
         "user_id": 1,
-        "playlist_id": 1 
-    },
-    {
-        "name": "Clint Eastwood",
-        "artist": "Gorillaz",
-        "URI": "1V_xRb0x9aw",
-        "user_id": 1,
         "playlist_id": 6 
     },
     {
@@ -282,18 +273,11 @@
         "playlist_id": 3 
     },
     {
-        "name": "MultipleSongs",
+        "name": "BB King Mix",
         "artist": "BB King",
         "URI": "QzRIPJMK6l8",
         "user_id": 1,
         "playlist_id": 6 
-    },
-    {
-        "name": "MultipleSongs",
-        "artist": "BB King",
-        "URI": "QzRIPJMK6l8",
-        "user_id": 1,
-        "playlist_id": 5 
     },
     {
         "name": "Your Body Is A Wonderland",

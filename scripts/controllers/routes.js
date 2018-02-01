@@ -15,22 +15,16 @@ function showCustomOpts(ctx) {
     $('#custom-options').toggleClass('hide');
 }
 
-function showLogIn() {
-    console.log('log in route hit');
-    
-    if(!$('#all-content').hasClass('hide')) {
-        $('#all-content').addClass('hide');
-    }
 
-    $('#log-in').toggleClass('hide');
-}
+
+
 
 function showHomePage() {
     if(!$('#log-in').hasClass('hide')) {
         $('#log-in').addClass('hide');
     }
 
-    $('#all-content').toggleClass('hide');
+    $('#all-content').show();
 }
 
 function showHidePreview() {
@@ -43,7 +37,7 @@ page('/playlist', playlistView.init)
 page('/playlist/:playlist_id', previewView.init)
 //this will just render the custom options menu
 page('/custom', showCustomOpts)
-page('/login', showLogIn)
+page('/login', loginView.init)
 page('/home', showHomePage)
 page('/preview', showHidePreview)
 
@@ -52,7 +46,8 @@ page('/custom/music', musicView.init)
 page('/custom/sound', soundView.init)
 page('/custom/video', videoView.init)
 page('/create', createView.init)
-page('/player', playerView.init, soundmood.play)
+page('/player', playerView.init)
+
 
 
 

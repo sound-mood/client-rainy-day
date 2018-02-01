@@ -49,7 +49,21 @@
 }
 
 .col-2of5 {
-    width: 47.5%;
+    max-width: 47.5%;
+}
+
+.logo {
+    max-height: 40px;
+}
+
+
+#smaller {
+    max-width:30%;
+}
+
+#login-link {
+    margin: 20px 8px 0px 0px;
+    z-index: -1;
 }
 
 @media only screen and (min-width: 500px) {
@@ -58,13 +72,36 @@
         min-height: 1px; 
         width: 100%; 
     }
+
+    .clearfix:after{
+        display:block;
+        clear:both;
+        content:'';
+    }
+
+    #smaller {
+        max-width: 50%;
+    }
+    
+    header {
+        max-height: 50px;
+        height: 100%;
+    }
     
     h1 {
         font-size: 30px;
     }
 
+    .logo {
+        max-height: 40px;
+    }
+
     a {
-        font-size: 10px;
+        font-size: 20px;
+    }
+    
+    #login-link {
+        margin: 20px 5px 0px 0px;
     }
 
     .section-title {
@@ -82,6 +119,6 @@
     }
 
     .col-4of5{
-        width: 75%; 
+        width: 100%; 
     }
 }
