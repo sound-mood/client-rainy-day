@@ -128,6 +128,38 @@ var __API_URL__ = 'http://localhost:3000';
         })
     };
 
+    Playlist.prototype.deleteRecord = (ctx, next) => {
+        let playlist_id = ctx.params.playlist_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/playlist/${playlist_id}`,
+            method: 'DELETE',
+        })
+    };
+           
+    Song.prototype.deleteRecord = (ctx, next) => {
+        let song_id = ctx.params.song_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/song/${song_id}`,
+            method: 'DELETE',
+        })
+    };        
+
+    Video.prototype.deleteRecord = (ctx, next) => {
+        let video_id = ctx.params.video_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/video/${video_id}`,
+            method: 'DELETE',
+        })
+    };   
+
+    Ambiance.prototype.deleteRecord = (ctx, next) => {
+        let ambiance_id = ctx.params.ambiance_id;
+        $.ajax({
+            url: `${__API_URL__}/api/v1/ambiance/${ambiance_id}`,
+            method: 'DELETE',
+        })
+    };
+
 
 
 
@@ -241,7 +273,7 @@ var __API_URL__ = 'http://localhost:3000';
         player1 = new YT.Player('player1', {
                               
             videoId: `${Song.all[0].uri}`,
-            playerVars: { 'playlist': `${Song.all}`, 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 1 },
+            playerVars: { 'playlist': `${Song.all}`, 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
             events: {
             'onReady': onPlayer1Ready,
             'onStateChange': onPlayer1StateChange
@@ -250,7 +282,7 @@ var __API_URL__ = 'http://localhost:3000';
         player2 = new YT.Player('player2', {
                               
                               videoId: 'q76bMs-NwRk',
-                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                              playerVars: { 'playlist': 'q76bMs-NwRk', 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
                               events: {
                                    'onReady': onPlayer2Ready,
                                    //'onStateChange': onPlayer2StateChange
@@ -258,7 +290,7 @@ var __API_URL__ = 'http://localhost:3000';
                           });
         player3 = new YT.Player('player3', {
                               videoId: `${Song.all[6].uri}`,
-                              playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
+                              playerVars: { 'playlist': `${Song.all[6].uri}`,'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
                               events: {
                                 'onReady': onPlayer3Ready,
                               }

@@ -17,8 +17,9 @@ function showCustomOpts(ctx) {
 
 function loginSubmit(e) {
     e.preventDefault();
+    let username = $('#username').val();
     let user = new User({
-        name: $('#username').val()
+        name: `${username}`
     });
 
     user.insertRecord();

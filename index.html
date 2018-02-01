@@ -126,29 +126,30 @@
                                     <p>Title your playlist:</p>
                                     <div class="grid-container clearfix">
                                         <div class="col-9of10 float-left">
-                                            <input type="text" placeholder="PLAYLIST TITLE">
+                                            <input id="new-playlist" type="text" placeholder="PLAYLIST TITLE">
                                         </div>
                                         <div class="col-1of10 float-right">
+                                                <button id="playlist-insert">+</button>  
                                         </div>
                                     </div>
                                     <p>Background Sounds (one per playlist)</p>
                                     <div class="grid-container clearfix">
                                         <div class="col-9of10 float-left">
-                                            <input type="text" placeholder="AMBIENT TRACK TITLE">
-                                            <input type="text" placeholder="AMBIENT TRACK URL">
+                                            <input id="new-sound" type="text" placeholder="AMBIENT TRACK TITLE">
+                                            <input id="sound-url" type="text" placeholder="AMBIENT TRACK URL">
                                         </div>
                                         <div class="col-1of10 float-right">
-                                            <button>+</button>
+                                            <button id="sound-insert">+</button>
                                         </div>
                                     </div>
                                     <p>Background Video (one per playlist)</p>
                                     <div class="grid-container clearfix">
                                         <div class="col-9of10 float-left">
-                                            <input type="text" placeholder="VIDEO TITLE">
-                                            <input type="text" placeholder="VIDEO URL">
+                                            <input id="new-video" type="text" placeholder="VIDEO TITLE">
+                                            <input id="video-url" type="text" placeholder="VIDEO URL">
                                         </div>
                                         <div class="col-1of10 float-right">
-                                            <button>+</button>                                    
+                                            <button id="video-insert">+</button>                                    
                                         </div>
                                     </div>
                                     <p>Track Title</p>
@@ -156,17 +157,17 @@
                                         <div class="col-9of10 float-left">
                                             <div class="grid-container">
                                                 <div class="col-2of5">
-                                                    <input type="text" class="half-size-input" placeholder="SONG TITLE">
+                                                    <input id="new-song" type="text" class="half-size-input" placeholder="SONG TITLE">
                                                 </div>
                                                 <div class="col-2of5">
-                                                    <input type="text" class="half-size-input" placeholder="SONG ARTIST">
+                                                    <input id="song-artist" type="text" class="half-size-input" placeholder="SONG ARTIST">
                                                 </div>
                                             </div>
-                                            <input type="text" placeholder="SONG URL">
+                                            <input id="song-url" type="text" placeholder="SONG URL">
 
                                         </div>
                                         <div class="col-1of10 float-right">
-                                            <button>+</button>
+                                            <button id="song-insert">+</button>
                                         </div>
                                     </div>
                                 </form>
