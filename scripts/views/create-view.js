@@ -12,6 +12,7 @@
         });
     
         playlist.insertRecord();
+        playlist.setPlaylistNew();
     
     }
 

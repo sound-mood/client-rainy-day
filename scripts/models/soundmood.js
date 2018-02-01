@@ -52,6 +52,7 @@ var __API_URL__ = 'http://localhost:3000';
     Video.all = [];
     Playlist.all = [];
     soundmood.currentUser = 0;
+    soundmood.currentPlaylist = 0;
     
     
 
@@ -288,6 +289,16 @@ var __API_URL__ = 'http://localhost:3000';
                 console.log(results);
                 console.log(results[results.length-1]);
                 soundmood.currentUser = results[results.length-1].user_id;
+            })
+            .then(callback)
+    }
+
+    Playlist.prototype.setPlaylistNew = (callback) => {
+        $.get(`${__API_URL__}/api/v1/playlists`)
+            .then(results => {
+                console.log(results);
+                console.log(results[results.length-1]);
+                soundmood.currentPlaylist = results[results.length-1].playlist_id;
             })
             .then(callback)
     }
