@@ -33,6 +33,11 @@
         function loginSubmit(e) {
             e.preventDefault();
             let username = $('#username').val();
+            let user = new User({
+                name: `${username}`
+            });
+
+            user.setUserLogin();
         }
     
         $('#sign-up-button').on('click', signupSubmit);

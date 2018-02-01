@@ -295,15 +295,20 @@ var __API_URL__ = 'http://localhost:3000';
             .then(callback)
     }
 
-    User.prototype.setUserLogin = (callback) => {
-        $.get(`${__API_URL__}/api/v1/users/login`)
-            .then(results => {
-                console.log(results);
-                console.log(results[results.length-1]);
-                soundmood.currentUser = results[results.length-1].user_id;
-            })
-            .then(callback)
-    }
+    User.prototype.setUserLogin = function(){
+        $.ajax({
+            url: `${__API_URL__ }/api/v1/users/login`,
+            method: 'GET',
+            data: {
+              name: this.name,
+              
+            },
+        })
+        
+    };
+            
+            
+            
 
 
    
