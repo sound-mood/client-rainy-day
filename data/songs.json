@@ -3,267 +3,366 @@
         "name": "Little Bird Sing",
         "artist": "Bob Marley",
         "URI": "zaGUr6wzyT8",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
+    },
+    {
+        "name": "Little Bird Sing",
+        "artist": "Bob Marley",
+        "URI": "zaGUr6wzyT8",
+        "user_id": 1,
+        "playlist_id": 6
     },
     {
         "name": "Knowledge",
         "artist": "Bob Marley",
         "URI": "h4OiCUkxGto",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "No Woman No Cry",
         "artist": "Bob Marley",
         "URI": "pHlSE9j5FGY",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Patience",
         "artist": "Damian Marley",
         "URI": "c9VQye6P8k0",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
 
     },
     {
         "name": "Jamrock",
         "artist": "Damian Marley",
         "URI": "xlCmQcRPtRg",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Here come truble",
         "artist": "Chronixx",
         "URI": "LfeIfiiBTfY",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Hello",
         "artist": "Adele (Reggae Cover)",
         "URI": "OmnDEUD9NyI",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Hardcore",
         "artist": "Chronixx",
         "URI": "xr6Kcgl0r5E",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Unforgettable",
         "artist": "French Montana",
         "URI": "CTFtOOh47oo",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 6
     },
     {
         "name": "I'm the One",
         "artist": "DJ Khalad",
         "URI": "weeI1G46q0o",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 6
     },
     {
         "name": "New flame",
         "artist": "Chris Brown",
         "URI": "kAOmzXRpkVk",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 7
+    },
+    {
+        "name": "Finesse",
+        "artist": "Bruno Mars",
+        "URI": "6OcOO1k-vGE",
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Knock You Down",
         "artist": "Keri Hilson",
         "URI": "p_RqWocthcc",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 6
+    },
+    {
+        "name": "Knock You Down",
+        "artist": "Keri Hilson",
+        "URI": "p_RqWocthcc",
+        "user_id": 1,
+        "playlist_id": 7
     },
     {
         "name": "Deuces",
         "artist": "Chris Brown",
         "URI": "rhBwt9mw7Sk",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 4
     },
     {
-        "name": "3w0yqAdJ1iY",
+        "name": "No Limit",
         "artist": "Usher",
         "URI": "3w0yqAdJ1iY",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 9
     },
     {
-        "name": "3AszPTJXIgM",
+        "name": "U Don't Have To Call",
         "artist": "Usher",
         "URI": "3AszPTJXIgM",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 8
     },
     {
         "name": "Happy",
         "artist": "Pharrell Williams",
         "URI": "ZbZSe6N_BXs",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 9
     },
     {
         "name": "She Knows",
         "artist": "J. Cole",
         "URI": "jYdaQJzcAcw",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 5
     },
     {
         "name": "Sweetest Girl",
         "artist": "Wyclef Jean",
         "URI": "sXJXLq1lN7U",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 5
 
     },
     {
         "name": "Can't Help But Wait",
         "artist": "Trey songz",
         "URI": "iF_JBlSh_G8",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 6
     },
     {
         "name": "Pretty Wings",
         "artist": "Maxwell",
         "URI": "RkPy4yq7EJo",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "This woman's wrok",
         "artist": "Maxwell",
         "URI": "gkeCNeHcmXY",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "Ordinary People",
         "artist": "John Legend",
         "URI": "PIh07c_P4hc",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "The Matrimony",
         "artist": "Wale",
         "URI": "IszJPYjNidg",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 6
     },
     {
-        "name": "I'm not the only one",
+        "name": "I'm Not the Only One",
         "artist": "Sam smith",
         "URI": "nCkpzqqog4k",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 7
     },
     {
         "name": "My Immortal",
         "artist": "Evanescence",
         "URI": "5anLPw0Efmo",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 7
     },
     {
         "name": "Sound of Silence",
         "artist": "Simon and Garfunkel",
         "URI": "4fWyzwo1xg0",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 5
     },
     {
         "name": "Dust In the Wind",
         "artist": "Kansas",
         "URI": "tH2w6Oxx0kQ",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 7
     },
     {
         "name": "Time After Time",
         "artist": "Cyndi Lauper",
         "URI": "VdQY7BusJNU",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
+    },
+    {
+        "name": "Time After Time",
+        "artist": "Cyndi Lauper",
+        "URI": "VdQY7BusJNU",
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "Take My Breath Away",
         "artist": "Berlin",
         "URI": "Bx51eegLTY8",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "G.O.M.D.",
         "artist": "J. Cole",
         "URI": "vHU6ZRQJ50Q",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Day n Nite",
         "artist": "Kid Cudi",
         "URI": "VrDfSZ_6f4U",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "POWER",
         "artist": "Kayne West",
         "URI": "L53gjP-TtGE",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 4
     },
     {
         "name": "Lose Yourself",
         "artist": "Eminem",
         "URI": "_Yhyp-_hX2s",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 4
     },
     {
         "name": "Clint Eastwood",
         "artist": "Gorillaz",
         "URI": "1V_xRb0x9aw",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1 
+    },
+    {
+        "name": "Clint Eastwood",
+        "artist": "Gorillaz",
+        "URI": "1V_xRb0x9aw",
+        "user_id": 1,
+        "playlist_id": 6 
     },
     {
         "name": "Hello",
         "artist": "Adele",
         "URI": "_WS9w10ygpU",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3 
     },
     {
         "name": "MultipleSongs",
         "artist": "BB King",
         "URI": "QzRIPJMK6l8",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 6 
+    },
+    {
+        "name": "MultipleSongs",
+        "artist": "BB King",
+        "URI": "QzRIPJMK6l8",
+        "user_id": 1,
+        "playlist_id": 5 
     },
     {
         "name": "Your Body Is A Wonderland",
         "artist": "John Mayer",
         "URI": "N5EnGwXV_Pg",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 7
+    },
+    {
+        "name": "Your Body Is A Wonderland",
+        "artist": "John Mayer",
+        "URI": "N5EnGwXV_Pg",
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "Assassin",
         "artist": "John Mayer",
         "URI": "9R50OpRbVxI",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "Waiting On the World to Change",
         "artist": "John Mayer",
         "URI": "oBIxScJ5rlY",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 9
     },
     {
         "name": "I'm Yours",
         "artist": "Jason Mraz",
         "URI": "RILP53OR63k",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
+    },
+    {
+        "name": "I'm Yours",
+        "artist": "Jason Mraz",
+        "URI": "RILP53OR63k",
+        "user_id": 1,
+        "playlist_id": 7
     },
     {
         "name": "Lay Me Down",
         "artist": "Sam Smith",
         "URI": "tZFScuPR0v0",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "Crystalised",
         "artist": "The XX",
         "URI": "Pib8eYDSFEI",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 1
     },
     {
         "name": "Blue Jeans",
         "artist": "Lana Del Rey",
         "URI": "PpF0vlAtjBM",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "Stay",
         "artist": "Rihanna",
         "URI": "wS4InT7Ycdk",
-        "user_id": 0
+        "user_id": 1,
+        "playlist_id": 7
     }
-
 ]

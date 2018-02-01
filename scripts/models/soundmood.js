@@ -23,7 +23,7 @@ var __API_URL__ = 'http://localhost:3000';
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
     }
 
-    function Preview(ctx) {
+    function Preset(ctx) {
         let index = (parseInt(ctx.params.playlist_id) - 1);
         console.log('playlist index', index);
         let currentPlaylist = Playlist.all[index];
@@ -32,8 +32,7 @@ var __API_URL__ = 'http://localhost:3000';
         this.videoURI = Video.all[currentPlaylist.video_id - 1].uri;
         this.ambiance = Ambiance.all[currentPlaylist.ambiance_id - 1].name;
         this.ambianceURI = Ambiance.all[currentPlaylist.ambiance_id - 1].uri;
-        // once have foreign keys, can grab songs and URI's.
-        // this.song
+        this.songs = Song.all.filter(a => a.playlist_id === parseInt(ctx.params.playlist_id));
     }
 
     //  THIS IS A TEST
@@ -51,9 +50,6 @@ var __API_URL__ = 'http://localhost:3000';
 
     Song.loadAll = rawData => {
         console.log(rawData);
-
-        
-
         Song.all = rawData.map((songObj) => new Song(songObj));
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
@@ -112,8 +108,8 @@ var __API_URL__ = 'http://localhost:3000';
         return template(this);
     }
 
-    Preview.prototype.previewToHtml = function() {
-        let template = Handlebars.compile($('#preview-template').text());
+    Preset.prototype.presetToHtml = function(a) {
+        let template = Handlebars.compile(a);
         return template(this);
     }
 
@@ -230,7 +226,7 @@ var __API_URL__ = 'http://localhost:3000';
     module.Song = Song;
     module.Video = Video;
     module.Ambiance = Ambiance;
-    module.Preview = Preview;
+    module.Preset = Preset;
     module.soundmood = soundmood;
 
 })(window)

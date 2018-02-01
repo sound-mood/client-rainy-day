@@ -30,7 +30,11 @@
             <h4>Ambient Noises:</h4> 
             <p>- {{ambiance}}</p>
             <h4>Songs:</h4>
+            {{#each songs}}
+            <p>- {{this.name}}</p> 
+            {{/each}}
         </script>
+
 
             
     </head>
@@ -140,6 +144,7 @@
                     <div id="your-current-playlist" class="hide">
                         <a class="section-title" href="/preview">Playlist Preview</a>
                         <div class="hide" id="playlist-preview"></div>
+                        <div class="hide" id="song-preview"></div>
                         <a href="/player">Start playing...</a>            
                     </div>
                 </div>
@@ -154,7 +159,6 @@
             <div id="player3" style="display: none"></div>
         </section>
         <footer>
-
         </footer>
 
 
