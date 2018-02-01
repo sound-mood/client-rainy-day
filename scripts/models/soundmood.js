@@ -340,7 +340,8 @@ var __API_URL__ = 'http://localhost:3000';
 
 
 
-    };
+        });
+    }
 
     function onPlayer1Ready() {
         player1.setVolume(0);

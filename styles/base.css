@@ -32,7 +32,7 @@ div {
     background-color: rgb(0, 0, 0);
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
     font-family: 'Yantramanav', sans-serif;
     margin: 0px;
     width: 98%;

@@ -24,7 +24,7 @@ function showHomePage() {
         $('#log-in').addClass('hide');
     }
 
-    $('#all-content').toggleClass('hide');
+    $('#all-content').show();
 }
 
 function showHidePreview() {
