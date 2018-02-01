@@ -300,11 +300,14 @@ var __API_URL__ = 'http://localhost:3000';
             url: `${__API_URL__ }/api/v1/users/login`,
             method: 'GET',
             data: {
-              name: this.name,
+              name: `${username}`
               
             },
         })
-        
+        .then(results => {
+            console.log(results);
+        })
+
     };
             
             
