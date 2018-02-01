@@ -46,7 +46,8 @@ page('/custom/music', musicView.init)
 page('/custom/sound', soundView.init)
 page('/custom/video', videoView.init)
 page('/create', createView.init)
-page('/player', playerView.init, soundmood.createPlayer)
+page('/player', playerView.init)
+
 
 
 
