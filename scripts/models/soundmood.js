@@ -162,9 +162,18 @@ var __API_URL__ = 'http://localhost:3000';
     var player1;
     var player2;
     var player3;
+    soundmood.play = function(ctx, next) {
+        $('#play-button').click(function(ctx, next, e) {
+            e.preventDefault();
+            console.log(ctx);
+        });
+    }
+
     soundmood.createPlayer = function(ctx,next) {
+
+
         player1 = new YT.Player('player1', {
-                              
+            // background video
             videoId: '668nUCeBHyY',
             playerVars: { 'playlist': '668nUCeBHyY', 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
             events: {
@@ -173,15 +182,15 @@ var __API_URL__ = 'http://localhost:3000';
                 }
           });
         player2 = new YT.Player('player2', {
-                              
+                            // sound
                               videoId: 'q76bMs-NwRk',
                               playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
                               events: {
                                    'onReady': onPlayer2Ready,
-                                   //'onStateChange': onPlayer2StateChange
                               }
                           });
         player3 = new YT.Player('player3', {
+                            // song
                               videoId: 'n0svuurLibQ',
                               playerVars: { 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
                               events: {

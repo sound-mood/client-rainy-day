@@ -3,32 +3,19 @@
 
 (function (module) {
     const previewView = {};
+    var preview = {};
 
     previewView.init = function (ctx, next) {
         console.log('previewView.init route hit');
         
         // TODO double check this... this object should push the context object into the object constructor above
         console.log('context object', ctx);
-        var preview = new Preset(ctx);
+        preview = new Preset(ctx);
 
         $('#playlist-preview').empty();
         
-        console.log(preview.songs);
+        console.log('preview songs', preview.songs);
         $('#playlist-preview').append(preview.presetToHtml($('#preview-template').text()));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         if (!$('#custom-options').hasClass('hide')) {
@@ -57,5 +44,6 @@
         $('#your-current-playlist').removeClass('hide');
     }
 
+    module.preview = preview;
     module.previewView = previewView;
 })(window)
