@@ -31,13 +31,42 @@ function showHidePreview() {
     $('#playlist-preview').toggleClass('hide');
 }
 
+function homePageInit (ctx, next) {
+    $('#all-content').hide();
+    console.log('home page init');
+    function signupSubmit(e) {
+        e.preventDefault();
+        let username = $('#username').val();
+        let user = new User({
+            name: `${username}`
+        });
+    
+        user.insertRecord();
+        user.setUser();
+        console.log(soundmood.currentUser);
+        $('#log-in').hide();
+        $('#all-content').show();
+    }        
+    
+    function loginSubmit(e) {
+        e.preventDefault();
+        let username = $('#username').val();
+        $('#log-in').hide();
+        $('#all-content').show();
+    }
+
+    $('#sign-up-button').on('click', signupSubmit);
+    $('#log-in-button').on('click', loginSubmit);
+
+    next();
+}
+
 // this will need to grab the ID of the playlist and use it to display the predetermined music experience
-page('/', soundmood.fetchAll)
+page('/', homePageInit, soundmood.fetchAll)
 page('/playlist', playlistView.init)
 page('/playlist/:playlist_id', previewView.init)
 //this will just render the custom options menu
 page('/custom', showCustomOpts)
-page('/login', loginView.init)
 page('/home', showHomePage)
 page('/preview', showHidePreview)
 

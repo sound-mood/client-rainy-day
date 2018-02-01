@@ -40,7 +40,8 @@
     </head>
     <body>
         <header>
-            <div class="grid-container clearfix">
+            <div class="grid-container clearfix
+            ">
                 <div class="col-2of5 clearfix header" id="cloud-logo">
                     <a href="/home">
                         <img class="logo" src="assets/cloud.png">
@@ -58,11 +59,11 @@
                         <form id="log-in-form">
                             <div class="loginContainer">
                                 <div class="login-title">Username</div>
-                                <input class="log-in-input" type="text" placeholder="Enter Username" name="userName" required>
-                                <div class="login-title">Password</div>
-                                <input class="log-in-input" type="password" placeholder="Enter Password" name="password" required>
-                                <button type="submit">Login</button>
-                                <button type="singUp">Sign Up</button>
+                                <input id="username" class="log-in-input" type="text" placeholder="Enter Username" name="userName" required>
+                                <!-- <div class="login-title">Password</div>
+                                <input class="log-in-input" type="password" placeholder="Enter Password" name="password" required> -->
+                                <button id="log-in-button">Login</button>
+                                <button id="sign-up-button">Sign Up</button>
                             </div>
                       </form>
                     </div>
@@ -173,7 +174,6 @@
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
         <script src="/scripts/models/soundmood.js"></script>
-        <script src="/scripts/views/login-view.js"></script>
         <script src="/scripts/views/music-view.js"></script>
         <script src="/scripts/views/video-view.js"></script>
         <script src="/scripts/views/sound-view.js"></script>
