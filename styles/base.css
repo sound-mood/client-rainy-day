@@ -13,14 +13,14 @@ body {
 }
 
 h1 {
-    font-size: 8vw;
+    font-size: 9vw;
     font-family: 'Yantramanav', sans-serif;
 }
 
 a {
     font-family: 'Yantramanav', sans-serif;
     text-decoration: none;
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     color: rgb(255, 255, 255);
     display: block;
     padding: 7px 7px;
