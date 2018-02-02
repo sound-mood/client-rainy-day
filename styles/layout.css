@@ -1,6 +1,4 @@
-.section-title {
-    font-size: 4vw;
-}
+
 
 .half-size-input {
     width: 40%;
@@ -17,40 +15,36 @@
 }
 
 #all-content {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .section-title {
-    font-family: 'Yantramanav', sans-serif;
-    background-color: rgba(137, 17, 167, 0.342);
+    font-family: 'Encode Sans Expanded', sans-serif;
+    background-color: rgba(137, 17, 167, 0.233);
     margin: 4px 0px 4px 0px;
-    padding-left: 9px;
+    padding: 9px 12px 9px 12px;
+    font-size: 5vw;
 }
 
 #music-selection, #video-selection, #playlist-preview, #sound-selection {
-    background-color: rgba(128, 128, 128, 0.459);
     max-height: 250px;
     overflow-y: auto;
 }
 
-.playlist-selections {
-    background-color: rgba(128, 128, 128, 0.459);
-}
-
 .custom-opts {
-    background-color: rgba(72, 72, 72, 0.459);
-    margin: 4px 0px 4px 0px;
-    padding-left: 9px;
+    background-color: rgba(78, 72, 78, 0.5);
+    margin: 4px 6px 4px 6px;
+    padding-left: 9px 7px 9px 7px;
 }
 
 .login-title {
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Encode Sans Expanded', sans-serif;
     background-color: rgba(137, 17, 167, 0.342);
     margin: 4px 0px 4px 0px;
     padding: 9px 0px 3px 7px;
     font-size: 6vw;
 }
 
-.strike {
-    text-decoration: line-through;
+#audio-visual {
+    background-color: #ffffff00;
 }

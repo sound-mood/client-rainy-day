@@ -28,7 +28,7 @@
     width: 100%; 
 }
 
-.col-1of5 {
+.col-1of4 {
     width: 100%;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .col-9of10 {
-    width: 90%;
+    width: 70%;
 }
 
 .col-1of10 {
@@ -61,6 +61,15 @@
     max-width:30%;
 }
 
+#log-in-button, #sign-up-button {
+    margin: 10px 10px 0px 10px;
+    max-width: 90%;
+}
+
+#sign-up-button {
+    margin-bottom: 10px;
+}
+
 #login-link {
     margin: 20px 8px 0px 0px;
     z-index: -1;
@@ -68,9 +77,34 @@
 
 @media only screen and (min-width: 500px) {
     [class*='col-'] {
-        float: left;
         min-height: 1px; 
         width: 100%; 
+    }
+
+    input[type=text], input[type=password] {
+        font-size: 15px;
+        max-width: 89%;
+        margin: 10px 0px;
+    }
+
+
+    #log-in {
+        margin:20px auto;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #log-in-form {
+        max-width: 200px;
+        margin:20px auto;
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+
+    .login-title {
+        font-size: 20px;
+    }
+
+    button, #playlist-insert {
+        font-size: 15px;
     }
 
     .clearfix:after{
@@ -78,7 +112,9 @@
         clear:both;
         content:'';
     }
-
+    .col-2of5 {
+        width:200px;
+    }
     #smaller {
         max-width: 50%;
     }
@@ -88,8 +124,16 @@
         height: 100%;
     }
     
+    a {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
     h1 {
-        font-size: 30px;
+        font-size: 50px;
     }
 
     .logo {
@@ -114,8 +158,9 @@
         line-height: 100px;
     }
 
-    .col-1of5{
-        width: 25%; 
+    .col-1of4{
+        width: 20%; 
+        margin: 30px 30px;
     }
 
     .col-4of5{

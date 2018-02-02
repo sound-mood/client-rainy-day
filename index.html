@@ -64,35 +64,34 @@
         </header>
         <main id="menu">
             <div class="grid-container">
-                <div class="col-1of5">
-                    <div id="log-in">
-                        <form id="log-in-form">
-                            <div class="loginContainer">
-                                <div class="login-title">Username</div>
-                                <input id="username" class="log-in-input" type="text" placeholder="Enter Username" name="userName" required>
-                                <!-- <div class="login-title">Password</div>
-                                <input class="log-in-input" type="password" placeholder="Enter Password" name="password" required> -->
-                                <button id="log-in-button">Login</button>
-                                <button id="sign-up-button">Sign Up</button>
-                            </div>
-                      </form>
-                    </div>
+                <div id="log-in">
+                    <form id="log-in-form">
+                        <div class="loginContainer">
+                            <div class="login-title">Username</div>
+                            <input id="username" class="log-in-input" type="text" placeholder="Enter Username" name="userName" required>
+                            <div class="login-title">Password</div>
+                            <input class="log-in-input" type="password" placeholder="Enter Password" name="password" required>
+                            <button id="log-in-button">Login</button>
+                            <button id="sign-up-button">Sign Up</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-1of5" id="all-content" >
-                    <div id="preset-playlists">
-                        <a class="section-title" href="/playlist">Preset Playlists</a>
+    
+                <div id="all-content" >
+                    <div class="col-1of4" id="preset-playlists">
+                        <a class="section-title" href="/playlist">PRESET PLAYLISTS</a>
                         <div class="hide" id="playlist-selections"></div>
                     </div> 
-                    <div id="custom-playlists">
-                        <a class="section-title" href="/custom">Pick your own from our library</a>
+                    <div class="col-1of4" id="custom-playlists">
+                        <a class="section-title" href="/custom">OUR LIBRARY</a>
                         <div class="hide" id="custom-options">
                             <div>
-                                <a href="/custom/music" class="custom-opts">Music selection (click song to add to playlist)</a>
+                                <a href="/custom/music" class="custom-opts">Music selection (click to add to playlist)</a>
                                 <div class="hide" id="music-selection">
                                 </div>
                             </div>
                             <div>
-                                <a href="/custom/sound" class="custom-opts">Sound selection (click to swap out ambient noise)</a>
+                                <a href="/custom/sound" class="custom-opts">Sound selection (click to swap out ambiance)</a>
                                 <div class="hide" id="sound-selection">
                                 </div>
                             </div>
@@ -106,8 +105,8 @@
 
                         </div>
                     </div>
-                    <div id="create-your-own">
-                        <a class="section-title" href="/create">Add your own to our library</a>
+                    <div class="col-1of4" id="create-your-own">
+                        <a class="section-title" href="/create">ADD YOUR OWN</a>
                         <div class="hide" id="create-playlist">
                             <div>
                                 <form>
@@ -162,13 +161,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id="your-current-playlist" class="hide">
-                        <a class="section-title" href="/preview">Playlist Preview</a>
-                        <div class="hide" id="playlist-preview"></div>
+                    <div class="col-1of4" class="hide" id="your-current-playlist">
+                        <a class="section-title" href="/preview">PREVIEW</a>
+                        <div class="hide" id="playlist-preview">
+                        </div>
                         <a href="/player"><button>Start playing...</button></a>
                     </div>
                 </div>
-                <div class="col-4of5">
+                <div>
                     <div id="audio-visual"></div>
                 </div>  
             </div>

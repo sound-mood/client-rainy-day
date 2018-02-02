@@ -13,17 +13,17 @@ body {
 }
 
 h1 {
-    font-size: 8vw;
+    font-size: 10vw;
     font-family: 'Yantramanav', sans-serif;
 }
 
 a {
     font-family: 'Yantramanav', sans-serif;
     text-decoration: none;
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     color: rgb(255, 255, 255);
     display: block;
-    padding: 7px 7px;
+    padding: 3px 7px;
     margin-left: 5px;
 }
 
@@ -34,17 +34,13 @@ div {
 
 input[type=text], input[type=password] {
     font-family: 'Yantramanav', sans-serif;
-    margin: 0px;
+    margin: 7px 7px;
     width: 98%;
     background-color: rgba(148, 112, 168, 0.274);
     font-size: 4.5vw;
     padding: 7px 13px;
     color: black;
     border: none;
-}
-
-#word-logo {
-    line-height: 30px;
 }
 
 input[type=text]:focus {
@@ -69,10 +65,10 @@ p {
 
 button {
     border: none;
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Encode Sans Expanded', sans-serif;
     font-size: 5.5vw;
     background-color: rgba(236, 228, 240, 0.233);
-    margin: 0px 0px 0px 0px;
+    margin: 4px 0px 0px 0px;
     height: 30px;
     width: 100%;
 }
