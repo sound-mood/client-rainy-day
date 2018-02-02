@@ -13,6 +13,14 @@
         if (!$('#sound-selection').hasClass('hide')) {
             $('#sound-selection').addClass('hide');
         }
+        Song.all = [];
+        soundmood.fetchAll();
+        $('#music-selection').empty();
+
+        Song.all.forEach(a => {
+            $('#music-selection').append(a.songToHtml())
+        });
+
 
         $('#music-selection').toggleClass('hide');
     }

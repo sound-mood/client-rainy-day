@@ -2,8 +2,8 @@
 
 (function (module) {
     const soundView = {};
-    
-    soundView.init = function (ctx, next) {
+
+    soundView.init = function (ctx) {
         console.log('soundView.init route hit');
 
         $('#sound-selection').toggleClass('hide');
@@ -15,7 +15,8 @@
         if (!$('#video-selection').hasClass('hide')) {
             $('#video-selection').addClass('hide');
         }
+
     }
-    
+
     module.soundView = soundView;
 })(window);
