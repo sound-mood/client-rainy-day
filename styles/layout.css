@@ -33,6 +33,10 @@
     overflow-y: auto;
 }
 
+.playlist-selections {
+    background-color: rgba(128, 128, 128, 0.459);
+}
+
 .custom-opts {
     background-color: rgba(72, 72, 72, 0.459);
     margin: 4px 0px 4px 0px;
