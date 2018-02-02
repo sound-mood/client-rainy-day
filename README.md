@@ -75,3 +75,8 @@ Bird Singing https://www.youtube.com/watch?v=PwSHOI7DwWM
 //world 
 //https://www.youtube.com/watch?v=CTFtOOh47oo (French Montana - Unforgetable)
 
+//script to prevent screen zooming on mobile devices; 
+<!-- //<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/> -->

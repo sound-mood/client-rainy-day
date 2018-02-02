@@ -2,21 +2,20 @@
 
 <html>
     <head>
-        <title>Sound Mood</title>
+        <title>soundmood</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/modules/modules.css">
-        <link rel="stylesheet" href="styles/login.css">
-        <!-- <link rel="stylesheet" href="styles/signUp.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
 
         <script id="song-choices-template" type="text/x-handlebars-template">
             <a href="/custom/music/{{song_id}}">+ {{name}} - {{artist}}</a>
         </script>
-        <script id="preset-playlist-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{playlist_id}}">{{playlist-title}}</a>
+        <script id="playlist-template" type="text/x-handlebars-template">
+            <a href="/playlist/{{playlist_id}}">+ {{name}}</a>
         </script>
         <script id="ambiance-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{ambiance_id}}">+ {{name}}</a>
@@ -24,93 +23,75 @@
         <script id="video-choices-template" type="text/x-handlebars-template">
             <a href="/playlist/{{video_id}}">+ {{name}}</a>
         </script>
+        <script id="preview-template" type="text/x-handlebars-template">
+            <h3>{{name}}</h3>
+            <h4>Background Video:</h4>
+            <p>- {{video}}</p>
+            <h4>Ambient Noises:</h4> 
+            <p>- {{ambiance}}</p>
+            <h4>Songs:</h4>
+            {{#each songs}}
+            <p>- {{this.name}}</p> 
+            {{/each}}
+        </script>
+
+
             
     </head>
     <body>
         <header>
-            <h1>Rainy Day</h1>
+            <div class="grid-container clearfix
+            ">
+                <div class="col-2of5 clearfix header" id="cloud-logo">
+                    <a href="/home">
+                        <img class="logo" src="assets/cloud.png">
+                        <h1 class="logo" id="word-logo">soundmood</h1>
+                    </a>
+                </div>
+                <div class="col-2of5 float-right clearfix header" id="smaller"><a href="/login" id="login-link" class="float-right">Log In</a></div>
+            </div>
 
         </header>
         <main id="menu">
-            <!-- this is where the user selects their  -->
             <div class="grid-container">
-                <div class="col-1of5 hide">
+                <div class="col-1of5">
                     <div id="log-in">
-                        <!-- LOG IN GOES HERE -->
-                        <form>
+                        <form id="log-in-form">
                             <div class="loginContainer">
-                                <label><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" name="userName" required>
-                                <label><b>Password</b></label>
-                                <input type="text" placeholder="Enter Password" name="password" required>
-                                <button type="submit">Login</button>
-                                <button type="singUp">Sign Up</button>
-                                <label>
-                                    <input type="checkbox" checked="checked"> Remember me
-                                </label>
+                                <div class="login-title">Username</div>
+                                <input id="username" class="log-in-input" type="text" placeholder="Enter Username" name="userName" required>
+                                <!-- <div class="login-title">Password</div>
+                                <input class="log-in-input" type="password" placeholder="Enter Password" name="password" required> -->
+                                <button id="log-in-button">Login</button>
+                                <button id="sign-up-button">Sign Up</button>
                             </div>
-                            <span class="password"><a href="#">Forgot password?</a></span>
-                        </form>
-                        <!-- sign up goes here -->
-                        <!-- <form>
-                            <div class="signUpContainer">
-                                <h1>Sign Up</h1>
-                                <p>Please fill in this form to create an account</p>
-                                <hr>
-
-                                <label><b>Email</b></label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
-
-                                <label><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="password" required>
-                                
-                                <label><b>Repeat Password</b></label>
-                                <input type="password" placeholder="Repeat Password" name="repeatPassword" required>
-
-                                <label>
-                                    <input type="checkbox" checked="checked" style="margin-bottom:15px"> Remember Me 
-                                </label>
-
-                                <div class="clearfix">
-                                    <button type="submit" class="signUpButton">Sign Up</button>
-                                </div>
-                            </div>
-                        </form> -->
+                      </form>
                     </div>
                 </div>
-                <div class="col-1of5">
+                <div class="col-1of5" id="all-content" >
                     <div id="preset-playlists">
                         <a class="section-title" href="/playlist">Preset Playlists</a>
-                        <div class="hide" id="playlist-selections">
-                            <!-- this section will be where playlists are rendered by handlebars -->
-                            <!-- each href will point to a playlist ID in routes JS which will tell the detail view which playlist to display -->
-                            <a href="">Playlist1</a>
-                            <a href="">Playlist2</a>
-                            <a href="">Playlist3</a>
-                            <a href="">Playlist4</a>
-                        </div>
+                        <div class="hide" id="playlist-selections"></div>
                     </div> 
-                
                     <div id="custom-playlists">
                         <a class="section-title" href="/custom">Pick your own from our library</a>
                         <div class="hide" id="custom-options">
                             <div>
-                                <a href="/custom/music">Music selection (click song to add to playlist)</a>
+                                <a href="/custom/music" class="custom-opts">Music selection (click song to add to playlist)</a>
                                 <div class="hide" id="music-selection">
                                 </div>
                             </div>
                             <div>
-                                <a href="/custom/sound">Sound selection (click to swap out ambient noise)</a>
+                                <a href="/custom/sound" class="custom-opts">Sound selection (click to swap out ambient noise)</a>
                                 <div class="hide" id="sound-selection">
                                 </div>
                             </div>
                             <div>
-                                <a href="/custom/video">Video selection (click to swap out video)</a>
+                                <a href="/custom/video" class="custom-opts">Video selection (click to swap out video)</a>
                                 <div class="hide" id="video-selection">
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div id="create-your-own">
                         <a class="section-title" href="/create">Add your own to our library</a>
@@ -118,68 +99,64 @@
                             <div>
                                 <form>
                                     <p>Title your playlist:</p>
-                                    <div class="grid-container clearfix">
-                                        <div class="col-9of10 float-left">
-                                            <input type="text" placeholder="PLAYLIST TITLE">
+                                    <div class="grid-container clearfix" id="playlist-add-title">
+                                        <div>
+                                            <input type="text" id="new-playlist" placeholder="PLAYLIST TITLE">
                                         </div>
-                                        <div class="col-1of10 float-right">
-                                        </div>
+                                        <button class="playlist-buttons" id="playlist-insert">Save</button>
                                     </div>
-                                    <p>Background Sounds (one per playlist)</p>
-                                    <div class="grid-container clearfix">
-                                        <div class="col-9of10 float-left">
-                                            <input type="text" placeholder="AMBIENT TRACK TITLE">
-                                            <input type="text" placeholder="AMBIENT TRACK URL">
-                                        </div>
-                                        <div class="col-1of10 float-right">
-                                            <button>+</button>
-                                        </div>
-                                    </div>
-                                    <p>Background Video (one per playlist)</p>
-                                    <div class="grid-container clearfix">
-                                        <div class="col-9of10 float-left">
-                                            <input type="text" placeholder="VIDEO TITLE">
-                                            <input type="text" placeholder="VIDEO URL">
-                                        </div>
-                                        <div class="col-1of10 float-right">
-                                            <button>+</button>                                    
-                                        </div>
-                                    </div>
-                                    <p>Track Title</p>
-                                    <div class="grid-container clearfix">
-                                        <div class="col-9of10 float-left">
-                                            <div class="grid-container">
-                                                <div class="col-2of5">
-                                                    <input type="text" class="half-size-input" placeholder="SONG TITLE">
-                                                </div>
-                                                <div class="col-2of5">
-                                                    <input type="text" class="half-size-input" placeholder="SONG ARTIST">
-                                                </div>
+                                    <div id="SVA-opts">
+                                        <p>Background Sounds (one per playlist)</p>
+                                        <div class="grid-container clearfix">
+                                            <div class="col-9of10 float-left">
+                                                <input type="text" placeholder="AMBIENT TRACK TITLE">
+                                                <input type="text" placeholder="AMBIENT TRACK URL">
                                             </div>
-                                            <input type="text" placeholder="SONG URL">
-
+                                            <div class="col-1of10 float-right">
+                                                <button>+</button>
+                                            </div>
                                         </div>
-                                        <div class="col-1of10 float-right">
-                                            <button>+</button>
+                                        <p>Background Video (one per playlist)</p>
+                                        <div class="grid-container clearfix">
+                                            <div class="col-9of10 float-left">
+                                                <input type="text" placeholder="VIDEO TITLE">
+                                                <input type="text" placeholder="VIDEO URL">
+                                            </div>
+                                            <div class="col-1of10 float-right">
+                                                <button>+</button>                                    
+                                            </div>
+                                        </div>
+                                        <p>Track Title</p>
+                                        <div class="grid-container clearfix">
+                                            <div class="col-9of10 float-left">
+                                                <div class="grid-container">
+                                                    <div class="col-2of5">
+                                                        <input type="text" class="half-size-input" placeholder="SONG TITLE">
+                                                    </div>
+                                                    <div class="col-2of5">
+                                                        <input type="text" class="half-size-input" placeholder="SONG ARTIST">
+                                                    </div>
+                                                </div>
+                                                <input type="text" placeholder="SONG URL">
+
+                                            </div>
+                                            <div class="col-1of10 float-right">
+                                                <button>+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div id="your-current-playlist">
+                    <div id="your-current-playlist" class="hide">
                         <a class="section-title" href="/preview">Playlist Preview</a>
-                        <div class="hide" id="create-playlist">
-    
+                        <div class="hide" id="playlist-preview"></div>
+                        <a href="/player"><button>Start playing...</button></a>
                     </div>
-
                 </div>
                 <div class="col-4of5">
-                    <div id="audio-visual">
-                        <a href="/player">Start playing...</a>
-                        
-                          
-                    </div>
+                    <div id="audio-visual"></div>
                 </div>  
             </div>
         </main>
@@ -189,11 +166,10 @@
             <div id="player3" style="display: none"></div>
         </section>
         <footer>
-
         </footer>
 
 
-        <script src = "https://www.youtube.com/iframe_api"></script>
+        <script src ="https://www.youtube.com/iframe_api"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>

@@ -26,7 +26,6 @@
         "URI": "c9VQye6P8k0",
         "user_id": 1,
         "playlist_id": 1
-
     },
     {
         "name": "Jamrock",
@@ -132,7 +131,6 @@
         "URI": "sXJXLq1lN7U",
         "user_id": 1,
         "playlist_id": 5
-
     },
     {
         "name": "Can't Help But Wait",
@@ -170,7 +168,7 @@
         "playlist_id": 6
     },
     {
-        "name": "I'm not the only one",
+        "name": "I'm Not the Only One",
         "artist": "Sam smith",
         "URI": "nCkpzqqog4k",
         "user_id": 1,
@@ -254,11 +252,15 @@
         "playlist_id": 3 
     },
     {
-        "name": "MultipleSongs",
+        "name": "BB King Mix",
         "artist": "BB King",
         "URI": "QzRIPJMK6l8",
         "user_id": 1,
+<<<<<<< HEAD
         "playlist_id": 5 
+=======
+        "playlist_id": 6 
+>>>>>>> a448b96f2cd7a7fb4182d6b18d51754be80023d5
     },
     {
         "name": "Your Body Is A Wonderland",
@@ -315,6 +317,173 @@
         "URI": "wS4InT7Ycdk",
         "user_id": 1,
         "playlist_id": 7
+    },
+    {
+        "name": "A Thousand Years",
+        "artist": "The Piano Guys",
+        "URI": "QgaTQ5-XfMM",
+        "user_id": 1,
+        "playlist_id": 2
+    },
+    {
+        "name": "Beethoven's 5 Secrets",
+        "artist": "The Piano Guys",
+        "URI": "mJ_fkw5j-t0",
+        "user_id": 1,
+        "playlist_id": 2
+    },
+    {
+        "name": "Paradise (Peponi) African Style",
+        "artist": "The Piano Guys",
+        "URI": "Cgovv8jWETM",
+        "user_id": 1,
+        "playlist_id": 2
+    },
+    {
+        "name": "Hello / Lacrimosa",
+        "artist": "The Piano Guys",
+        "URI": "WZjFMj7OHTw",
+        "user_id": 1,
+        "playlist_id": 2
+    },
+    {
+        "name": "Without You ft. Usher",
+        "artist": "The Piano Guys",
+        "URI": "dfRtPbBFoGg",
+        "user_id": 1,
+        "playlist_id": 2
+    },
+    {
+        "name": "Otis ft. Otis Redding",
+        "artist": "JAY Z, Kanye West",
+        "URI": "BoEKWtgJQAU",
+        "user_id": 1,
+        "playlist_id": 4
+    },
+    {
+        "name": "Music",
+        "artist": "Erick Sermon feat. Marvin Gaye",
+        "URI": "fle-zebSXNc",
+        "user_id": 1,
+        "playlist_id": 4
+    },
+    {
+        "name": "Drown in the Now",
+        "artist": "The Crystal Method feat. Matisyahu",
+        "URI": "iiSfWHXq4nw",
+        "user_id": 1,
+        "playlist_id": 4
+    },
+    {
+        "name": "Just a Dream",
+        "artist": "Nelly",
+        "URI": "N6O2ncUKvlg",
+        "user_id": 1,
+        "playlist_id": 4
+    },
+    {
+        "name": "Stay With Me",
+        "artist": "Sam Smith",
+        "URI": "pB-5XG-DbAA",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "California King Bed",
+        "artist": "Rhianna",
+        "URI": "nhBorPm6JjQ",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "Stay",
+        "artist": "Rhianna",
+        "URI": "JF8BRvqGCNs",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "Adore You",
+        "artist": "Miley Cyrus",
+        "URI": "W1tzURKYFNs",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "Love Remains The Same",
+        "artist": "Gavin Rossdale",
+        "URI": "No8e0OE9QAU",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "Rise Up",
+        "artist": "Andra Day",
+        "URI": "kNKu1uNBVkU",
+        "user_id": 1,
+        "playlist_id": 8
+    },
+    {
+        "name": "Like I'm Gonna Lose You ft. John Legend",
+        "artist": "Meghan Trainor",
+        "URI": "2-MBfn8XjIU",
+        "user_id": 1,
+        "playlist_id": 8
+    },
+    {
+        "name": "Father And Daughter",
+        "artist": "Paul Simon",
+        "URI": "COQPSoRFdwg",
+        "user_id": 1,
+        "playlist_id": 8
+    },
+    {
+        "name": "Angels on the Moon",
+        "artist": "Thriving Ivory",
+        "URI": "S38-mjy5NtA",
+        "user_id": 1,
+        "playlist_id": 8
+    },
+    {
+        "name": "Gone till November",
+        "artist": "Wyclef Jean",
+        "URI": "kI6MWZrl8v8",
+        "user_id": 1,
+        "playlist_id": 8
+    },
+    {
+        "name": "Home",
+        "artist": "Edward Sharpe & The Magnetic Zeros",
+        "URI": "DHEOF_rcND8",
+        "user_id": 1,
+        "playlist_id": 9
+    },
+    {
+        "name": "GLORIOUS",
+        "artist": "MACKLEMORE FEAT SKYLAR GREY",
+        "URI": "1nXxPTsy5Gc",
+        "user_id": 1,
+        "playlist_id": 9
+    },
+    {
+        "name": "Girl On Fire",
+        "artist": "Alicia Keys",
+        "URI": "e7xsVF_XTEs",
+        "user_id": 1,
+        "playlist_id": 9
+    },
+    {
+        "name": "You Da One",
+        "artist": "Rihanna",
+        "URI": "b3HeLs8Yosw",
+        "user_id": 1,
+        "playlist_id": 9
+    },
+    {
+        "name": "Feel It Still",
+        "artist": "Portugal. The Man",
+        "URI": "1T73xhutNXQ",
+        "user_id": 1,
+        "playlist_id": 9
     }
-
 ]

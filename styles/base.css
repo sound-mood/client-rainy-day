@@ -23,27 +23,28 @@ a {
     font-size: 4.5vw;
     color: rgb(255, 255, 255);
     display: block;
-    padding: 3px 0px;
+    padding: 3px 7px;
     margin-left: 5px;
 }
 
 
 div {
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: rgb(0, 0, 0);
 }
 
-header {
-    margin: 10px 10px;
-}
-
-input[type=text] {
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    font-size: 10px;
-    padding: 4px 0px 4px 4px;
-    margin: 7px 15px 3px 10px;
-    width: 90%;
+input[type=text], input[type=password] {
+    font-family: 'Yantramanav', sans-serif;
+    margin: 0px;
+    width: 98%;
+    background-color: rgba(148, 112, 168, 0.274);
+    font-size: 4.5vw;
+    padding: 7px 13px;
+    color: black;
     border: none;
-    background-color: rgb(148, 112, 168);
+}
+
+#word-logo {
+    line-height: 30px;
 }
 
 input[type=text]:focus {
@@ -56,14 +57,42 @@ form {
 }
 
 p {
-    font-family: verdana;
-    font-size: 3.6vw;
-    padding-left: 10px;
+    font-family: 'Yantramanav', sans-serif;
+    text-decoration: none;
+    font-size: 4.5vw;
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 3px 7px;
+    margin-left: 5px;
 }
+    
 
 button {
     border: none;
-    background-color: rgb(148, 112, 168);
-    margin: 6px 0px 0px 0px;
-    height: 50px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 5.5vw;
+    background-color: rgba(236, 228, 240, 0.233);
+    margin: 4px 0px 0px 0px;
+    height: 30px;
+    width: 100%;
+}
+
+.playlist-buttons {
+    font-size: 3.5vw;
+}
+
+
+h3, h4 {
+    font-family: 'Yantramanav', sans-serif;
+    text-decoration: none;
+    font-size: 4.8vw;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: bold;  
+    padding: 3px 7px;
+    margin-left: 5px;
+}
+
+h3 {
+    font-size: 5.5vw;
 }
