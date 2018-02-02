@@ -6,9 +6,6 @@
     playlistView.init = function (ctx, next, e) {
         console.log('playlistView.init route hit');
 
-        // this sends each item in the presetPlaylists array to the toHtml method which appends the playlist preview to the website
-        // app.soundmood.presetPlaylists.forEach(a => $('playlist-selections').append(a.playlistPreviewToHtml()));
-
         if (!$('#custom-options').hasClass('hide')) {
             $('#custom-options').addClass('hide');
         }

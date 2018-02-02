@@ -13,8 +13,6 @@
         preview = new Preset(ctx);
 
         $('#playlist-preview').empty();
-        console.log('preview object', preview);
-        console.log('preview songs', preview.songs);
         $('#playlist-preview').append(preview.presetToHtml($('#preview-template').text()));
 
 
@@ -44,7 +42,6 @@
         $('#your-current-playlist').removeClass('hide');
 
         var songUriArray = preview.songs.map(a => a.uri);
-        console.log('songuri array', songUriArray);
 
         module.videoURI = preview.videoURI;
         module.ambianceURI = preview.ambianceURI;
@@ -55,7 +52,6 @@
             songUriString += songUriArray[i] + '\', \'';
         }
         songUriString += songUriArray[songUriArray.length - 1] + '\'';
-        console.log('song uri string', songUriString);
         module.firstSong = songUriArray[0];
         module.songUriString = songUriString;        
     }

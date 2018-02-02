@@ -16,7 +16,6 @@
         Song.all = [];
         soundmood.fetchAll();
         $('#music-selection').empty();
-
         Song.all.forEach(a => {
             $('#music-selection').append(a.songToHtml())
         });
