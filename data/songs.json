@@ -7,13 +7,6 @@
         "playlist_id": 1
     },
     {
-        "name": "Little Bird Sing",
-        "artist": "Bob Marley",
-        "URI": "zaGUr6wzyT8",
-        "user_id": 1,
-        "playlist_id": 6
-    },
-    {
         "name": "Knowledge",
         "artist": "Bob Marley",
         "URI": "h4OiCUkxGto",
@@ -96,13 +89,6 @@
         "URI": "p_RqWocthcc",
         "user_id": 1,
         "playlist_id": 6
-    },
-    {
-        "name": "Knock You Down",
-        "artist": "Keri Hilson",
-        "URI": "p_RqWocthcc",
-        "user_id": 1,
-        "playlist_id": 7
     },
     {
         "name": "Deuces",
@@ -214,13 +200,6 @@
         "artist": "Cyndi Lauper",
         "URI": "VdQY7BusJNU",
         "user_id": 1,
-        "playlist_id": 1
-    },
-    {
-        "name": "Time After Time",
-        "artist": "Cyndi Lauper",
-        "URI": "VdQY7BusJNU",
-        "user_id": 1,
         "playlist_id": 3
     },
     {
@@ -284,13 +263,6 @@
         "artist": "John Mayer",
         "URI": "N5EnGwXV_Pg",
         "user_id": 1,
-        "playlist_id": 7
-    },
-    {
-        "name": "Your Body Is A Wonderland",
-        "artist": "John Mayer",
-        "URI": "N5EnGwXV_Pg",
-        "user_id": 1,
         "playlist_id": 3
     },
     {
@@ -306,13 +278,6 @@
         "URI": "oBIxScJ5rlY",
         "user_id": 1,
         "playlist_id": 9
-    },
-    {
-        "name": "I'm Yours",
-        "artist": "Jason Mraz",
-        "URI": "RILP53OR63k",
-        "user_id": 1,
-        "playlist_id": 1
     },
     {
         "name": "I'm Yours",
