@@ -5,6 +5,8 @@
     
 
     musicView.init = function (ctx, next) {
+
+        
         console.log('musicView.init route hit');            
         // hides music and sound selection area
         if (!$('#video-selection').hasClass('hide')) {
@@ -14,7 +16,8 @@
             $('#sound-selection').addClass('hide');
         }
 
-        $('#music-selection').toggleClass('hide');
+
+        $('#music-selection').show();
     }
 
 

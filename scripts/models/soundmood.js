@@ -8,7 +8,6 @@ var __API_URL__ = 'http://localhost:3000';
 
     function Song(rawDataObj) {
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
-
     }
 
     function Ambiance(rawDataObj) {
@@ -53,12 +52,14 @@ var __API_URL__ = 'http://localhost:3000';
     Playlist.all = [];
     soundmood.currentUser = 0;
     soundmood.currentPlaylist = 0;
-    
+    soundmood.playersCreated = false;    
     
 
     Song.loadAll = rawData => {
-        console.log(rawData);
-        Song.all = rawData.map((songObj) => new Song(songObj));
+        Song.all = []; // NEW
+        console.log('empty song.all', Song.all);
+        Song.all = rawData.map((songObj) => new Song(songObj)).filter(a => (a.user_id === 1 || a.user_id === `${soundmood.currentUser}`));
+        console.log('full song.all', Song.all);
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
         Song.all.forEach(a => {
@@ -110,13 +111,11 @@ var __API_URL__ = 'http://localhost:3000';
     };
 
     Playlist.prototype.updateRecord = function (callback) {
-       
         $.ajax({
           url: `${__API_URL__}/api/v1/playlists/${this.playlist_id}`,
           method: 'PUT',
           data: {
-            name: this.name,
-            
+            name: this.name            
           }
         })
         .then(callback);
@@ -144,7 +143,7 @@ var __API_URL__ = 'http://localhost:3000';
             data: {
               name: this.name,
               URI: this.URI,
-              user_id: `${soundmood.currentUser}`
+              user_id: soundmood.currentUser
             },
             
         })
@@ -188,6 +187,7 @@ var __API_URL__ = 'http://localhost:3000';
     
 
     Ambiance.loadAll = rawData => {
+        Ambiance.all = [];
         Ambiance.all = rawData.map((ambianceObj) => new Ambiance(ambianceObj));
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain ambiances
@@ -198,6 +198,7 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     Video.loadAll = rawData => {
+        Video.all = [];
         Video.all = rawData.map((videoObj) => new Video(videoObj));
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain videos
         Video.all.forEach(a => {
@@ -207,6 +208,7 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     Playlist.loadAll = rawData => {
+        Playlist.all = [];
         Playlist.all = rawData.map((playlistObj) => new Playlist(playlistObj));
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain playlists
@@ -244,7 +246,6 @@ var __API_URL__ = 'http://localhost:3000';
 
 
     soundmood.fetchAll = function () {
-        $('#all-content').hide();
         Song.fetchAll();
         Ambiance.fetchAll();
         Video.fetchAll();
@@ -332,8 +333,16 @@ var __API_URL__ = 'http://localhost:3000';
     var player2;
     var player3;
 
+    soundmood.stopPlayer = () => {
+        player1.stopVideo();
+        player2.stopVideo();
+        player3.stopVideo();
+    }
 
     soundmood.createPlayer = function (video, ambiance, songs, firstSong) {
+
+        soundmood.playersCreated = true;
+
         player1 = new YT.Player('player1', {
             // background video
             videoId: `${video}`,

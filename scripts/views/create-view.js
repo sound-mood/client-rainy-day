@@ -10,9 +10,11 @@
         let playlist = new Playlist({
             name: $('#new-playlist').val()
         });
-    
+        $('#SVA-opts').show();
+        
         playlist.insertRecord();
         playlist.setPlaylistNew();
+        soundmood.fetchAll();
     
     }
 
@@ -26,6 +28,7 @@
         });
     
         ambiance.insertRecord();
+        soundmood.fetchAll();
     
     }
 
@@ -39,6 +42,7 @@
         });
     
         video.insertRecord();
+        soundmood.fetchAll();
     
     }
 
@@ -53,7 +57,7 @@
         });
     
         song.insertRecord();
-    
+        soundmood.fetchAll();
     }
 
     createView.init = function (ctx, next) {
@@ -67,7 +71,7 @@
             $('#playlist-selections').addClass('hide');
         }
 
-        
+        $('#SVA-opts').hide();
         $('#create-playlist').toggleClass('hide');
 
         $('#playlist-insert').on('click', newPlaylist);
