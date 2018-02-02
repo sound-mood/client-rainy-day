@@ -292,24 +292,6 @@ var __API_URL__ = 'http://localhost:3000';
             .then(callback)
     }
 
-//jasper:
-//perform a "get request" for all playlist from the table. 
-//perform a "get request" for all playlist from the table.
-let customSongs = []
-Soundmood.currentPlaylist;
-customSongs = results.filter(item => item.playlist_id === {Soundmood.currentPlaylist})
-
-    Songs.prototype.setSongs = (callback) => {
-        $.get(`${__API_URL__}/api/v1/songs`)
-            .then(results => {
-                console.log(results);
-                
-                console.log(results[results.lenght-1]);
-                soundmood. 
-            })
-
-}
-
     User.prototype.setUserLogin = (callback) => {
         $.get(`${__API_URL__}/api/v1/users/login`)
             .then(results => {
