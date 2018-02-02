@@ -1,7 +1,6 @@
 'use strict';
 
 function showCustomOpts(ctx) {
-    console.log('custom options route hit')
 
     if(!$('#playlist-selections').hasClass('hide')) {
         $('#playlist-selections').addClass('hide');
@@ -33,7 +32,10 @@ function showHomePage() {
     }
     $('#menu').show();
     $('#all-content').show();
-    
+    if(!$('#your-current-playlist').hasClass('hide')) {
+        $('#your-current-playlist').addClass('hide');
+    }
+
     if (soundmood.playersCreated === true) {
         soundmood.stopPlayer();
     }
@@ -45,7 +47,6 @@ function showHidePreview() {
 
 function homePageInit (ctx, next) {
     $('#all-content').hide();
-    console.log('home page init');
     function signupSubmit(e) {
         e.preventDefault();
         let username = $('#username').val();
@@ -55,9 +56,11 @@ function homePageInit (ctx, next) {
     
         user.insertRecord();
         user.setUser();
-        console.log(soundmood.currentUser);
         $('#log-in').hide();
         $('#all-content').show();
+        if(!$('#your-current-playlist').hasClass('hide')) {
+            $('#your-current-playlist').addClass('hide');
+        }
     }        
     
     function loginSubmit(e) {
@@ -69,6 +72,9 @@ function homePageInit (ctx, next) {
         user.setUserLogin();
         $('#log-in').hide();
         $('#all-content').show();
+        if(!$('#your-current-playlist').hasClass('hide')) {
+            $('#your-current-playlist').addClass('hide');
+        }
     }
 
     $('#sign-up-button').on('click', signupSubmit);
@@ -79,17 +85,21 @@ function homePageInit (ctx, next) {
 }
 
 function addSVA() {
-    console.log('save button hit');
     $('#playlist-add-opts').hide();
     $('#SVA-opts').show();
 }
 
 function pushSongsToCustom(ctx) {
     var index = (parseInt(ctx.params.song_id) - 1);
-    console.log('index', index);
-    console.log('song at index uri', Song.all[index].uri);
     custom.songs.push(Song.all[index].uri);
 }
+
+function logout(ctx) {
+    soundmood.currentUser = 0;
+    window.location = '/';
+}
+
+
 
 page('/', homePageInit, soundmood.fetchAll)
 page('/playlist', playlistView.init)
@@ -99,7 +109,7 @@ page('/playlist/:playlist_id', previewView.init)
 page('/custom', showCustomOpts)
 page('/home', showHomePage)
 page('/preview', showHidePreview)
-
+page('/logout', logout)
 page('/custom/music', musicView.init)
 page('/custom/music/:song_id', custom.pushSongsToCustom, custom.showButton)
 page('/custom/sound', soundView.init)

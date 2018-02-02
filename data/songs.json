@@ -1,4 +1,40 @@
 [
+    
+    {
+        "name": "My Immortal",
+        "artist": "Evanescence",
+        "URI": "5anLPw0Efmo",
+        "user_id": 1,
+        "playlist_id": 7
+    },
+    {
+        "name": "Sound of Silence",
+        "artist": "Simon and Garfunkel",
+        "URI": "4fWyzwo1xg0",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "She Knows",
+        "artist": "J. Cole",
+        "URI": "jYdaQJzcAcw",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "Can't Help But Wait",
+        "artist": "Trey songz",
+        "URI": "iF_JBlSh_G8",
+        "user_id": 1,
+        "playlist_id": 6
+    },
+    {
+        "name": "Ordinary People",
+        "artist": "John Legend",
+        "URI": "PIh07c_P4hc",
+        "user_id": 1,
+        "playlist_id": 3
+    },
     {
         "name": "Little Bird Sing",
         "artist": "Bob Marley",
@@ -88,7 +124,7 @@
         "artist": "Keri Hilson",
         "URI": "p_RqWocthcc",
         "user_id": 1,
-        "playlist_id": 6
+        "playlist_id": 7
     },
     {
         "name": "Deuces",
@@ -119,25 +155,11 @@
         "playlist_id": 9
     },
     {
-        "name": "She Knows",
-        "artist": "J. Cole",
-        "URI": "jYdaQJzcAcw",
-        "user_id": 1,
-        "playlist_id": 5
-    },
-    {
         "name": "Sweetest Girl",
         "artist": "Wyclef Jean",
         "URI": "sXJXLq1lN7U",
         "user_id": 1,
         "playlist_id": 5
-    },
-    {
-        "name": "Can't Help But Wait",
-        "artist": "Trey songz",
-        "URI": "iF_JBlSh_G8",
-        "user_id": 1,
-        "playlist_id": 6
     },
     {
         "name": "Pretty Wings",
@@ -154,13 +176,6 @@
         "playlist_id": 3
     },
     {
-        "name": "Ordinary People",
-        "artist": "John Legend",
-        "URI": "PIh07c_P4hc",
-        "user_id": 1,
-        "playlist_id": 3
-    },
-    {
         "name": "The Matrimony",
         "artist": "Wale",
         "URI": "IszJPYjNidg",
@@ -173,20 +188,6 @@
         "URI": "nCkpzqqog4k",
         "user_id": 1,
         "playlist_id": 7
-    },
-    {
-        "name": "My Immortal",
-        "artist": "Evanescence",
-        "URI": "5anLPw0Efmo",
-        "user_id": 1,
-        "playlist_id": 7
-    },
-    {
-        "name": "Sound of Silence",
-        "artist": "Simon and Garfunkel",
-        "URI": "4fWyzwo1xg0",
-        "user_id": 1,
-        "playlist_id": 5
     },
     {
         "name": "Dust In the Wind",
@@ -263,7 +264,7 @@
         "artist": "John Mayer",
         "URI": "N5EnGwXV_Pg",
         "user_id": 1,
-        "playlist_id": 3
+        "playlist_id": 7
     },
     {
         "name": "Assassin",

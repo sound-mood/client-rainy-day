@@ -29,7 +29,6 @@ var __API_URL__ = 'http://localhost:3000';
 
     function Preset(ctx) {
         let index = (parseInt(ctx.params.playlist_id) - 1);
-        console.log('playlist index', index);
         let currentPlaylist = Playlist.all[index];
         this.name = currentPlaylist.name;
         this.video = Video.all[currentPlaylist.video_id - 1].name;
@@ -58,10 +57,7 @@ var __API_URL__ = 'http://localhost:3000';
     Song.loadAll = rawData => {
 
         Song.all = []; // NEW
-        console.log('empty song.all', Song.all);
-        console.log(soundmood.currentUser);
         Song.all = rawData.map((songObj) => new Song(songObj)).filter(item => (item.user_id === 1 || item.user_id === soundmood.currentUser));
-        console.log('full song.all', Song.all);
 
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
@@ -296,14 +292,6 @@ var __API_URL__ = 'http://localhost:3000';
     User.prototype.setUser = (callback) => {
         $.get(`${__API_URL__}/api/v1/users`)
             .then(results => {
-                console.log(results);
-                console.log(results[results.length-1]);
-                results.map( function(item) {
-                    if(item.name == $('#username').val()) {
-                        alert('Username Taken');
-                        window.location = '../';
-                    }
-                });
                 soundmood.currentUser = results[results.length-1].user_id;
                 $('#login-link').text(results[results.length-1].name);
             })
@@ -313,8 +301,6 @@ var __API_URL__ = 'http://localhost:3000';
     Playlist.prototype.setPlaylistNew = (callback) => {
         $.get(`${__API_URL__}/api/v1/playlists`)
             .then(results => {
-                console.log(results);
-                console.log(results[results.length-1]);
                 soundmood.currentPlaylist = results[results.length-1].playlist_id;
             })
             .then(callback)
@@ -323,15 +309,8 @@ var __API_URL__ = 'http://localhost:3000';
     User.prototype.setUserLogin = function(callback){
         $.get(`${__API_URL__}/api/v1/users`)
         .then(results => {
-            console.log(results);
-            console.log($('#username').val());
             let userVal = $('#username').val();
-            if((results.filter(item => item.name === `${userVal}`)[0])== undefined){
-                alert('User Not Found');
-                window.location = '../';
-            }
             soundmood.currentUser = results.filter(item => item.name === `${userVal}`)[0].user_id;
-            console.log(soundmood.currentUser);
             $('#login-link').text(results.filter(item => item.name === `${userVal}`)[0].name);
             
         })
@@ -361,6 +340,7 @@ var __API_URL__ = 'http://localhost:3000';
         player1 = new YT.Player('player1', {
             // background video
             videoId: `${video}`,
+            startSeconds: 30,
             playerVars: { 'playlist': `${video}`, 'rel': 0, 'showinfo': 0, 'loop': 1, 'autoplay': 1, 'controls': 0 },
             events: {
                 'onReady': onPlayer1Ready,
@@ -395,12 +375,12 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     function onPlayer2Ready() {
-        player2.setVolume(100);
+        player2.setVolume(80);
         player2.startVideo();
     }
 
     function onPlayer3Ready() {
-        player3.setVolume(90);
+        player3.setVolume(100);
         player3.startVideo();
     }
 
