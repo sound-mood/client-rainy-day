@@ -40,7 +40,6 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
 
-
     // gonna need to create an object constructor which will put playlist objects in this array so that they can be called by the playlistView.init function
     // TODO: should probably only be triggered when the /playlist route is hit??? don't need it every time
     let presetPlaylists = [];
@@ -66,6 +65,7 @@ var __API_URL__ = 'http://localhost:3000';
 
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
+        $('#music-selection').empty();
         Song.all.forEach(a => {
             $('#music-selection').append(a.songToHtml())
         });
@@ -193,7 +193,7 @@ var __API_URL__ = 'http://localhost:3000';
     Ambiance.loadAll = rawData => {
         Ambiance.all = [];
         Ambiance.all = rawData.map((ambianceObj) => new Ambiance(ambianceObj));
-
+        $('#sound-selection').empty();
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain ambiances
         Ambiance.all.forEach(a => {
             $('#sound-selection').append(a.ambianceToHtml())
@@ -205,6 +205,7 @@ var __API_URL__ = 'http://localhost:3000';
         Video.all = [];
         Video.all = rawData.map((videoObj) => new Video(videoObj));
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain videos
+        $('#video-selection').empty();
         Video.all.forEach(a => {
             $('#video-selection').append(a.videoToHtml())
         });
@@ -214,7 +215,7 @@ var __API_URL__ = 'http://localhost:3000';
     Playlist.loadAll = rawData => {
         Playlist.all = [];
         Playlist.all = rawData.map((playlistObj) => new Playlist(playlistObj));
-
+        $('#playlist-selections').empty();
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain playlists
         Playlist.all.forEach(a => {
             $('#playlist-selections').append(a.playlistToHtml())

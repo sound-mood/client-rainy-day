@@ -50,3 +50,7 @@
     padding: 9px 0px 3px 7px;
     font-size: 6vw;
 }
+
+.strike {
+    text-decoration: line-through;
+}

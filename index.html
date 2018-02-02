@@ -18,10 +18,10 @@
             <a href="/playlist/{{playlist_id}}">+ {{name}}</a>
         </script>
         <script id="ambiance-choices-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{ambiance_id}}">+ {{name}}</a>
+            <a href="/custom/sound/{{ambiance_id}}">+ {{name}}</a>
         </script>
         <script id="video-choices-template" type="text/x-handlebars-template">
-            <a href="/playlist/{{video_id}}">+ {{name}}</a>
+            <a href="/custom/video/{{video_id}}">+ {{name}}</a>
         </script>
         <script id="preview-template" type="text/x-handlebars-template">
             <h3>{{name}}</h3>
@@ -32,6 +32,16 @@
             <h4>Songs:</h4>
             {{#each songs}}
             <p>- {{this.name}}</p> 
+            {{/each}}
+        </script>
+        <script id="custom-preview-template" type="text/x-handlebars-template">
+            <h4>Background Video:</h4>
+            <p>- {{video.name}}</p>
+            <h4>Ambient Noises:</h4> 
+            <p>- {{sound.name}}</p>
+            <h4>Songs:</h4>
+            {{#each songNames}}
+            <p>- {{this}}</p> 
             {{/each}}
         </script>
 
@@ -91,6 +101,9 @@
                                 <div class="hide" id="video-selection">
                                 </div>
                             </div>
+                            <a id="custom-player-button" class="hide" href="/custom/player"><button>Start playing...</button></a>
+                            <button class="playlist-buttons" id="custom-playlist-insert">Save Playlist</button>
+
                         </div>
                     </div>
                     <div id="create-your-own">
@@ -169,7 +182,7 @@
         </footer>
 
 
-        <script src ="https://www.youtube.com/iframe_api"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
@@ -181,6 +194,7 @@
         <script src="/scripts/views/playlist-view.js"></script>
         <script src="/scripts/views/preview-view.js"></script>
         <script src="/scripts/views/player-view.js"></script>
+        <script src="/scripts/models/custom.js"></script>
         <script src="/scripts/controllers/routes.js"></script>
     </body>
 </html>
