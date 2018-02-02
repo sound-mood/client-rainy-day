@@ -22,7 +22,7 @@
         });
 
 
-        $('#music-selection').show();
+        $('#music-selection').toggleClass('hide');
     }
 
 
