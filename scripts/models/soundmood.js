@@ -57,11 +57,13 @@ var __API_URL__ = 'http://localhost:3000';
     
 
     Song.loadAll = rawData => {
+
         Song.all = []; // NEW
         console.log('empty song.all', Song.all);
         console.log(soundmood.currentUser);
         Song.all = rawData.map((songObj) => new Song(songObj)).filter(item => (item.user_id === 1 || item.user_id === soundmood.currentUser));
         console.log('full song.all', Song.all);
+
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
         Song.all.forEach(a => {
