@@ -69,10 +69,10 @@ p {
 
 button {
     border: none;
-    font-family: 'Encode Sans Expanded', sans-serif;
+    font-family: 'Yantramanav', sans-serif;
     font-size: 5.5vw;
     background-color: rgba(236, 228, 240, 0.233);
-    margin: 4px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     height: 30px;
     width: 100%;
 }
