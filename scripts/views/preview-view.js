@@ -5,7 +5,7 @@
     const previewView = {};
     var preview = {};
 
-    previewView.init = function (ctx, next) {
+    previewView.init = function (ctx, next) {        
         console.log('previewView.init route hit');
         
         // TODO double check this... this object should push the context object into the object constructor above

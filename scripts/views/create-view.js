@@ -11,8 +11,10 @@
             name: $('#new-playlist').val()
         });
         $('#SVA-opts').show();
-    
+        
         playlist.insertRecord();
+        playlist.setPlaylistNew();
+        
     
     }
 
@@ -26,6 +28,7 @@
         });
     
         ambiance.insertRecord();
+        
     
     }
 
@@ -39,6 +42,7 @@
         });
     
         video.insertRecord();
+        
     
     }
 
@@ -53,7 +57,7 @@
         });
     
         song.insertRecord();
-    
+        
     }
 
     createView.init = function (ctx, next) {

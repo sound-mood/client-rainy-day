@@ -25,6 +25,7 @@ function showCustomOpts(ctx) {
 
 
 function showHomePage() {
+    soundmood.fetchAll();
     $('#log-in').hide();
     $('#audio-visual').hide();
     if(!$('#player').hasClass('hide')) {
@@ -62,6 +63,10 @@ function homePageInit (ctx, next) {
     function loginSubmit(e) {
         e.preventDefault();
         let username = $('#username').val();
+        let user = new User({
+            name: `${username}`
+        });
+        user.setUserLogin();
         $('#log-in').hide();
         $('#all-content').show();
     }
@@ -70,6 +75,7 @@ function homePageInit (ctx, next) {
     $('#log-in-button').on('click', loginSubmit);
 
     next();
+    
 }
 
 function addSVA() {
@@ -88,6 +94,7 @@ function pushSongsToCustom(ctx) {
 page('/', homePageInit, soundmood.fetchAll)
 page('/playlist', playlistView.init)
 page('/playlist/:playlist_id', previewView.init)
+
 
 page('/custom', showCustomOpts)
 page('/home', showHomePage)

@@ -5,6 +5,8 @@
     
 
     musicView.init = function (ctx, next) {
+
+        
         console.log('musicView.init route hit');            
         // hides music and sound selection area
         if (!$('#video-selection').hasClass('hide')) {
@@ -19,7 +21,6 @@
         Song.all.forEach(a => {
             $('#music-selection').append(a.songToHtml())
         });
-
 
         $('#music-selection').toggleClass('hide');
     }

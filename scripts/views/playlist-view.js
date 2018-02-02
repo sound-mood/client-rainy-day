@@ -3,7 +3,7 @@
 (function (module) {
     const playlistView = {};
 
-    playlistView.init = function (ctx, next, e) {
+    playlistView.init = function (ctx, next) {
         console.log('playlistView.init route hit');
 
         if (!$('#custom-options').hasClass('hide')) {
