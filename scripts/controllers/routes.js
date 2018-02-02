@@ -7,6 +7,11 @@ function showCustomOpts(ctx) {
         $('#playlist-selections').addClass('hide');
     }
 
+    if(!$('#your-current-playlist').hasClass('hide')) {
+        $('#your-current-playlist').addClass('hide');
+    }
+
+
     if(!$('#create-playlist').hasClass('hide')) {
         $('#create-playlist').addClass('hide');
 
@@ -20,6 +25,7 @@ function showCustomOpts(ctx) {
 
 
 function showHomePage() {
+    soundmood.fetchAll();
     $('#log-in').hide();
     $('#audio-visual').hide();
     if(!$('#player').hasClass('hide')) {
@@ -57,6 +63,10 @@ function homePageInit (ctx, next) {
     function loginSubmit(e) {
         e.preventDefault();
         let username = $('#username').val();
+        let user = new User({
+            name: `${username}`
+        });
+        user.setUserLogin();
         $('#log-in').hide();
         $('#all-content').show();
     }
@@ -65,6 +75,7 @@ function homePageInit (ctx, next) {
     $('#log-in-button').on('click', loginSubmit);
 
     next();
+    
 }
 
 function addSVA() {
@@ -73,23 +84,32 @@ function addSVA() {
     $('#SVA-opts').show();
 }
 
-// this will need to grab the ID of the playlist and use it to display the predetermined music experience
+function pushSongsToCustom(ctx) {
+    var index = (parseInt(ctx.params.song_id) - 1);
+    console.log('index', index);
+    console.log('song at index uri', Song.all[index].uri);
+    custom.songs.push(Song.all[index].uri);
+}
+
 page('/', homePageInit, soundmood.fetchAll)
 page('/playlist', playlistView.init)
 page('/playlist/:playlist_id', previewView.init)
-//this will just render the custom options menu
+
+
 page('/custom', showCustomOpts)
 page('/home', showHomePage)
 page('/preview', showHidePreview)
 
-// // these will need additional functions added to them to customize the music experience based on params passed through the ctx object
 page('/custom/music', musicView.init)
+page('/custom/music/:song_id', custom.pushSongsToCustom, custom.showButton)
 page('/custom/sound', soundView.init)
+page('/custom/sound/:sound_id', custom.addSoundToCustom, custom.showButton)
 page('/custom/video', videoView.init)
+page('/custom/video/:video_id', custom.addVideoToCustom, custom.showButton)
+page('/custom/player', custom.initiatePlayer)
 page('/create', createView.init)
 page('/player', playerView.init)
 page('/playlist-add', addSVA)
-
 
 
 
