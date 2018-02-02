@@ -83,6 +83,7 @@ function addSVA() {
 page('/', homePageInit, soundmood.fetchAll)
 page('/playlist', playlistView.init)
 page('/playlist/:playlist_id', previewView.init)
+
 //this will just render the custom options menu
 page('/custom', showCustomOpts)
 page('/home', showHomePage)
@@ -95,6 +96,7 @@ page('/custom/video', videoView.init)
 page('/create', createView.init)
 page('/player', playerView.init)
 page('/playlist-add', addSVA)
+
 
 
 

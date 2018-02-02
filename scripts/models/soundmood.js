@@ -295,6 +295,12 @@ var __API_URL__ = 'http://localhost:3000';
             .then(results => {
                 console.log(results);
                 console.log(results[results.length-1]);
+                results.map( function(item) {
+                    if(item.name == $('#username').val()) {
+                        alert('Username Taken');
+                        window.location = '../';
+                    }
+                });
                 soundmood.currentUser = results[results.length-1].user_id;
                 $('#login-link').text(results[results.length-1].name);
             })
@@ -317,6 +323,10 @@ var __API_URL__ = 'http://localhost:3000';
             console.log(results);
             console.log($('#username').val());
             let userVal = $('#username').val();
+            if((results.filter(item => item.name === `${userVal}`)[0])== undefined){
+                alert('User Not Found');
+                window.location = '../';
+            }
             soundmood.currentUser = results.filter(item => item.name === `${userVal}`)[0].user_id;
             console.log(soundmood.currentUser);
             $('#login-link').text(results.filter(item => item.name === `${userVal}`)[0].name);
