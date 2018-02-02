@@ -20,6 +20,7 @@ function showCustomOpts(ctx) {
 
 
 function showHomePage() {
+    soundmood.fetchAll();
     $('#log-in').hide();
     $('#audio-visual').hide();
     if(!$('#player').hasClass('hide')) {
