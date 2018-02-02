@@ -4,7 +4,6 @@
     const soundView = {};
 
     soundView.init = function (ctx) {
-        console.log('soundView.init route hit');
 
         $('#sound-selection').toggleClass('hide');
         

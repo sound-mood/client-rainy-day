@@ -4,7 +4,8 @@
     const playlistView = {};
 
     playlistView.init = function (ctx, next) {
-        console.log('playlistView.init route hit');
+        Playlist.all = [];
+        Playlist.fetchAll();
 
         if (!$('#custom-options').hasClass('hide')) {
             $('#custom-options').addClass('hide');

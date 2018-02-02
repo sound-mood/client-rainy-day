@@ -4,7 +4,6 @@
     const playerView = {};
 
     playerView.init = function(ctx, next) {
-        console.log('playerView route hit');
         soundmood.createPlayer(videoURI, ambianceURI, songUriString, firstSong);
         $('#menu').hide();
         $('#player').toggleClass('hide');

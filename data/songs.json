@@ -1,17 +1,46 @@
 [
+    
     {
-        "name": "Little Bird Sing",
-        "artist": "Bob Marley",
-        "URI": "zaGUr6wzyT8",
+        "name": "My Immortal",
+        "artist": "Evanescence",
+        "URI": "5anLPw0Efmo",
         "user_id": 1,
-        "playlist_id": 1
+        "playlist_id": 7
+    },
+    {
+        "name": "Sound of Silence",
+        "artist": "Simon and Garfunkel",
+        "URI": "4fWyzwo1xg0",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "She Knows",
+        "artist": "J. Cole",
+        "URI": "jYdaQJzcAcw",
+        "user_id": 1,
+        "playlist_id": 5
+    },
+    {
+        "name": "Can't Help But Wait",
+        "artist": "Trey songz",
+        "URI": "iF_JBlSh_G8",
+        "user_id": 1,
+        "playlist_id": 6
+    },
+    {
+        "name": "Ordinary People",
+        "artist": "John Legend",
+        "URI": "PIh07c_P4hc",
+        "user_id": 1,
+        "playlist_id": 3
     },
     {
         "name": "Little Bird Sing",
         "artist": "Bob Marley",
         "URI": "zaGUr6wzyT8",
         "user_id": 1,
-        "playlist_id": 6
+        "playlist_id": 1
     },
     {
         "name": "Knowledge",
@@ -95,13 +124,6 @@
         "artist": "Keri Hilson",
         "URI": "p_RqWocthcc",
         "user_id": 1,
-        "playlist_id": 6
-    },
-    {
-        "name": "Knock You Down",
-        "artist": "Keri Hilson",
-        "URI": "p_RqWocthcc",
-        "user_id": 1,
         "playlist_id": 7
     },
     {
@@ -133,25 +155,11 @@
         "playlist_id": 9
     },
     {
-        "name": "She Knows",
-        "artist": "J. Cole",
-        "URI": "jYdaQJzcAcw",
-        "user_id": 1,
-        "playlist_id": 5
-    },
-    {
         "name": "Sweetest Girl",
         "artist": "Wyclef Jean",
         "URI": "sXJXLq1lN7U",
         "user_id": 1,
         "playlist_id": 5
-    },
-    {
-        "name": "Can't Help But Wait",
-        "artist": "Trey songz",
-        "URI": "iF_JBlSh_G8",
-        "user_id": 1,
-        "playlist_id": 6
     },
     {
         "name": "Pretty Wings",
@@ -164,13 +172,6 @@
         "name": "This woman's wrok",
         "artist": "Maxwell",
         "URI": "gkeCNeHcmXY",
-        "user_id": 1,
-        "playlist_id": 3
-    },
-    {
-        "name": "Ordinary People",
-        "artist": "John Legend",
-        "URI": "PIh07c_P4hc",
         "user_id": 1,
         "playlist_id": 3
     },
@@ -189,32 +190,11 @@
         "playlist_id": 7
     },
     {
-        "name": "My Immortal",
-        "artist": "Evanescence",
-        "URI": "5anLPw0Efmo",
-        "user_id": 1,
-        "playlist_id": 7
-    },
-    {
-        "name": "Sound of Silence",
-        "artist": "Simon and Garfunkel",
-        "URI": "4fWyzwo1xg0",
-        "user_id": 1,
-        "playlist_id": 5
-    },
-    {
         "name": "Dust In the Wind",
         "artist": "Kansas",
         "URI": "tH2w6Oxx0kQ",
         "user_id": 1,
         "playlist_id": 7
-    },
-    {
-        "name": "Time After Time",
-        "artist": "Cyndi Lauper",
-        "URI": "VdQY7BusJNU",
-        "user_id": 1,
-        "playlist_id": 1
     },
     {
         "name": "Time After Time",
@@ -287,13 +267,6 @@
         "playlist_id": 7
     },
     {
-        "name": "Your Body Is A Wonderland",
-        "artist": "John Mayer",
-        "URI": "N5EnGwXV_Pg",
-        "user_id": 1,
-        "playlist_id": 3
-    },
-    {
         "name": "Assassin",
         "artist": "John Mayer",
         "URI": "9R50OpRbVxI",
@@ -306,13 +279,6 @@
         "URI": "oBIxScJ5rlY",
         "user_id": 1,
         "playlist_id": 9
-    },
-    {
-        "name": "I'm Yours",
-        "artist": "Jason Mraz",
-        "URI": "RILP53OR63k",
-        "user_id": 1,
-        "playlist_id": 1
     },
     {
         "name": "I'm Yours",
