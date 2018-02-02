@@ -33,7 +33,7 @@
     overflow-y: auto;
 }
 
-.playlist-selections {
+#playlist-selections {
     background-color: rgba(128, 128, 128, 0.459);
 }
 
