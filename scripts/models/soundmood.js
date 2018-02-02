@@ -8,7 +8,6 @@ var __API_URL__ = 'http://localhost:3000';
 
     function Song(rawDataObj) {
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
-
     }
 
     function Ambiance(rawDataObj) {
@@ -41,25 +40,32 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
 
-
     // gonna need to create an object constructor which will put playlist objects in this array so that they can be called by the playlistView.init function
     // TODO: should probably only be triggered when the /playlist route is hit??? don't need it every time
     let presetPlaylists = [];
 
     // array full of objects housing respective data, initialized on page load
     Song.all = [];
+    Song.custom = []
     Ambiance.all = [];
     Video.all = [];
     Playlist.all = [];
     soundmood.currentUser = 0;
+    soundmood.currentPlaylist = 0;
     soundmood.playersCreated = false;    
     
 
     Song.loadAll = rawData => {
-        console.log(rawData);
-        Song.all = rawData.map((songObj) => new Song(songObj));
+
+        Song.all = []; // NEW
+        console.log('empty song.all', Song.all);
+        console.log(soundmood.currentUser);
+        Song.all = rawData.map((songObj) => new Song(songObj)).filter(item => (item.user_id === 1 || item.user_id === soundmood.currentUser));
+        console.log('full song.all', Song.all);
+
 
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain songs
+        $('#music-selection').empty();
         Song.all.forEach(a => {
             $('#music-selection').append(a.songToHtml())
         });
@@ -89,7 +95,8 @@ var __API_URL__ = 'http://localhost:3000';
               name: this.name,
               artist: this.artist,
               URI: this.URI,
-              user_id: `${soundmood.currentUser}`
+              user_id: `${soundmood.currentUser}`,
+              playlist_id: `${soundmood.currentPlaylist}`
             },
             
         })
@@ -100,20 +107,19 @@ var __API_URL__ = 'http://localhost:3000';
             url: `${__API_URL__ }/api/v1/playlists`,
             method: 'POST',
             data: {
-              name: this.name
+              name: this.name,
+              user_id: `${soundmood.currentUser}`,
             },
             
         })
     };
 
     Playlist.prototype.updateRecord = function (callback) {
-       
         $.ajax({
           url: `${__API_URL__}/api/v1/playlists/${this.playlist_id}`,
           method: 'PUT',
           data: {
-            name: this.name,
-            
+            name: this.name            
           }
         })
         .then(callback);
@@ -127,7 +133,8 @@ var __API_URL__ = 'http://localhost:3000';
             method: 'POST',
             data: {
               name: this.name,
-              URI: this.URI
+              URI: this.URI,
+              user_id: `${soundmood.currentUser}`
             },
             
         })
@@ -184,8 +191,9 @@ var __API_URL__ = 'http://localhost:3000';
     
 
     Ambiance.loadAll = rawData => {
+        Ambiance.all = [];
         Ambiance.all = rawData.map((ambianceObj) => new Ambiance(ambianceObj));
-
+        $('#sound-selection').empty();
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain ambiances
         Ambiance.all.forEach(a => {
             $('#sound-selection').append(a.ambianceToHtml())
@@ -194,8 +202,10 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     Video.loadAll = rawData => {
+        Video.all = [];
         Video.all = rawData.map((videoObj) => new Video(videoObj));
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain videos
+        $('#video-selection').empty();
         Video.all.forEach(a => {
             $('#video-selection').append(a.videoToHtml())
         });
@@ -203,8 +213,9 @@ var __API_URL__ = 'http://localhost:3000';
     }
 
     Playlist.loadAll = rawData => {
+        Playlist.all = [];
         Playlist.all = rawData.map((playlistObj) => new Playlist(playlistObj));
-
+        $('#playlist-selections').empty();
         // TODO: add code so that if user_id is 0 or the individual's user_id then it appends certain playlists
         Playlist.all.forEach(a => {
             $('#playlist-selections').append(a.playlistToHtml())
@@ -287,20 +298,47 @@ var __API_URL__ = 'http://localhost:3000';
             .then(results => {
                 console.log(results);
                 console.log(results[results.length-1]);
+                results.map( function(item) {
+                    if(item.name == $('#username').val()) {
+                        alert('Username Taken');
+                        window.location = '../';
+                    }
+                });
                 soundmood.currentUser = results[results.length-1].user_id;
+                $('#login-link').text(results[results.length-1].name);
             })
             .then(callback)
     }
 
-    User.prototype.setUserLogin = (callback) => {
-        $.get(`${__API_URL__}/api/v1/users/login`)
+    Playlist.prototype.setPlaylistNew = (callback) => {
+        $.get(`${__API_URL__}/api/v1/playlists`)
             .then(results => {
                 console.log(results);
                 console.log(results[results.length-1]);
-                soundmood.currentUser = results[results.length-1].user_id;
+                soundmood.currentPlaylist = results[results.length-1].playlist_id;
             })
             .then(callback)
     }
+
+    User.prototype.setUserLogin = function(callback){
+        $.get(`${__API_URL__}/api/v1/users`)
+        .then(results => {
+            console.log(results);
+            console.log($('#username').val());
+            let userVal = $('#username').val();
+            if((results.filter(item => item.name === `${userVal}`)[0])== undefined){
+                alert('User Not Found');
+                window.location = '../';
+            }
+            soundmood.currentUser = results.filter(item => item.name === `${userVal}`)[0].user_id;
+            console.log(soundmood.currentUser);
+            $('#login-link').text(results.filter(item => item.name === `${userVal}`)[0].name);
+            
+        })
+        .then(callback)
+}
+            
+            
 
 
    
