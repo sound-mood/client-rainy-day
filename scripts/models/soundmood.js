@@ -102,7 +102,8 @@ var __API_URL__ = 'http://localhost:3000';
             url: `${__API_URL__ }/api/v1/playlists`,
             method: 'POST',
             data: {
-              name: this.name
+              name: this.name,
+              user_id: `${soundmood.currentUser}`,
             },
             
         })
@@ -292,6 +293,7 @@ var __API_URL__ = 'http://localhost:3000';
                 console.log(results);
                 console.log(results[results.length-1]);
                 soundmood.currentUser = results[results.length-1].user_id;
+                $('#login-link').text(results[results.length-1].name);
             })
             .then(callback)
     }
@@ -310,9 +312,11 @@ var __API_URL__ = 'http://localhost:3000';
         $.get(`${__API_URL__}/api/v1/users`)
         .then(results => {
             console.log(results);
-            console.log(`${username}`);
-            soundmood.currentUser = results.filter(item => item.name === `${username}`).name;
+            console.log($('#username').val());
+            let userVal = $('#username').val();
+            soundmood.currentUser = results.filter(item => item.name === `${userVal}`)[0].user_id;
             console.log(soundmood.currentUser);
+            $('#login-link').text(results.filter(item => item.name === `${userVal}`)[0].name);
             
         })
         .then(callback)

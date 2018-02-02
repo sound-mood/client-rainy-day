@@ -48,7 +48,7 @@
                         <h1 class="logo" id="word-logo">soundmood</h1>
                     </a>
                 </div>
-                <div class="col-2of5 float-right clearfix header" id="smaller"><a href="/login" id="login-link" class="float-right">Log In</a></div>
+                <div class="col-2of5 float-right clearfix header" id="smaller"><a href="/login" id="login-link" class="float-right"></a></div>
             </div>
 
         </header>
@@ -101,7 +101,7 @@
                                     <p>Title your playlist:</p>
                                     <div class="grid-container clearfix">
                                         <div>
-                                            <input type="text" placeholder="PLAYLIST TITLE">
+                                            <input id="new-playlist" type="text" placeholder="PLAYLIST TITLE">
                                         </div>
                                         <button class="playlist-buttons" id="playlist-insert">Save</button>
                                     </div>
@@ -109,21 +109,21 @@
                                         <p>Background Sounds (one per playlist)</p>
                                         <div class="grid-container clearfix">
                                             <div class="col-9of10 float-left">
-                                                <input type="text" placeholder="AMBIENT TRACK TITLE">
-                                                <input type="text" placeholder="AMBIENT TRACK URL">
+                                                <input id="new-sound" type="text" placeholder="AMBIENT TRACK TITLE">
+                                                <input id="sound-url" type="text" placeholder="AMBIENT TRACK URL">
                                             </div>
                                             <div class="col-1of10 float-right">
-                                                <button>+</button>
+                                                <button id="sound-insert">+</button>
                                             </div>
                                         </div>
                                         <p>Background Video (one per playlist)</p>
                                         <div class="grid-container clearfix">
                                             <div class="col-9of10 float-left">
-                                                <input type="text" placeholder="VIDEO TITLE">
-                                                <input type="text" placeholder="VIDEO URL">
+                                                <input id="new-video" type="text" placeholder="VIDEO TITLE">
+                                                <input id="video-url" type="text" placeholder="VIDEO URL">
                                             </div>
                                             <div class="col-1of10 float-right">
-                                                <button>+</button>                                    
+                                                <button id="video-insert">+</button>                                    
                                             </div>
                                         </div>
                                         <p>Track Title</p>

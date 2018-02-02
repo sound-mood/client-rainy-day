@@ -63,6 +63,7 @@ function homePageInit (ctx, next) {
     $('#log-in-button').on('click', loginSubmit);
 
     next();
+    
 }
 
 // this will need to grab the ID of the playlist and use it to display the predetermined music experience
